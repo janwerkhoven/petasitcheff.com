@@ -70,18 +70,23 @@ a {
 // Buttons
 a.button,
 button {
+  font-family: $neuzeit-book;
   display: inline-block;
   font-size: 15px;
-  text-transform: uppercase;
-  font-weight: bold;
   line-height: 32px;
   padding: 0 14px;
-  border-radius: 5px;
   background-color: $background-grey;
   border: 0;
   color: white;
   cursor: pointer;
   outline: 0;
+  &:hover {
+    background: lighten($background-grey, 10%);
+  }
+}
+
+input {
+  font-family: $neuzeit-book;
 }
 
 // For the outdated browser message
