@@ -5,6 +5,18 @@ body#landing {
     justify-content: center;
     align-items: center;
     min-height: 70vh;
+    img {
+      height: 40vh;
+      width: auto;
+      margin: 0 auto;
+    }
+    hr {
+      border: 0;
+      margin: 40px auto;
+      height: 3px;
+      width: 30px;
+      background: white;
+    }
     h1 {
       color: white;
     }
