@@ -4,7 +4,11 @@ body#landing {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     min-height: 70vh;
+    > div {
+      padding: 6vh 20px;
+    }
     img {
       height: 40vh;
       width: auto;
@@ -19,9 +23,13 @@ body#landing {
     }
     h1 {
       color: white;
+      font-size: 4vh;
+      margin: 1.2vh 0;
     }
     h2 {
       color: $logo-yellow;
+      font-family: $neuzeit-book;
+      font-size: 2vh;
     }
   }
   #mailchimp {

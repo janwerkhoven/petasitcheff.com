@@ -1,12 +1,24 @@
-/* @import must be at top of file, otherwise CSS will not work */
-// @import url("//hello.myfonts.net/count/32fa56");
+
 @font-face {
-	font-family: 'NeuzeitSLTStd-Book';
-	src: url('webfonts/32FA56_0_0.eot');
-	src: url('webfonts/32FA56_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/32FA56_0_0.woff2') format('woff2'),url('webfonts/32FA56_0_0.woff') format('woff'),url('webfonts/32FA56_0_0.ttf') format('truetype');
+	font-family: 'Neuzeit-Book';
+	src: url('/assets/fonts/subset-NeuzeitSLTStd-Book.eot');
+	src: url('/assets/fonts/subset-NeuzeitSLTStd-Book.eot?#iefix') format('embedded-opentype'),
+		url('/assets/fonts/subset-NeuzeitSLTStd-Book.woff2') format('woff2'),
+		url('/assets/fonts/subset-NeuzeitSLTStd-Book.woff') format('woff'),
+		url('/assets/fonts/subset-NeuzeitSLTStd-Book.ttf') format('truetype'),
+		url('/assets/fonts/subset-NeuzeitSLTStd-Book.svg#Montserrat-Regular') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
+
 @font-face {
-	font-family: 'NeuzeitSLTStd-BookHeavy';
-	src: url('webfonts/32FA56_1_0.eot');
-	src: url('webfonts/32FA56_1_0.eot?#iefix') format('embedded-opentype'),url('webfonts/32FA56_1_0.woff2') format('woff2'),url('webfonts/32FA56_1_0.woff') format('woff'),url('webfonts/32FA56_1_0.ttf') format('truetype');
+	font-family: 'Neuzeit-Heavy';
+	src: url('/assets/fonts/subset-NeuzeitSLTStd-BookHeavy.eot');
+	src: url('/assets/fonts/subset-NeuzeitSLTStd-BookHeavy.eot?#iefix') format('embedded-opentype'),
+		url('/assets/fonts/subset-NeuzeitSLTStd-BookHeavy.woff2') format('woff2'),
+		url('/assets/fonts/subset-NeuzeitSLTStd-BookHeavy.woff') format('woff'),
+		url('/assets/fonts/subset-NeuzeitSLTStd-BookHeavy.ttf') format('truetype'),
+		url('/assets/fonts/subset-NeuzeitSLTStd-BookHeavy.svg#Montserrat-Bold') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
