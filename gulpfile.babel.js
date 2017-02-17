@@ -23,7 +23,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const babel = require('gulp-babel');
 const concat = require('gulp-concat');
 const connect = require('gulp-connect');
-const data = require('gulp-data');
+// const data = require('gulp-data');
 const del = require('del');
 const eslint = require('gulp-eslint');
 const gulp = require('gulp');
@@ -66,9 +66,9 @@ function copyOutdatedBrowser() {
 // Compile all HTML
 function compileHtml() {
   return gulp.src('src/templates/pages/**/*.+(html|nunjucks)')
-    .pipe(data(function() { return require('./src/templates/data/partners.json') }))
-    .pipe(data(function() { return require('./src/templates/data/people.json') }))
-    .pipe(data(function() { return require('./src/templates/data/videos.json') }))
+    // .pipe(data(function() { return require('./src/templates/data/partners.json') }))
+    // .pipe(data(function() { return require('./src/templates/data/people.json') }))
+    // .pipe(data(function() { return require('./src/templates/data/videos.json') }))
     .pipe(nunjucksRender({ path: ['src/templates'] }))
     .pipe(prettify({ config: './jsbeautifyrc.json' }))
     .pipe(gulp.dest('dist'))
@@ -125,7 +125,6 @@ function concatJs() {
   return gulp.src([
       'bower_components/jquery/dist/jquery.min.js',
       'bower_components/velocity/velocity.min.js',
-      'bower_components/countUp.js/dist/countUp.min.js',
       'src/js/vendor/google-analytics.js',
       'temp/scripts.js'
     ])
@@ -140,7 +139,6 @@ function concatJsMin() {
   return gulp.src([
       'bower_components/jquery/dist/jquery.min.js',
       'bower_components/velocity/velocity.min.js',
-      'bower_components/countUp.js/dist/countUp.min.js',
       'src/js/vendor/google-analytics.js',
       'temp/scripts.min.js'
     ])

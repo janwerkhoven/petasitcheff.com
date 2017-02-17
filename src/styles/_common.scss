@@ -1,12 +1,12 @@
 // All headings, paragraphs and buttons will inherit these font styles from the <body>
 body {
-  font-family: $montserrat-regular;
+  font-family: $neuzeit-book;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 130%;
   margin: 0;
-  color: $reddust-stone;
+  color: $background-grey;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   &.prevent-scroll {
@@ -52,7 +52,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $from-where-you-are-regular;
+  font-family: $neuzeit-heavy;
   font-style: normal;
   font-weight: normal;
   line-height: 150%;
@@ -77,286 +77,16 @@ button {
   line-height: 32px;
   padding: 0 14px;
   border-radius: 5px;
-  background-color: transparent;
-  border: $reddust-gold 1px solid;
-  color: $reddust-gold;
+  background-color: $background-grey;
+  border: 0;
+  color: white;
   cursor: pointer;
   outline: 0;
-  &.support {
-    margin: 2px 0;
-    &:hover {
-      color: $reddust-sunset;
-      border-color: $reddust-sunset;
-    }
-  }
-  &.rust {
-    background-color: $reddust-rust;
-    &:hover {
-      background-color: $reddust-sunset;
-      border-color: $reddust-sunset;
-    }
-  }
-  &.gold {
-    color: $reddust-gold;
-    border-color: $reddust-gold;
-    &:hover {
-      color: $reddust-cream;
-      border-color: $reddust-cream;
-    }
-  }
-  &.cream {
-    color: $reddust-cream;
-    border-color: $reddust-cream;
-    &:hover {
-      color: $reddust-sunset;
-      border-color: $reddust-sunset;
-    }
-  }
-  &.large {
-    padding: 0 50px;
-    line-height: 46px;
-  }
-}
-.rust {
-  background-color: $reddust-rust;
-}
-.gold {
-  background-color: $reddust-gold;
-}
-.sunset {
-  background-color: $reddust-sunset;
-}
-.icon {
-  cursor: pointer;
-  img {
-    height: auto;
-  }
-  img:nth-last-child(1) {
-    display: none;
-  }
-  &:hover {
-    img:nth-last-child(2) {
-      display: none;
-    }
-    img:nth-last-child(1) {
-      display: block;
-    }
-  }
-}
-
-//Header Mobile Navigation Toggle
-.mobile-nav-active {
-  header div nav ul {
-    display: flex;
-  }
-  @media (max-width: 900px) {
-    section:nth-child(1) {
-      filter: blur(2px);
-
-      &::before {
-        content: ('');
-        position: absolute;
-        width: 100%;
-        height: 400px;
-        background: rgba(0,0,0,0.7);
-        z-index: 1;
-      }
-    }
-  }
 }
 
 // For the outdated browser message
 #outdated {
   p {
     max-width: none;
-  }
-}
-
-// Most hero sections share the same CSS
-section#hero {
-  overflow: hidden;
-  position: relative;
-  min-height: 300px;
-  background-color: $reddust-yinnar;
-  @media (min-width: 1700px) {
-    display: flex;
-    justify-content: center;
-  }
-
-  img {
-    width: 100vw;
-    height: auto;
-    max-height: 800px;
-    @media (max-width: 632px) {
-      position: absolute;
-      top: 0;
-      height: 300px;
-      width: auto;
-    }
-    @media (min-width: 1700px) {
-      height: 800px;
-      width: auto;
-    }
-  }
-  &.right {
-    img {
-      @media (max-width: 632px) {
-        right: 0;
-      }
-    }
-  }
-  &.center {
-    img {
-      @media (max-width: 632px) {
-        left: 50vw;
-        transform: translateX(-50%);
-      }
-    }
-  }
-}
-
-#modals {
-  display: none;
-  > div {
-    position: fixed;
-    z-index: 2;
-    -webkit-overflow-scrolling: touch;
-    overflow-y: scroll;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    overflow: auto;
-    box-sizing: border-box;
-    padding: 20px;
-    min-width: 320px;
-    max-width: none;
-    @media (max-width: 400px) {
-      padding: 10px;
-    }
-    .overlay {
-      position: fixed;
-      overflow-y: scroll;
-      -webkit-overflow-scrolling: touch;
-      z-index: 2;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      opacity: 0;
-      background: rgba(black, .5);
-      background: rgba($reddust-stone, .9);
-      user-select: none;
-      padding: 20px;
-      min-width: 320px;
-      box-sizing: border-box;
-      &.centre-content {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .modal {
-        position: relative;
-        background: $reddust-bone;
-        max-width: 800px;
-        min-height: 300px;
-        width: 100%;
-        margin: 0 auto;
-        @media (max-width: 700px) {
-          max-width: 460px !important;
-        }
-        &.has-image {
-          max-width: 1080px;
-        }
-        svg {
-          width: 20px;
-          height: 20px;
-          padding: 20px;
-          position: absolute;
-          right: 10px;
-          top: 10px;
-          cursor: pointer;
-          background: $reddust-bone;
-          &:hover {
-            path[fill="#D66839"] {
-              fill: $reddust-rust;
-            }
-          }
-        }
-        .content {
-          padding: 4vw;
-          @media (min-width: 1250px) {
-            padding: 50px;
-          }
-          @media (max-width: 750px) {
-            padding: 30px;
-          }
-          @media (min-width: 701px) {
-            display: flex;
-            flex-flow: row nowrap;
-          }
-          .img {
-            flex-shrink: 0;
-            margin: 0 0 22px;
-            @media (min-width: 701px) {
-              margin: 0 30px 0 0;
-            }
-            img {
-              width: 100%;
-              height: auto;
-              max-width: 400px;
-              max-height: 400px;
-              @media (min-width: 701px) {
-                width: 33vw;
-              }
-            }
-          }
-          .bio {
-            width: 100%;
-            h2,
-            h3 {
-              font-family: $montserrat-bold;
-              text-transform: uppercase;
-              line-height: 120%;
-            }
-            h2 {
-              font-size: 36px;
-              margin-bottom: 5px;
-              padding-right: 40px;
-            }
-            h3 {
-              font-size: 20px;
-              color: $reddust-sunset;
-            }
-            p {
-              line-height: 150%;
-              font-size: 16px;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-#coming-soon {
-  background-color: $reddust-cream;
-  > div {
-    min-height: 420px;
-    height: 80vh;
-    text-align: center;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    h1 {
-      font-size: 30px;
-      margin-bottom: 20px;
-      color: $reddust-rust;
-    }
-    h2 {
-      font-size: 20px;
-      color: $reddust-sunset;
-    }
   }
 }

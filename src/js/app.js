@@ -65,41 +65,9 @@ function checkModalCentre() {
   }
 }
 
-var animatingCounters = false;
-
-// Check whether to animate the landing page counters or not
-function checkWhetherToAnimateCounters() {
-  // Only bind this this on logic on the landing page, avoid collisions on other pages
-  var triggerTop = $('#landing .counter-wrapper').first().offset().top;
-  var windowBottom = $(window).scrollTop() + $(window).height();
-  // console.log(triggerTop, windowBottom);
-  if (!animatingCounters) {
-    if (windowBottom > triggerTop) {
-      animatingCounters = true;
-      animateCounters();
-    }
-  }
-}
-
-// Animate the counters on the landing page
-function animateCounters() {
-  $('#impact').find('.counter-wrapper').each(function() {
-    var countUpToValue = $(this).find('h1').attr('value');
-    $(this).find('h1').attr('id', countUpToValue);
-    const options = {
-      useEasing: true,
-      useGrouping: true,
-      separator: ',',
-      decimal: '.',
-      prefix: '',
-      suffix: ''
-    };
-    var demo = new CountUp(countUpToValue, 0, countUpToValue, 0, 5 * (countUpToValue / 1709), options);
-    demo.start();
-  });
-}
-
 $(document).ready(function() {
+
+  const bodyId = $('body').attr('id');
 
   // Open & close the mobile navigation
   var mobileNavActive = false;
@@ -117,15 +85,8 @@ $(document).ready(function() {
   });
 
   // Things to fire ONLY on the landing page (avoid unexpected future collisions)
-  if ($('body').attr('id') === 'landing') {
-
-    // On load
-    checkWhetherToAnimateCounters();
-    // On scroll
-    $(window).scroll(function() {
-      checkWhetherToAnimateCounters();
-    });
-
+  if (bodyId === 'landing') {
+    console.info('landing page');
   }
 
   // Make any hashtag link scroll with animation to element with matching ID
