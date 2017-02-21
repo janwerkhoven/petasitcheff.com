@@ -10,7 +10,7 @@
     <meta name="google-site-verification" content="ioMjIIMP2lu2mdNGjdrooe7XUsQ2AIbCtzigPclkQmE"/>
     {% block meta %}{% endblock %}
     <link href="/assets/css/styles.min.css" rel="stylesheet" type="text/css">
-    <script src="/assets/js/scripts.min.js"></script>
+    <script src="/assets/js/scripts.js"></script>
     {% include "partials/favicons.html" %}
   </head>
   <body id="{% block id %}{% endblock %}">

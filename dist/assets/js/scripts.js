@@ -16,7 +16,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 
 /*! Scripts for www.reddust.org.au */
 
-var isProduction = location.host === 'www.reddust.org.au' ? true : false;
+var isProduction = location.host === 'www.petasitcheff.com' ? true : false;
 var environment = isProduction ? 'production' : 'staging';
 
 // Fire page view to Google Analytics
@@ -32,10 +32,10 @@ if (ga) {
 function mailChimp(data) {
   var deferred = $.Deferred();
   // var url = '//finsecptx.us13.list-manage.com/subscribe/post-json?u=500670fda51c3a1aa312eecfa&id=0d0bbdfa29&c=?'; // Testing
-  var url = '//petasitcheff.us15.list-manage.com/subscribe/post-json?u=81562367b11da2f0e94d42dbd&id=1f0a8aa42&c=?'; // Testing
+  var url = '//petasitcheff.us15.list-manage.com/subscribe/post-json?u=81562367b11da2f0e94d42dbd&id=f610797f40&c=?';
   if (isProduction) {
     // url = '//finsecptx.us13.list-manage.com/subscribe/post-json?u=500670fda51c3a1aa312eecfa&id=202853ccf3&c=?'; // Live
-    url = '//petasitcheff.us15.list-manage.com/subscribe/post-json?u=81562367b11da2f0e94d42dbd&id=1f0a8aa42&c=?'; // Testing
+    url = '//petasitcheff.us15.list-manage.com/subscribe/post-json?u=81562367b11da2f0e94d42dbd&id=1f0a8aa42c&c=?';
   }
   $.ajax({
     type: 'GET',
@@ -56,21 +56,15 @@ function mailChimp(data) {
 
 $(document).ready(function () {
 
-  $('#mailchimp button').addClass('aaaaaah').on('click', function () {
+  $('body').addClass(environment);
 
-    debugger;
+  $('#mailchimp button').on('click', function () {
 
     var $btn = $(this);
     $btn.html('Subcribing...').prop('disabled', true);
 
-    // var dataMailChimp = {};
-    // var keys = ['title', 'name', 'email', 'phone', 'state', 'age'];
-    // $.each(keys, function(i, key) {
-    //   dataMailChimp[key.toUpperCase()] = sessionStorage.getItem(key) || '-';
-    // });
-
     var dataMailChimp = {
-      EMAIL: $('#mailchimp [name="email"]').val()
+      'EMAIL': $('#mailchimp [name="email"]').val()
     };
 
     console.log('Submitting subscription to Mailchimp ...', dataMailChimp);
