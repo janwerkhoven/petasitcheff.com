@@ -66,8 +66,88 @@ body#landing {
       }
     }
   }
+
+  #welcome {
+    > div {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      padding: 12vw 30px;
+    }
+    h2 {
+      font-size: 4vw;
+      font-family: $neuzeit-heavy;
+      line-height: 120%;
+    }
+    h3 {
+      font-size: 2vw;
+      font-family: $neuzeit-book;
+      line-height: 100%;
+    }
+    hr {
+      width: 30px;
+      height: 3px;
+      background: $logo-yellow;
+      border: 0;
+      margin: 2vw 0 1.6vw;
+    }
+    p {
+      line-height: 170%;
+      margin: 0 0 1.6vw;
+    }
+    .left {
+      width: 36vw;
+    }
+    .callout {
+      width: 35vw;
+      position: relative;
+      background: $logo-yellow;
+      color: white;
+      padding: 3vw 3.4vw;
+      box-sizing: border-box;
+      margin-left: 5vw;
+      &:after {
+        content: ' ';
+        position: absolute;
+        bottom: -40px;
+        width: 0;
+        height: 0;
+        border-left: 50px solid rgba(0, 0, 0, 0);
+        border-top: 40px solid $logo-yellow;
+        right: 40px;
+      }
+      blockquote {
+        font-family: $neuzeit-heavy;
+        font-size: 1.7vw;
+        line-height: 170%;
+        margin: 0;
+        color: #fff;
+        u {
+          display: inline-block;
+          position: relative;
+          text-decoration: none;
+          &:after {
+            content: ' ';
+            background: white;
+            height: 0.2vw;
+            bottom: 0.1vw;
+            width: 100%;
+            position: absolute;
+            right: 0;
+          }
+        }
+      }
+      cite {
+        margin-top: 2.2vw;
+        font-size: 1.8vw;
+        font-style: normal;
+        display: block;
+        text-align: right;
+      }
+    }
+  }
+
   #guidance {
-    background: #2a292a;
     > div {
       position: relative;
       max-width: none;
@@ -80,6 +160,7 @@ body#landing {
       height: 100%;
       width: 100%;
       background: #2a292a url('/assets/images/background-city-2000px.jpg') no-repeat 50% bottom / cover;
+      opacity: 0.92;
     }
     blockquote {
       position: relative;
@@ -95,7 +176,6 @@ body#landing {
         &:after {
           content: ' ';
           background: $logo-yellow;
-          background: #f5e401;
           height: 2px;
           bottom: 0;
           width: 84%;

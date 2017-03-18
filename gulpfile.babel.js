@@ -71,9 +71,7 @@ function copyOutdatedBrowser() {
 // Compile all HTML
 function compileHtml() {
   return gulp.src('src/templates/pages/**/*.+(html|nunjucks)')
-    // .pipe(data(function() { return require('./src/templates/data/partners.json') }))
     // .pipe(data(function() { return require('./src/templates/data/people.json') }))
-    // .pipe(data(function() { return require('./src/templates/data/videos.json') }))
     .pipe(nunjucksRender({
       path: ['src/templates'],
       data: {
