@@ -69,11 +69,16 @@ function compileHtml() {
     // .pipe(data(function() { return require('./src/templates/data/partners.json') }))
     // .pipe(data(function() { return require('./src/templates/data/people.json') }))
     // .pipe(data(function() { return require('./src/templates/data/videos.json') }))
-    .pipe(nunjucksRender({ path: ['src/templates'] }))
+    .pipe(nunjucksRender({
+      path: ['src/templates'],
+      data: {
+        app_name: 'Peta Sitcheff'
+      }
+    }))
     .pipe(prettify({ config: './jsbeautifyrc.json' }))
     .pipe(gulp.dest('dist'))
     .pipe(sitemap({
-      siteUrl: 'http://www.reddust.org.au',
+      siteUrl: 'http://www.petasitcheff.com/',
       changefreq: 'monthly',
       priority: 0.5
     }))
