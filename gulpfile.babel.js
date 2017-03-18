@@ -19,6 +19,11 @@
 
 'use strict';
 
+const project = {
+  name: 'Peta Sitcheff',
+  url: 'http://www.petasitcheff.com/'
+};
+
 const autoprefixer = require('gulp-autoprefixer');
 const babel = require('gulp-babel');
 const concat = require('gulp-concat');
@@ -72,7 +77,9 @@ function compileHtml() {
     .pipe(nunjucksRender({
       path: ['src/templates'],
       data: {
-        app_name: 'Peta Sitcheff'
+        project: project,
+        app_name: 'Peta Sitcheff',
+        app_url: 'http://www.petasitcheff.com/'
       }
     }))
     .pipe(prettify({ config: './jsbeautifyrc.json' }))

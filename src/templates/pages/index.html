@@ -1,28 +1,39 @@
-{% extends "layout.nunjucks" %}
+{% extends "layout.nunjucks" %} {% block meta %}
+<title>Peta Sitcheff - Sales Coaching &amp; Strategy</title>
+<meta name="description" content="Authentic, intentional and sustainable"> {% endblock %} {% block id %}landing{% endblock %} {% block main %}
 
-{% block meta %}
-  <title>Peta Sitcheff - Sales Coaching &amp; Strategy</title>
-  <meta name="description" content="Authentic, intentional and sustainable">
-{% endblock %}
-
-{% block id %}landing{% endblock %}
-
-{% block main %}
-
-  <section id="hero">
-    <div>
-      <div class="left">
-        <img src="/assets/images/peta-sitcheff-logo.svg" alt="Peta Sitcheff logo" width="233" height="480">
-        {% include "partials/svg/hamburger.html" %}
-      </div>
-      <div class="right">
-        <h1>Sales Coaching &amp;&nbsp;Strategy</h1>
-        <h2>Authentic, intentional, sustainable</h2>
-        <a href="#welcome">
+<section id="hero">
+  <div>
+    <div class="left">
+      <img src="/assets/images/peta-sitcheff-logo.svg" alt="Peta Sitcheff logo" width="233" height="480"> {% include "partials/svg/hamburger.html" %}
+    </div>
+    <div class="right">
+      <h1>Sales Coaching &amp;&nbsp;Strategy</h1>
+      <h2>Authentic, intentional, sustainable</h2>
+      <a href="#welcome">
           {% include "partials/svg/arrow-down.html" %}
         </a>
-      </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<section id="welcome">
+  <div>
+    <h2>Welcome</h2>
+    <h3>Engineering exceptional sales results</h3>
+    <hr>
+    <p>Your sales force is the lifeblood of your organisation. Their performance is critical to your overall business success. But how often do you stop to ask, are we doing enough to support our salespeople and make them exceptional? When your salespeople thrive, so does your bottom line.</p>
+    <p>Whether you’re a fresh starter, a seasoned performer or simply seeking some professional direction, my coaching vision is to help salespeople of all levels thrive through the development of a personal selling plan that is intentional, authentic and above all, sustainable.</p>
+    <blockquote cite="{{ project.url }}">&ldquo;My holistic coaching approach focuses on you, the individual seller first. Together we will explore and enhance your <u>signature selling style</u>. We develop tailored strategies that will equip you to tackle the highs and lows of a career in sales with confidence and integrity.&rdquo;</blockquote>
+    <cite>- Peta Sitcheff</cite>
+  </div>
+</section>
+
+<section id="guidance">
+  <div>
+    <div class="background"></div>
+    <blockquote cite="{{ project.url }}">&ldquo;I wholeheartedly believe that with the right <u>guidance</u>, we each have the ability to engineer our exceptional selling selves.&rdquo;</blockquote>
+  </div>
+</section>
 
 {% endblock %}
