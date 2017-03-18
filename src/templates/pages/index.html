@@ -1,7 +1,7 @@
 {% extends "layout.nunjucks" %}
 
 {% block meta %}
-  <title>Peta Sitcheff - Sales Coach &amp; Consultant</title>
+  <title>Peta Sitcheff - Sales Coaching &amp; Strategy</title>
   <meta name="description" content="Authentic, intentional and sustainable">
 {% endblock %}
 
@@ -11,19 +11,17 @@
 
   <section id="hero">
     <div>
-      <img src="/assets/images/peta-sitcheff-logo.svg" alt="Peta Sitcheff logo" width="233" height="480">
-      <hr>
-      <h1>Sales Coach &amp; Consultant</h1>
-      <h2>Authentic, Intentional, Sustainable</h2>
-    </div>
-  </section>
-
-  <section id="mailchimp">
-    <div>
-      <p>Launching March 2017.</p>
-      <p>Enter your email for updates &amp; news.</p>
-      <input type="email" name="email">
-      <button>Subscribe</button>
+      <div class="left">
+        <img src="/assets/images/peta-sitcheff-logo.svg" alt="Peta Sitcheff logo" width="233" height="480">
+        {% include "partials/svg/hamburger.html" %}
+      </div>
+      <div class="right">
+        <h1>Sales Coaching &amp;&nbsp;Strategy</h1>
+        <h2>Authentic, intentional, sustainable</h2>
+        <a href="#welcome">
+          {% include "partials/svg/arrow-down.html" %}
+        </a>
+      </div>
     </div>
   </section>
 
