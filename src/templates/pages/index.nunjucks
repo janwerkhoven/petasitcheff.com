@@ -29,7 +29,7 @@
         <h3>Engineering exceptional sales results</h3>
         <hr>
         <p>Your sales force is the lifeblood of your organisation. Their performance is critical to your overall business success. But how often do you stop to ask, are we doing enough to support our salespeople and make them exceptional? When your salespeople thrive, so does your bottom line.</p>
-        <p>Whether you’re a fresh starter, a seasoned performer or simply seeking some professional direction, my coaching vision is to help salespeople of all levels thrive through the development of a personal selling plan that is intentional, authentic and above all, sustainable.</p>
+        <p>Whether you're a fresh starter, a seasoned performer or simply seeking some professional direction, my coaching vision is to help salespeople of all levels thrive through the development of a personal selling plan that is intentional, authentic and above all, sustainable.</p>
       </div>
       <div class="callout">
         <blockquote cite="{{ project.url }}">&ldquo;My holistic coaching approach focuses on you, the individual seller first. Together we will explore and enhance your
@@ -44,6 +44,66 @@
       <div class="background"></div>
       <blockquote cite="{{ project.url }}">&ldquo;I wholeheartedly believe that with the right
         <u>guidance</u>, we each have the ability to engineer our exceptional selling selves.&rdquo;</blockquote>
+    </div>
+  </section>
+
+  <section id="my-story">
+    <div id="short">
+      <h2>My Story</h2>
+      <hr>
+      <p>Let me introduce myself, I'm Peta Sitcheff and I unashamedly love to sell. In fact, I love it to the point where most of the time, I don't even realise I'm doing it.</p>
+      <a href="#">Read More
+        {% include "partials/svg/arrow-down.html" %}
+      </a>
+    </div>
+    <div id="long">
+      <h2>My Story</h2>
+      <hr>
+      <div>
+        <div class="left">
+          <p>Selling is a passion of mine that has afforded me an extraordinary career spanning over 17 years. I've worked for market leading organisations in a range of industries. Each organisation possessed a strong culture that I could thrive in. Success was recognised, challenges overcome and achievements rewarded, but most importantly for me, those I respected took the time to recognise a job well done.</p>
+          <p>My career was ticking along beautifully. Then one day that changed. I was so determined to succeed that I failed to recognise I no longer had professional boundaries. Work was 24/7. I was operating robotically, I was exhausted and I was on the edge of a burn out. I pretended everything was OK when in reality it was far from it.</p>
+          <p>Fundamentally I still loved what I did, I just didn't love the impact it was having on me anymore. It was completely unsustainable. This moment made me question things. How do I prevent this from happening again to myself or to any high performing salesperson? I knew there must be a better way.</p>
+        </div>
+        <div class="right">
+          <p>By drawing on my personal experiences, the triumphs and let's face it, a few failures along the way, I've devised a sales coaching practice which acknowledges that every salesperson has a unique operating style. This, along with loyal customer connections and a value based sales strategy, provides the foundation for your selling success.</p>
+          <p>I believe that practicing sales can and should be deeply rewarding for both you and the business you operate within. And most importantly it must be sustainable.</p>
+          <a href="#" class="button">LinkedIn</a>
+          <a href="#" class="button">Contact Peta</a>
+        </div>
+      </div>
+      <a href="#">Read More
+        {% include "partials/svg/arrow-down.html" %}
+      </a>
+    </div>
+  </section>
+
+  <section id="services">
+    <div>
+      <h2>Services</h2>
+      <hr>
+      <ul>
+        <li>
+          <a href="#">Sales Coaching 1 On 1
+            {% include "partials/svg/arrow-down.html" %}
+          </a>
+        </li>
+        <li>
+          <a href="#">Coaching Women
+            {% include "partials/svg/arrow-down.html" %}
+          </a>
+        </li>
+        <li>
+          <a href="#">Medical Device Industry Preparation
+            {% include "partials/svg/arrow-down.html" %}
+          </a>
+        </li>
+        <li>
+          <a href="#">Group Workshops
+            {% include "partials/svg/arrow-down.html" %}
+          </a>
+        </li>
+      </ul>
     </div>
   </section>
 

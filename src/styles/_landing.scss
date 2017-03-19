@@ -3,6 +3,7 @@ body#landing {
     position: relative;
     background: #0B0B0B url('/assets/images/hero-2000px.jpg') no-repeat 50% 50% / auto 100%;
     height: 1333px;
+    max-height: 100vh;
     @media (max-width: 1800px) {
       background-image: url('/assets/images/hero-1800px.jpg');
       height: 1333px;
@@ -37,7 +38,10 @@ body#landing {
       position: absolute;
       left: 3vw;
       top: 3vw;
-      img {}
+      img {
+        width: 11vw;
+        height: auto;
+      }
       svg {
         width: 50px;
       }
@@ -46,8 +50,11 @@ body#landing {
       position: absolute;
       right: 3vw;
       bottom: 13vw;
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: flex-end;
       h1 {
-        font-size: 6vh;
+        font-size: 5.6vh;
         max-width: 30vw;
         text-align: right;
         line-height: 120%;
@@ -55,13 +62,19 @@ body#landing {
       }
       h2 {
         font-family: $neuzeit-book;
-        font-size: 2vh;
-        // color: $logo-yellow;
-        color: #9ba918;
+        font-size: 2.4vh;
+        color: $peta-yellow;
+        text-align: right;
+        line-height: 150%;
+        margin-top: 0.8vw;
       }
       a {
+        display: block;
+        padding: 4vw;
+        transform: translateX(3.5vw);
         svg {
-          width: 3vw;
+          width: 8vw;
+          height: auto;
         }
       }
     }
@@ -73,6 +86,7 @@ body#landing {
       flex-flow: row nowrap;
       justify-content: center;
       padding: 12vw 30px;
+      max-width: none;
     }
     h2 {
       font-size: 4vw;
@@ -87,13 +101,14 @@ body#landing {
     hr {
       width: 30px;
       height: 3px;
-      background: $logo-yellow;
+      background: $peta-yellow;
       border: 0;
       margin: 2vw 0 1.6vw;
     }
     p {
       line-height: 170%;
       margin: 0 0 1.6vw;
+      font-size: 1.25vw;
     }
     .left {
       width: 36vw;
@@ -101,7 +116,7 @@ body#landing {
     .callout {
       width: 35vw;
       position: relative;
-      background: $logo-yellow;
+      background: $peta-yellow;
       color: white;
       padding: 3vw 3.4vw;
       box-sizing: border-box;
@@ -113,7 +128,7 @@ body#landing {
         width: 0;
         height: 0;
         border-left: 50px solid rgba(0, 0, 0, 0);
-        border-top: 40px solid $logo-yellow;
+        border-top: 40px solid $peta-yellow;
         right: 40px;
       }
       blockquote {
@@ -175,12 +190,61 @@ body#landing {
         text-decoration: none;
         &:after {
           content: ' ';
-          background: $logo-yellow;
+          background: $peta-yellow;
           height: 2px;
           bottom: 0;
           width: 84%;
           position: absolute;
           right: 0;
+        }
+      }
+    }
+  }
+
+  #services {
+    background: $peta-yellow;
+    > div {
+      max-width: none;
+    }
+    h2 {
+      color: white;
+      font-family: $neuzeit-heavy;
+      font-size: 5vw;
+    }
+    hr {
+      width: 30px;
+      height: 3px;
+      background: white;
+      border: 0;
+      margin: 2vw 0 1.6vw;
+    }
+    ul {
+      display: flex;
+      flex-flow: row nowrap;
+      li {
+        width: 25%;
+        &:nth-child(even) {
+          padding-top: 4vw;
+        }
+        a {
+          display: block;
+          border: 0.3vw solid white;
+          color: white;
+          font-family: $neuzeit-heavy;
+          font-size: 2.8vw;
+          line-height: 140%;
+          margin: 0.8vw;
+          padding: 4vw 2vw;
+          user-select: none;
+          svg {
+            width: 6vw;
+            height: auto;
+            display: block;
+            margin-top: 1vw;
+            path {
+              fill: white;
+            }
+          }
         }
       }
     }

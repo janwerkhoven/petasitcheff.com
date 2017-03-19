@@ -97,7 +97,7 @@ function compileCss() {
     .pipe(sass({
       outputStyle: 'expanded',
       includePaths: require('node-normalize-scss').includePaths
-    }))
+    }).on('error', sass.logError))
     .pipe(autoprefixer({
       browsers: ['> 1% in AU', 'Explorer > 9', 'Firefox >= 17', 'Chrome >= 10', 'Safari >= 6', 'iOS >= 6'],
       cascade: false
