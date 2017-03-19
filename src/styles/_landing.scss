@@ -205,6 +205,10 @@ body#landing {
     background: $peta-yellow;
     > div {
       max-width: none;
+      padding: 8vw 3vw;
+      > div {
+        margin-left: 36vw;
+      }
     }
     h2 {
       color: white;
@@ -212,11 +216,11 @@ body#landing {
       font-size: 5vw;
     }
     hr {
-      width: 30px;
-      height: 3px;
+      width: 3vw;
+      height: 0.3vw;
       background: white;
       border: 0;
-      margin: 2vw 0 1.6vw;
+      margin: 0 0 3.6vw;
     }
     ul {
       display: flex;
@@ -224,7 +228,9 @@ body#landing {
       li {
         width: 25%;
         &:nth-child(even) {
-          padding-top: 4vw;
+          a {
+            padding-top: 6vw;
+          }
         }
         a {
           display: block;
@@ -234,8 +240,10 @@ body#landing {
           font-size: 2.8vw;
           line-height: 140%;
           margin: 0.8vw;
-          padding: 4vw 2vw;
+          padding: 4vw 2vw 0;
+          height: 27vw;
           user-select: none;
+          box-sizing: border-box;
           svg {
             width: 6vw;
             height: auto;
@@ -247,6 +255,52 @@ body#landing {
           }
         }
       }
+    }
+  }
+  #sales-coaching {
+    position: relative;
+    background: #0B0B0C url('/assets/images/1on1-2000px.jpg') no-repeat 50% 50% / auto 100%;
+    height: 1333px;
+    max-height: 100vh;
+    @media (max-width: 1200px) {
+      background-image: url('/assets/images/1on1-1200px.jpg');
+      height: 800px;
+    }
+    @include retina {
+       @media (max-width: 600px){
+        background-image: url('/assets/images/1on1-1200px.jpg');
+        height: 400px;
+      }
+    }
+    > div {
+      max-width: none;
+    }
+    h2 {
+      color: white;
+      font-family: $neuzeit-heavy;
+      font-size: 4vw;
+      max-width: 40vw;
+    }
+    p {
+      color: white;
+      line-height: 170%;
+      margin: 0 0 1.6vw;
+      font-size: 1.25vw;
+    }
+    hr {
+      width: 3vw;
+      height: 0.3vw;
+      background: $peta-yellow;
+      border: 0;
+      margin: 0 0 3.6vw;
+    }
+    img {
+      max-width: 100%;
+    }
+    a.button {
+      border: 0.3vw solid $peta-yellow;
+      color: $peta-yellow;
+      background: none;
     }
   }
 }

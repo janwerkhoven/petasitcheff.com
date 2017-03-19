@@ -80,8 +80,10 @@
 
   <section id="services">
     <div>
-      <h2>Services</h2>
-      <hr>
+      <div>
+        <h2>Services</h2>
+        <hr>
+      </div>
       <ul>
         <li>
           <a href="#">Sales Coaching 1 On 1
@@ -104,6 +106,18 @@
           </a>
         </li>
       </ul>
+    </div>
+  </section>
+
+  <section id="sales-coaching">
+    <div>
+      <h2>Sales Coaching
+        <nobr>1 on 1</nobr>
+      </h2>
+      <hr>
+      <p>Coaching is a recognised tool that helps your sales talent maximise their potential and drive results. My coaching sessions are designed to engage, inspire and empower salespeople with the tools required to achieve sustainable selling success.</p>
+      <p>By enhancing your authentic awareness, I encourage you to appreciate your natural talent as we transform your personal traits into practical selling tools. This will help you navigate your sales career with confidence, integrity &amp; authenticity.</p>
+      <a href="#" class="button">Enquire</a>
     </div>
   </section>
 
