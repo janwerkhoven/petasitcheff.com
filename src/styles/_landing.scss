@@ -303,4 +303,31 @@ body#landing {
       background: none;
     }
   }
+  #packages {
+    background: #0b0b0c;
+    ul {
+      li {
+        background: white;
+        margin-bottom: 20px;
+        h3 {
+          color: $peta-yellow;
+          color: #f4eb00;
+        }
+      }
+    }
+  }
+  #coaching-women {
+    background: $peta-yellow;
+    background: #4f504f;
+  }
+  #sales-presentation {
+    background: white;
+  }
+  #group-workshop {
+    background: #4f504f;
+  }
+  #contact {
+    background: $peta-yellow;
+    background: #f4eb00;
+  }
 }

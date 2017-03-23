@@ -43,7 +43,8 @@
     <div>
       <div class="background"></div>
       <blockquote cite="{{ project.url }}">&ldquo;I wholeheartedly believe that with the right
-        <u>guidance</u>, we each have the ability to engineer our exceptional selling selves.&rdquo;</blockquote>
+        <u>guidance</u>, we each have the ability to engineer our exceptional selling selves.&rdquo;
+      </blockquote>
     </div>
   </section>
 
@@ -118,6 +119,207 @@
       <p>Coaching is a recognised tool that helps your sales talent maximise their potential and drive results. My coaching sessions are designed to engage, inspire and empower salespeople with the tools required to achieve sustainable selling success.</p>
       <p>By enhancing your authentic awareness, I encourage you to appreciate your natural talent as we transform your personal traits into practical selling tools. This will help you navigate your sales career with confidence, integrity &amp; authenticity.</p>
       <a href="#" class="button">Enquire</a>
+    </div>
+  </section>
+
+  <section id="packages">
+    <div>
+      <div class="left">
+        <h2>Packages</h2>
+        <hr>
+        <p>Depending on your needs, I offer three core areas of focus or you can select a custom package. In any case, each package is tailored to your own business and your individual needs.</p>
+      </div>
+      <div class="callout">
+        <blockquote cite="{{ project.url }}">&ldquo;I guide salespeople on a journey to discover their
+          <u>authentic</u>
+          selling practice and develop a signature selling style.&rdquo;
+        </blockquote>
+      </div>
+    </div>
+    <div>
+      <ul>
+        <li>
+          <div class="left">
+            <h3>You</h3>
+            <p>Together we’ll identify your inner traits and explore ways to turn them into valuable sales tools. You’ll discover the role authenticity plays in your selling practice and develop a framework that sets the foundations for your personal selling style.</p>
+            <a href="#enquire">Enquire</a>
+          </div>
+          <div class="right">
+            <h4>Includes:</h4>
+            <ul>
+              <li>4x 1-hour sessions in person, phone or by Skype</li>
+              <li>Unlimited email correspondence throughout your journey</li>
+              <li>Course materials</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="left">
+            <h3>Your Customer</h3>
+            <p>Successful salespeople have one thing in common, the ability to build an emotional connection with their customers quickly. We’ll dissect your customer’s journey, refine communication skills and devise strategies that will enhance your relationship and drive sales.</p>
+            <a href="#enquire">Enquire</a>
+          </div>
+          <div class="right">
+            <h4>Includes:</h4>
+            <ul>
+              <li>4x 1-hour sessions in person, phone or by Skype</li>
+              <li>Unlimited email correspondence throughout your journey</li>
+              <li>Course materials</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="left">
+            <h3>Your Sales Strategy</h3>
+            <p>Strategise by design not by default. We’ll review your existing plans and identify opportunities before creating and crash testing an intentional and targeted sales strategy. Your transformative sales plan will empower you to navigate sales challenges with ease and maximise your business potential.</p>
+            <a href="#enquire">Enquire</a>
+          </div>
+          <div class="right">
+            <h4>Includes:</h4>
+            <ul>
+              <li>4x 1-hour sessions in person, phone or by Skype</li>
+              <li>Unlimited email correspondence throughout your journey</li>
+              <li>Course materials</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="left">
+            <h3>Custom</h3>
+            <p>No set framework, this package is based on individual needs. It is ideal for sales people who have a specific problem to solve or who feel like they are at a crossroads in their career and need clarity on the journey forward.</p>
+            <a href="#enquire">Enquire</a>
+          </div>
+          <div class="right">
+            <h4>Includes:</h4>
+            <ul>
+              <li>4x 1-hour sessions in person, phone or by Skype</li>
+              <li>Unlimited email correspondence throughout your journey</li>
+              <li>Course materials</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <h5>Read more about the benefits of sales coaching</h5>
+          <div>
+            <p>Sales Teams Need More Coaching</p>
+            <a href="https://hbr.org/2015/05/a-high-percentage-move-to-increase-revenue" target="_blank" title="Sales Teams Need More Coaching">Read</a>
+          </div>
+          <div>
+            <p>The Dirty Secret of Effective Sales Coaching</p>
+            <a href="https://hbr.org/2011/01/the-dirty-secret-of-effective" target="_blank" title="The Dirty Secret of Effective Sales Coaching">Read</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="awareness">
+    <div>
+      <div class="background"></div>
+      <blockquote cite="{{ project.url }}">&ldquo;Don't underestimate the power of your
+        <u>authentic awareness</u>
+        and the value that brings to your customers.&rdquo;
+      </blockquote>
+    </div>
+  </section>
+
+  <section>
+    <div class="left">
+      <h2>Coaching Women</h2>
+      <p>Having worked in male dominated industries myself, I’m particularly passionate about supporting women sales experts to succeed. These sessions are designed to engage, empower and provide a confidential environment where scenarios can be discussed and workshopped. Through the use of powerful mindset techniques alongside tested sales strategies we build confidence and tenacity to improve performance for female salespeople.</p>
+      <h4>Includes:</h4>
+      <ul>
+        <li>4x 1-hour sessions in person, phone or by Skype</li>
+        <li>Unlimited email correspondence throughout your journey</li>
+        <li>Course materials</li>
+      </ul>
+      <a href="#enquire" class="button">Enquire</a>
+    </div>
+    <div class="right">
+      <img src="/assets/images/coaching-women.jpg" alt="Peta Sitcheff portrait for coaching women" width="660" height="1110">
+    </div>
+  </section>
+
+  <section>
+    <div class="left">
+      <img src="/assets/images/sales-preparation.jpg" alt="City map from the sky for sales presentation" width="660" height="1110">
+    </div>
+    <div class="right">
+      <h2>Sales Preparation</h2>
+      <h3>For The Medical Device Industry</h3>
+      <hr>
+      <p>The medical device industry is driven by continuous innovation and new technologies. If you’re looking to carve out a rewarding and lucrative sales career in this dynamic industry, we will arm you with industry insights, ensure you are interview ready and provide recruitment support along the way.</p>
+      <h4>Includes:</h4>
+      <ul>
+        <li>2x 1-hour sessions in person, phone or by Skype</li>
+        <li>Unlimited email correspondence throughout your journey</li>
+        <li>Course materials</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="left">
+      <h2>Group Workshops</h2>
+      <hr>
+      <p>Your teams coaching journey will reveal unique methods of selling for each person while keeping the company vision and desired team culture top of mind. Your team will not only transform their personal selling power, but also gain an understanding of each other’s unique talents to enhance team performance.</p>
+      <p>These workshops are customised to suit your organisations needs or can be based on the 1:1 sales coaching framework; you, your customer, your business strategy.</p>
+      <a href="#enquire" class="button">Enquire</a>
+    </div>
+    <div class="right">
+      <img src="/assets/images/group-workshops.jpg" alt="City map from the sky for sales presentation" width="660" height="1110">
+    </div>
+  </section>
+
+  <section id="contact">
+    <div id="details">
+      <h2>Contact</h2>
+      <hr>
+      <h3>Are you ready to discover how a confident and authentic sales strategy can transform how you sell?</h3>
+      <p>I’d love to hear from you. Send me your career questions, comments and coaching enquiries. I personally answer every email that comes in. Alternatively, book a free 15-minute call with me to talk about how your career is going and how I might be able to help you.</p>
+      <dl>
+        <dt>E</dt>
+        <dd>
+          <a href="mailto:peta@petasitcheff.com" target="_blank">peta@petasitcheff.com</a>
+        </dd>
+        <dt>T</dt>
+        <dd>
+          <a href="tel:+61488025991" target="_blank">0488 025 991</a>
+        </dd>
+      </dl>
+      <ul class="social">
+        <li>
+          <a href="#">Facebook</a>
+        </li>
+        <li>
+          <a href="#">Twitter</a>
+        </li>
+        <li>
+          <a href="#">Linkedin</a>
+        </li>
+        <li>
+          <a href="#">Instagram</a>
+        </li>
+      </ul>
+      <h4>Book your free 15-minute call</h4>
+      <a href="#enquire" class="button">Book</a>
+    </div>
+    <div id="form">
+      <h4></h4>
+      <form>
+        <div class="left">
+          <input type="text" placeholder="Name">
+          <input type="text" placeholder="Email">
+          <input type="text" placeholder="Phone">
+          <input type="text" placeholder="Location">
+          <input type="text" placeholder="Company Name">
+          <input type="text" placeholder="Industry">
+        </div>
+        <div class="right">
+          <textarea rows="8" cols="80" placeholder="Message"></textarea>
+          <button>Send Message</button>
+        </div>
+      </form>
     </div>
   </section>
 
