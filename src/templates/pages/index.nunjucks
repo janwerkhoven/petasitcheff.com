@@ -39,7 +39,7 @@
     </div>
   </section>
 
-  <section id="guidance">
+  <section id="guidance-quote">
     <div>
       <div class="background"></div>
       <blockquote cite="{{ project.url }}">&ldquo;I wholeheartedly believe that with the right
@@ -79,7 +79,7 @@
     </div>
   </section>
 
-  <section id="services">
+  <section id="services-nav">
     <div>
       <div>
         <h2>Services</h2>
@@ -147,9 +147,15 @@
           <div class="right">
             <h4>Includes:</h4>
             <ul>
-              <li>4x 1-hour sessions in person, phone or by Skype</li>
-              <li>Unlimited email correspondence throughout your journey</li>
-              <li>Course materials</li>
+              <li>
+                <p>4x 1-hour sessions in person, phone or by Skype</p>
+              </li>
+              <li>
+                <p>Unlimited email correspondence throughout your journey</p>
+              </li>
+              <li>
+                <p>Course materials</p>
+              </li>
             </ul>
           </div>
         </li>
@@ -162,9 +168,15 @@
           <div class="right">
             <h4>Includes:</h4>
             <ul>
-              <li>4x 1-hour sessions in person, phone or by Skype</li>
-              <li>Unlimited email correspondence throughout your journey</li>
-              <li>Course materials</li>
+              <li>
+                <p>4x 1-hour sessions in person, phone or by Skype</p>
+              </li>
+              <li>
+                <p>Unlimited email correspondence throughout your journey</p>
+              </li>
+              <li>
+                <p>Course materials</p>
+              </li>
             </ul>
           </div>
         </li>
@@ -177,9 +189,15 @@
           <div class="right">
             <h4>Includes:</h4>
             <ul>
-              <li>4x 1-hour sessions in person, phone or by Skype</li>
-              <li>Unlimited email correspondence throughout your journey</li>
-              <li>Course materials</li>
+              <li>
+                <p>4x 1-hour sessions in person, phone or by Skype</p>
+              </li>
+              <li>
+                <p>Unlimited email correspondence throughout your journey</p>
+              </li>
+              <li>
+                <p>Course materials</p>
+              </li>
             </ul>
           </div>
         </li>
@@ -192,9 +210,15 @@
           <div class="right">
             <h4>Includes:</h4>
             <ul>
-              <li>4x 1-hour sessions in person, phone or by Skype</li>
-              <li>Unlimited email correspondence throughout your journey</li>
-              <li>Course materials</li>
+              <li>
+                <p>4x 1-hour sessions in person, phone or by Skype</p>
+              </li>
+              <li>
+                <p>Unlimited email correspondence throughout your journey</p>
+              </li>
+              <li>
+                <p>Course materials</p>
+              </li>
             </ul>
           </div>
         </li>
@@ -213,7 +237,7 @@
     </div>
   </section>
 
-  <section id="awareness">
+  <section id="awareness-quote">
     <div>
       <div class="background"></div>
       <blockquote cite="{{ project.url }}">&ldquo;Don't underestimate the power of your

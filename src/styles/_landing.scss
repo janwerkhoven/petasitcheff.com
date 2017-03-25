@@ -162,7 +162,8 @@ body#landing {
     }
   }
 
-  #guidance {
+  #awareness-quote,
+  #guidance-quote {
     > div {
       position: relative;
       max-width: none;
@@ -174,8 +175,16 @@ body#landing {
       top: 0;
       height: 100%;
       width: 100%;
-      background: #2a292a url('/assets/images/background-city-2000px.jpg') no-repeat 50% bottom / cover;
       opacity: 0.92;
+      background: #2a292a url('/assets/images/background-city-2000px.jpg') no-repeat 50% bottom / cover;
+      @media (max-width: 1200px) {
+        background-image: url('/assets/images/background-city-1200px.jpg');
+      }
+      @include retina {
+         @media (max-width: 600px){
+          background-image: url('/assets/images/background-city-1200px.jpg');
+        }
+      }
     }
     blockquote {
       position: relative;
@@ -183,7 +192,7 @@ body#landing {
       color: white;
       font-size: 2.2vw;
       line-height: 170%;
-      margin: 8vw 6vw;
+      margin: 8vw;
       width: 42vw;
       u {
         position: relative;
@@ -201,7 +210,33 @@ body#landing {
     }
   }
 
-  #services {
+  #awareness-quote {
+    > div {
+      display: flex;
+      justify-content: flex-end;
+    }
+    .background {
+      background-image: url('/assets/images/background-hand-2000px.jpg');
+      @media (max-width: 1200px) {
+        background-image: url('/assets/images/background-hand-1200px.jpg');
+      }
+      @include retina {
+         @media (max-width: 600px){
+          background-image: url('/assets/images/background-hand-1200px.jpg');
+        }
+      }
+    }
+    blockquote {
+      text-align: right;
+      u {
+        &:after {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  #services-nav {
     background: $peta-yellow;
     > div {
       max-width: none;
@@ -257,6 +292,7 @@ body#landing {
       }
     }
   }
+
   #sales-coaching {
     position: relative;
     background: #0B0B0C url('/assets/images/1on1-2000px.jpg') no-repeat 50% 50% / auto 100%;
@@ -278,8 +314,17 @@ body#landing {
     h2 {
       color: white;
       font-family: $neuzeit-heavy;
-      font-size: 4vw;
+      font-size: 3.9vw;
       max-width: 40vw;
+      &:after {
+        content: ' ';
+        background: $peta-yellow;
+        height: 2px;
+        bottom: 0;
+        width: 30px;
+        position: absolute;
+        left: 0;
+      }
     }
     p {
       color: white;
@@ -303,22 +348,91 @@ body#landing {
       background: none;
     }
   }
+
   #packages {
     background: #0b0b0c;
-    ul {
-      li {
-        background: white;
-        margin-bottom: 20px;
-        h3 {
-          color: $peta-yellow;
-          color: #f4eb00;
+    > div {
+      max-width: none;
+      width: 80vw;
+      > ul {
+        > li {
+          display: flex;
+          flex-flow: row nowrap;
+          padding: 4vw 3vw 4vw 8vw;
+          background: white;
+          margin-bottom: 3vw;
+          h3 {
+            position: relative;
+            color: $peta-yellow;
+            color: #f4eb00; // TODO make variable
+            font-size: 4.9vw;
+            line-height: 120%;
+            margin-bottom: 3vw;
+            &:after {
+              content: ' ';
+              background: $peta-yellow;
+              height: 0.14vw;
+              bottom: -1.2vw;
+              width: 2.8vw;
+              position: absolute;
+              left: 0;
+              min-height: 1px;
+            }
+          }
+          p {
+            line-height: 170%;
+            margin: 0 0 1.6vw;
+            font-size: 1.25vw;
+          }
+          a {
+            font-size: 1.25vw;
+            font-family: $neuzeit-heavy;
+            color: $peta-yellow;
+            text-decoration: underline;
+            &:hover {
+              text-decoration: none;
+            }
+          }
+          .left {
+            width: 100%;
+            padding-right: 4vw;
+          }
+          .right {
+            width: 33%;
+            flex-shrink: 0;
+            h4 {
+              font-family: $neuzeit-book;
+              font-size: 2.7vw;
+              margin-top: 1.58vw;
+              margin-bottom: 1vw;
+            }
+            ul {
+              li {
+                position: relative;
+                padding-left: 1.5vw;
+                &:after {
+                  content: ' ';
+                  position: absolute;
+                  left: 0;
+                  top: 0.68vw;
+                  width: 0.5vw;
+                  height: 0.5vw;
+                  background: $peta-yellow;
+                  border-radius: 50%;
+                }
+                p {
+                  margin: 0;
+                }
+              }
+            }
+          }
         }
       }
     }
   }
   #coaching-women {
     background: $peta-yellow;
-    background: #4f504f;
+    background: #4f504f; // TODO make variable
   }
   #sales-presentation {
     background: white;
