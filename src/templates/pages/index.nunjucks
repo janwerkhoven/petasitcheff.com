@@ -142,7 +142,7 @@
           <img src="/assets/images/icon-you.svg" alt="icon of you waving your hand" width="80" height="80">
           <div class="left">
             <h3>You</h3>
-            <p>Together we’ll identify your inner traits and explore ways to turn them into valuable sales tools. You’ll discover the role authenticity plays in your selling practice and develop a framework that sets the foundations for your personal selling style.</p>
+            <p>Together we'll identify your inner traits and explore ways to turn them into valuable sales tools. You'll discover the role authenticity plays in your selling practice and develop a framework that sets the foundations for your personal selling style.</p>
             <a href="#enquire">Enquire</a>
           </div>
           <div class="right">
@@ -164,7 +164,7 @@
           <img src="/assets/images/icon-your-customer.svg" alt="icon of you and customer shaking hands" width="80" height="80">
           <div class="left">
             <h3>Your Customer</h3>
-            <p>Successful salespeople have one thing in common, the ability to build an emotional connection with their customers quickly. We’ll dissect your customer’s journey, refine communication skills and devise strategies that will enhance your relationship and drive sales.</p>
+            <p>Successful salespeople have one thing in common, the ability to build an emotional connection with their customers quickly. We'll dissect your customer's journey, refine communication skills and devise strategies that will enhance your relationship and drive sales.</p>
             <a href="#enquire">Enquire</a>
           </div>
           <div class="right">
@@ -186,7 +186,7 @@
           <img src="/assets/images/icon-strategy.svg" alt="icon of strategy network" width="80" height="80">
           <div class="left">
             <h3>Your Sales Strategy</h3>
-            <p>Strategise by design not by default. We’ll review your existing plans and identify opportunities before creating and crash testing an intentional and targeted sales strategy. Your transformative sales plan will empower you to navigate sales challenges with ease and maximise your business potential.</p>
+            <p>Strategise by design not by default. We'll review your existing plans and identify opportunities before creating and crash testing an intentional and targeted sales strategy. Your transformative sales plan will empower you to navigate sales challenges with ease and maximise your business potential.</p>
             <a href="#enquire">Enquire</a>
           </div>
           <div class="right">
@@ -226,7 +226,7 @@
             </ul>
           </div>
         </li>
-        <li>
+        <li class="last">
           <h5>Read more about the benefits of sales coaching</h5>
           <div>
             <p>Sales Teams Need More Coaching</p>
@@ -251,60 +251,84 @@
     </div>
   </section>
 
-  <section>
-    <div class="left">
+  <section id="coaching-women" class="split">
+    <div class="left text">
       <h2>Coaching Women</h2>
-      <p>Having worked in male dominated industries myself, I’m particularly passionate about supporting women sales experts to succeed. These sessions are designed to engage, empower and provide a confidential environment where scenarios can be discussed and workshopped. Through the use of powerful mindset techniques alongside tested sales strategies we build confidence and tenacity to improve performance for female salespeople.</p>
-      <h4>Includes:</h4>
-      <ul>
-        <li>4x 1-hour sessions in person, phone or by Skype</li>
-        <li>Unlimited email correspondence throughout your journey</li>
-        <li>Course materials</li>
-      </ul>
+      <hr>
+      <p>Having worked in male dominated industries myself, I'm particularly passionate about supporting women sales experts to succeed. These sessions are designed to engage, empower and provide a confidential environment where scenarios can be discussed and workshopped. Through the use of powerful mindset techniques alongside tested sales strategies we build confidence and tenacity to improve performance for female salespeople.</p>
+      <div class="includes">
+        <h4>Includes:</h4>
+        <ul>
+          <li>
+            <p>4x 1-hour sessions in person,
+              <nobr>phone or by Skype</nobr>
+            </p>
+          </li>
+          <li>
+            <p>Unlimited email correspondence throughout your journey</p>
+          </li>
+          <li>
+            <p>Course materials</p>
+          </li>
+        </ul>
+      </div>
       <a href="#enquire" class="button">Enquire</a>
     </div>
     <div class="right">
-      <img src="/assets/images/coaching-women.jpg" alt="Peta Sitcheff portrait for coaching women" width="660" height="1110">
+      <img src="/assets/images/coaching-women.jpg" alt="portrait photo of Peta Sitcheff for coaching women by Prue Aja" width="660" height="1110">
     </div>
   </section>
 
-  <section>
+  <section id="sales-preparation" class="split">
     <div class="left">
-      <img src="/assets/images/sales-preparation.jpg" alt="City map from the sky for sales presentation" width="660" height="1110">
+      <img src="/assets/images/sales-preparation.jpg" alt="sky view from city map Peta Sitcheff's sales preparation" width="660" height="1110">
     </div>
-    <div class="right">
+    <div class="right text">
       <h2>Sales Preparation</h2>
       <h3>For The Medical Device Industry</h3>
-      <hr>
-      <p>The medical device industry is driven by continuous innovation and new technologies. If you’re looking to carve out a rewarding and lucrative sales career in this dynamic industry, we will arm you with industry insights, ensure you are interview ready and provide recruitment support along the way.</p>
-      <h4>Includes:</h4>
-      <ul>
-        <li>2x 1-hour sessions in person, phone or by Skype</li>
-        <li>Unlimited email correspondence throughout your journey</li>
-        <li>Course materials</li>
-      </ul>
+      <div class="line">
+        <hr>
+      </div>
+      <p>The medical device industry is driven by continuous innovation and new technologies. If you're looking to carve out a rewarding and lucrative sales career in this dynamic industry, we will arm you with industry insights, ensure you are interview ready and provide recruitment&nbsp;<nobr>support along the way.</nobr>
+      </p>
+      <div class="includes">
+        <h4>Includes:</h4>
+        <ul>
+          <li>
+            <p>2x 1-hour sessions in person,
+              <nobr>phone or by Skype</nobr>
+            </p>
+          </li>
+          <li>
+            <p>Unlimited email correspondence throughout your journey</p>
+          </li>
+          <li>
+            <p>Course materials</p>
+          </li>
+        </ul>
+      </div>
+      <a href="#enquire" class="button">Enquire</a>
     </div>
   </section>
 
-  <section>
-    <div class="left">
+  <section id="group-workshop" class="split">
+    <div class="left text">
       <h2>Group Workshops</h2>
       <hr>
-      <p>Your teams coaching journey will reveal unique methods of selling for each person while keeping the company vision and desired team culture top of mind. Your team will not only transform their personal selling power, but also gain an understanding of each other’s unique talents to enhance team performance.</p>
+      <p>Your teams coaching journey will reveal unique methods of selling for each person while keeping the company vision and desired team culture top of mind. Your team will not only transform their personal selling power, but also gain an understanding of each other's unique talents to enhance team performance.</p>
       <p>These workshops are customised to suit your organisations needs or can be based on the 1:1 sales coaching framework; you, your customer, your business strategy.</p>
       <a href="#enquire" class="button">Enquire</a>
     </div>
     <div class="right">
-      <img src="/assets/images/group-workshops.jpg" alt="City map from the sky for sales presentation" width="660" height="1110">
+      <img src="/assets/images/group-workshops.jpg" alt="photo of Peta Sitcheff for group workshop by Prue Aja" width="660" height="1110">
     </div>
   </section>
 
   <section id="contact">
     <div id="details">
       <h2>Contact</h2>
-      <hr>
       <h3>Are you ready to discover how a confident and authentic sales strategy can transform how you sell?</h3>
-      <p>I’d love to hear from you. Send me your career questions, comments and coaching enquiries. I personally answer every email that comes in. Alternatively, book a free 15-minute call with me to talk about how your career is going and how I might be able to help you.</p>
+      <p>I'd love to hear from you. Send me your career questions, comments and coaching enquiries. I personally answer every email that comes in. Alternatively, book a free 15-minute call with me to talk about how your career is going and how I might be able to help you.</p>
       <dl>
         <dt>E</dt>
         <dd>
