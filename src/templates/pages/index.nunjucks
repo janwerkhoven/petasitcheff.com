@@ -148,6 +148,7 @@
           <img src="/assets/images/icon-you.svg" alt="icon of you waving your hand" width="80" height="80">
           <div class="left">
             <h3>You</h3>
+            <hr>
             <p>Together we'll identify your inner traits and explore ways to turn them into valuable sales tools. You'll discover the role authenticity plays in your selling practice and develop a framework that sets the foundations for your personal selling style.</p>
             <a href="#enquire">Enquire</a>
           </div>
@@ -170,6 +171,7 @@
           <img src="/assets/images/icon-your-customer.svg" alt="icon of you and customer shaking hands" width="80" height="80">
           <div class="left">
             <h3>Your Customer</h3>
+            <hr>
             <p>Successful salespeople have one thing in common, the ability to build an emotional connection with their customers quickly. We'll dissect your customer's journey, refine communication skills and devise strategies that will enhance your relationship and drive sales.</p>
             <a href="#enquire">Enquire</a>
           </div>
@@ -192,6 +194,7 @@
           <img src="/assets/images/icon-strategy.svg" alt="icon of strategy network" width="80" height="80">
           <div class="left">
             <h3>Your Sales Strategy</h3>
+            <hr>
             <p>Strategise by design not by default. We'll review your existing plans and identify opportunities before creating and crash testing an intentional and targeted sales strategy. Your transformative sales plan will empower you to navigate sales challenges with ease and maximise your business potential.</p>
             <a href="#enquire">Enquire</a>
           </div>
@@ -214,6 +217,7 @@
           <img src="/assets/images/icon-custom.svg" alt="icon of pen writing custom package" width="80" height="80">
           <div class="left">
             <h3>Custom</h3>
+            <hr>
             <p>No set framework, this package is based on individual needs. It is ideal for sales people who have a specific problem to solve or who feel like they are at a crossroads in their career and need clarity on the journey forward.</p>
             <a href="#enquire">Enquire</a>
           </div>

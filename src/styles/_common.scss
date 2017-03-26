@@ -59,7 +59,30 @@ h6 {
   margin: 0;
 }
 
-// Normal hyperlinks
+p {
+  line-height: 170%;
+  font-size: 1.25vw;
+  color: $paragraph-grey;
+  margin: 0 0 1.6vw;
+}
+
+hr {
+  width: 3vw;
+  height: 0.3vw;
+  background: $peta-yellow;
+  border: 0;
+}
+
+h2 {
+  color: #fff;
+  font-size: 5vw;
+  line-height: 120%;
+  color: white;
+  &+hr {
+    margin: 1vw 0 3vw;
+  }
+}
+
 a {
   text-decoration: none;
   &:hover {
@@ -67,7 +90,6 @@ a {
   }
 }
 
-// Buttons
 a.button,
 button {
   font-family: $neuzeit-book;
