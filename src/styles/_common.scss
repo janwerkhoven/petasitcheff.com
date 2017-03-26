@@ -89,6 +89,55 @@ input {
   font-family: $neuzeit-book;
 }
 
+.callout {
+  width: 35vw;
+  position: relative;
+  background: $peta-yellow;
+  color: white;
+  padding: 3vw 3.4vw;
+  box-sizing: border-box;
+  margin-left: 5vw;
+  &:after {
+    content: ' ';
+    position: absolute;
+    bottom: -40px;
+    bottom: -4.3vw;
+    width: 0;
+    height: 0;
+    border-left: 6.2vw solid rgba(0, 0, 0, 0);
+    border-top: 4.4vw solid $peta-yellow;
+    right: 4.3vw;
+  }
+  blockquote {
+    font-family: $neuzeit-heavy;
+    font-size: 1.7vw;
+    line-height: 170%;
+    margin: 0;
+    color: #fff;
+    u {
+      display: inline-block;
+      position: relative;
+      text-decoration: none;
+      &:after {
+        content: ' ';
+        background: white;
+        height: 0.2vw;
+        bottom: 0.1vw;
+        width: 100%;
+        position: absolute;
+        right: 0;
+      }
+    }
+  }
+  cite {
+    margin-top: 2.2vw;
+    font-size: 1.8vw;
+    font-style: normal;
+    display: block;
+    text-align: right;
+  }
+}
+
 // For the outdated browser message
 #outdated {
   p {
