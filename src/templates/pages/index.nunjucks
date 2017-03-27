@@ -128,7 +128,7 @@
     </div>
   </section>
 
-  <section id="packages">
+  <section id="packages-intro">
     <div>
       <div class="left">
         <h2>Packages</h2>
@@ -142,6 +142,9 @@
         </blockquote>
       </div>
     </div>
+  </section>
+
+  <section id="packages-list">
     <div>
       <ul>
         <li>

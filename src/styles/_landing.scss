@@ -339,20 +339,48 @@ body#landing {
       border: 0.3vw solid $peta-yellow;
       color: $peta-yellow;
       background: none;
+      font-size: 2vw;
+      padding: 1.4vw 5vw;
+      margin-top: 2vw;
     }
   }
 
-  #packages {
+  #packages-intro,
+  #packages-list {
     background: #0b0b0c;
+    > div {
+      max-width: none;
+      width: 82vw;
+    }
     h2 {
       color: white;
     }
     p {
       color: white;
     }
+  }
+
+  #packages-intro {
     > div {
-      max-width: none;
-      width: 82vw;
+      padding: 10vw 5vw 8vw;
+      display: flex;
+      h2 {
+        margin-top: 1vw;
+      }
+      .callout {
+        flex-shrink: 0;
+        width: 39vw;
+        padding: 3.2vw 3.6vw;
+        blockquote {
+          font-size: 2.4vw;
+          line-height: 150%;
+        }
+      }
+    }
+  }
+
+  #packages-list {
+    > div {
       padding: 0 5vw 11vw;
       > ul {
         > li {
@@ -470,6 +498,7 @@ body#landing {
       }
     }
   }
+
   section.split {
     display: flex;
     flex-flow: row nowrap;
