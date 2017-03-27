@@ -93,22 +93,22 @@
       </div>
       <ul>
         <li>
-          <a href="#">Sales Coaching 1 On 1
+          <a href="#sales-coaching" class="button">Sales Coaching 1 On 1
             {% include "partials/svg/arrow-down.html" %}
           </a>
         </li>
         <li>
-          <a href="#">Coaching Women
+          <a href="#coaching-women" class="button">Coaching Women
             {% include "partials/svg/arrow-down.html" %}
           </a>
         </li>
         <li>
-          <a href="#">Medical Device Industry Preparation
+          <a href="#sales-preparation" class="button">Medical Device Industry Preparation
             {% include "partials/svg/arrow-down.html" %}
           </a>
         </li>
         <li>
-          <a href="#">Group Workshops
+          <a href="#group-workshop" class="button">Group Workshops
             {% include "partials/svg/arrow-down.html" %}
           </a>
         </li>

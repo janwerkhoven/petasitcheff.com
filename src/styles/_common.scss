@@ -97,13 +97,14 @@ button {
   font-size: 15px;
   line-height: 32px;
   padding: 0 14px;
-  background-color: $background-grey;
   border: 0;
   color: white;
   cursor: pointer;
   outline: 0;
+  background: rgba(white, 0);
+  transition: background-color 300ms ease-out;
   &:hover {
-    background: lighten($background-grey, 10%);
+    background: rgba(white, 0.3);
   }
 }
 
@@ -144,7 +145,7 @@ input {
         content: ' ';
         background: white;
         height: 0.2vw;
-        bottom: 0.1vw;
+        bottom: 0.4vw;
         width: 100%;
         position: absolute;
         right: 0;

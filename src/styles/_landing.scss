@@ -283,7 +283,14 @@ body#landing {
           height: 27vw;
           user-select: none;
           box-sizing: border-box;
+          &:hover {
+            svg {
+              transform: translateY(1vw);
+            }
+          }
           svg {
+            transform: translateY(0vw);
+            transition: transform 200ms ease-out;
             width: 6vw;
             height: auto;
             display: block;
@@ -340,10 +347,13 @@ body#landing {
     a.button {
       border: 0.3vw solid $peta-yellow;
       color: $peta-yellow;
-      background: none;
       font-size: 2vw;
-      padding: 1.4vw 5vw;
+      padding: 1.4vw 5vw 1.1vw;
       margin-top: 2vw;
+      background: rgba($peta-yellow, 0);
+      &:hover {
+        background: rgba($peta-yellow, 0.3);
+      }
     }
   }
 
@@ -563,7 +573,6 @@ body#landing {
     .button {
       width: 100%;
       border: 0.2vw solid $peta-yellow;
-      background: none;
       color: $peta-brown;
       display: block;
       box-sizing: border-box;
@@ -605,6 +614,12 @@ body#landing {
       font-size: 2vw;
       font-family: $neuzeit-book;
       margin-bottom: 0.9vw;
+    }
+    .button {
+      background: rgba($peta-yellow, 0);
+      &:hover {
+        background: rgba($peta-yellow, 1);
+      }
     }
   }
 
@@ -693,10 +708,24 @@ body#landing {
               height: 5vw;
               transform: scaleX(1) scaleY(1);
               transition: transform 400ms ease-out;
-              // transition: transform 400ms $ease-in-circ;
             }
           }
         }
+      }
+      h4 {
+        line-height: 200%;
+        font-size: 2vw;
+        font-family: $neuzeit-heavy;
+        color: $peta-brown-text;
+      }
+      .button {
+        border: 0.2vw solid white;
+        line-height: 100%;
+        font-size: 2.4vw;
+        text-align: center;
+        width: 28vw;
+        padding: 1.7vw 0 1.4vw;
+        margin: 1.1vw 0;
       }
     }
     #form {
