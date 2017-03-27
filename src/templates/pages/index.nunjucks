@@ -340,6 +340,7 @@
   <section id="contact">
     <div id="details">
       <h2>Contact</h2>
+      <hr>
       <h3>Are you ready to discover how a confident and authentic sales strategy can transform how you sell?</h3>
       <p>I'd love to hear from you. Send me your career questions, comments and coaching enquiries. I personally answer every email that comes in. Alternatively, book a free 15-minute call with me to talk about how your career is going and how I might be able to help you.</p>
       <dl>
@@ -354,16 +355,24 @@
       </dl>
       <ul class="social">
         <li>
-          <a href="#">Facebook</a>
+          <a href="https://www.facebook.com/peta.sitcheff" target="_blank" title="Make friends with Peta on Facebook">
+            <img src="/assets/images/facebook.svg" alt="Facebook icon" width="40px" height="40px">
+          </a>
         </li>
         <li>
-          <a href="#">Twitter</a>
+          <a href="https://twitter.com/PetaSitcheff" target="_blank" title="Follow Peta Sitcheff on Twitter">
+            <img src="/assets/images/twitter.svg" alt="Twitter icon" width="40px" height="40px">
+          </a>
         </li>
         <li>
-          <a href="#">Linkedin</a>
+          <a href="https://www.linkedin.com/in/peta-sitcheff-20b8b483/" target="_blank" title="Connect with Peta Sitcheff on Linkedin">
+            <img src="/assets/images/linkedin.svg" alt="Linkdein icon" width="40px" height="40px">
+          </a>
         </li>
         <li>
-          <a href="#">Instagram</a>
+          <a href="https://www.instagram.com/petasitcheff/" target="_blank" title="See pictures of Peta on Instagram">
+            <img src="/assets/images/instagram.svg" alt="Instagram icon" width="40px" height="40px">
+          </a>
         </li>
       </ul>
       <h4>Book your free 15-minute call</h4>
