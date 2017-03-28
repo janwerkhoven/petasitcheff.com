@@ -379,18 +379,45 @@
       <a href="#enquire" class="button">Book</a>
     </div>
     <div id="form">
-      <h4></h4>
+      <h4>Or contact Peta via email</h4>
       <form>
         <div class="left">
-          <input type="text" placeholder="Name">
-          <input type="text" placeholder="Email">
-          <input type="text" placeholder="Phone">
-          <input type="text" placeholder="Location">
-          <input type="text" placeholder="Company Name">
-          <input type="text" placeholder="Industry">
+          <div class="field">
+            <label>Name</label>
+            <input type="text" name="name">
+            <div class="bg"></div>
+          </div>
+          <div class="field">
+            <label>Email</label>
+            <input type="email" name="email">
+            <div class="bg"></div>
+          </div>
+          <div class="field">
+            <label>Phone</label>
+            <input type="text" name="phone">
+            <div class="bg"></div>
+          </div>
+          <div class="field">
+            <label>Location</label>
+            <input type="text" name="location">
+            <div class="bg"></div>
+          </div>
+          <div class="field">
+            <label>Company</label>
+            <input type="text" name="company">
+            <div class="bg"></div>
+          </div>
+          <div class="field">
+            <label>Industry</label>
+            <input type="text" name="industry">
+            <div class="bg"></div>
+          </div>
         </div>
         <div class="right">
-          <textarea rows="8" cols="80" placeholder="Message"></textarea>
+          <div class="field">
+            <label>Message</label>
+            <textarea rows="8" cols="80" name="message"></textarea>
+          </div>
           <button>Send Message</button>
         </div>
       </form>

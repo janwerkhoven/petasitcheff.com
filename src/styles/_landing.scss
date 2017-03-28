@@ -644,7 +644,7 @@ body#landing {
   }
 
   #group-workshop {
-    background: #4f504f;
+    background: $background-brown;
     p {
       color: white;
     }
@@ -655,17 +655,23 @@ body#landing {
 
   #contact {
     background: $peta-yellow-bg;
+    h3 {
+      font-family: $neuzeit-book;
+      font-size: 2.5vw;
+      color: $peta-brown-text;
+      line-height: 130%;
+    }
+    h4 {
+      line-height: 200%;
+      font-size: 1.8vw;
+      font-family: $neuzeit-heavy;
+      color: $peta-brown-text;
+    }
     #details {
       max-width: 37vw;
       padding-top: 10vw;
       hr {
         background: white;
-      }
-      h3 {
-        font-family: $neuzeit-book;
-        font-size: 2.5vw;
-        color: $peta-brown-text;
-        line-height: 130%;
       }
       p {
         margin-top: 2vw;
@@ -732,12 +738,6 @@ body#landing {
           }
         }
       }
-      h4 {
-        line-height: 200%;
-        font-size: 2vw;
-        font-family: $neuzeit-heavy;
-        color: $peta-brown-text;
-      }
       .button {
         border: 0.2vw solid white;
         line-height: 100%;
@@ -750,6 +750,104 @@ body#landing {
     }
     #form {
       max-width: 80vw;
+      padding-top: 6vw;
+      padding-bottom: 17vw;
+      h4 {
+        margin-bottom: 1vw;
+      }
+      form {
+        display: flex;
+        > div {
+          width: 50%;
+          display: flex;
+          flex-flow: column nowrap;
+          &.left {
+            padding-right: 2vw;
+          }
+          &.right {
+            padding-left: 2vw;
+          }
+        }
+      }
+      .field {
+        position: relative;
+        margin-bottom: 1.5vw;
+        input,
+        label,
+        textarea {
+          font-size: 2vw;
+          line-height: 150%;
+          padding: 1.8vw 1.9vw 1.4vw;
+        }
+        label {
+          position: absolute;
+          z-index: 3;
+          left: 0;
+          top: 0;
+          transition: transform 300ms ease-out;
+          color: $peta-yellow;
+        }
+        input,
+        textarea {
+          position: relative;
+          z-index: 2;
+          width: 100%;
+          box-sizing: border-box;
+          color: $peta-brown-text;
+          border: 0;
+          outline: 0;
+          background: white;
+        }
+        input {
+          &:focus+.bg {
+            transform: scaleX(1.02) scaleY(1.06);
+          }
+          &[name="name"] {
+            padding-left: 8.2vw;
+          }
+          &[name="email"] {
+            padding-left: 7.7vw;
+          }
+          &[name="phone"] {
+            padding-left: 8.5vw;
+          }
+          &[name="location"] {
+            padding-left: 10.8vw;
+          }
+          &[name="company"] {
+            padding-left: 11.8vw;
+          }
+          &[name="industry"] {
+            padding-left: 10vw;
+          }
+        }
+        textarea {
+          display: block;
+          max-width: 100%;
+          min-width: 100%;
+          min-height: 36.6vw;
+          padding-bottom: 1.8vw;
+        }
+        .bg {
+          background: white;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          left: 0;
+          bottom: 0;
+          transition: transform 200ms ease-out;
+        }
+      }
+      button {
+        background: $background-brown;
+        font-size: 2vw;
+        line-height: 150%;
+        padding: 1.8vw 1.9vw 1.4vw;
+        transition: opacity 200ms ease-out;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
     }
   }
 
