@@ -415,8 +415,8 @@
         </div>
         <div class="right">
           <div class="field">
-            <label>Message</label>
             <textarea rows="8" cols="80" name="message"></textarea>
+            <label>Message</label>
           </div>
           <button>Send Message</button>
         </div>

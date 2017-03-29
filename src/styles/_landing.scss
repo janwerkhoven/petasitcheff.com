@@ -827,6 +827,12 @@ body#landing {
           min-width: 100%;
           min-height: 36.6vw;
           padding-bottom: 1.8vw;
+          &.has-value,
+          &:focus {
+            &+label {
+              display: none;
+            }
+          }
         }
         .bg {
           background: white;

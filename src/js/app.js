@@ -1,7 +1,8 @@
-/*! Scripts for www.reddust.org.au */
-
 const isProduction = location.host === 'www.petasitcheff.com' ? true : false;
 const environment = isProduction ? 'production' : 'staging';
+
+// Where we store contact form details
+let userData = {};
 
 // Fire page view to Google Analytics
 if (ga) {
@@ -12,31 +13,57 @@ if (ga) {
   ga('send', 'pageview');
 }
 
-// // The AJAX request to Mailchimp
-// function mailChimp(data) {
-//   var deferred = $.Deferred();
-//   // var url = '//finsecptx.us13.list-manage.com/subscribe/post-json?u=500670fda51c3a1aa312eecfa&id=0d0bbdfa29&c=?'; // Testing
-//   var url = '//petasitcheff.us15.list-manage.com/subscribe/post-json?u=81562367b11da2f0e94d42dbd&id=f610797f40&c=?';
-//   if (isProduction) {
-//     // url = '//finsecptx.us13.list-manage.com/subscribe/post-json?u=500670fda51c3a1aa312eecfa&id=202853ccf3&c=?'; // Live
-//     url = '//petasitcheff.us15.list-manage.com/subscribe/post-json?u=81562367b11da2f0e94d42dbd&id=1f0a8aa42c&c=?';
-//   }
-//   $.ajax({
-//     type: 'GET',
-//     url: url,
-//     data: $.param(data),
-//     cache: false,
-//     dataType: 'json',
-//     contentType: 'application/json; charset=utf-8'
-//   }).done(function(data) {
-//     deferred.resolve('success');
-//     console.log('AJAX success', data);
-//   }).fail(function(jqXHR, textStatus, errorThrown) {
-//     deferred.reject('fail');
-//     console.error('AJAX fail', jqXHR, textStatus, errorThrown);
-//   });
-//   return deferred.promise();
-// }
+// The AJAX request to Formspree
+function formSpree(data) {
+  var deferred = $.Deferred();
+  $.ajax({
+    url: 'https://formspree.io/jw@nabu.io',
+    method: 'POST',
+    data: data,
+    dataType: 'json'
+  }).done(function(data) {
+    deferred.resolve('success');
+    console.log('AJAX success', data);
+  }).fail(function(jqXHR, textStatus, errorThrown) {
+    deferred.reject('fail');
+    console.error('AJAX fail', jqXHR, textStatus, errorThrown);
+  });
+  return deferred.promise();
+}
+
+function submitContactForm() {
+  const label = !isProduction ? '[TEST] ' : '';
+  const extra = !isProduction ? 'Given that this is test data, it\'s very likely Jan or Hannah working on your website :)' : '';
+  let data = {
+    message: `${label} Someone just completed the contact form on ${location.href}. ${extra}`,
+    _subject: `${label} Someone is contacting you`,
+    _format: 'plain'
+  };
+  const keys = ['name', 'email', 'phone', 'location', 'company', 'industry', 'message'];
+  $.each(keys, function(i, key) {
+    data[key] = userData[key] || '-';
+  });
+  console.log('Submitting contact form to FormSpree ...', data);
+  const $btn = $('#contact #form button');
+  $btn.html('Sending...').prop('disabled', true);
+  $.when(formSpree(data)).then(function() {
+    console.log('success');
+    $btn.html('Sent!');
+  }, function() {
+    console.log('fail');
+    $btn.html('Whoops, invalid email?').prop('disabled', false).hover(function() {
+      $(this).html('Try again');
+    }, function() {
+      $(this).html('Whoops, invalid email?');
+    });
+  });
+}
+
+// Store key value pairs in sessionStorage
+function store(key, value) {
+  userData[key] = value;
+  console.log(key, value);
+}
 
 $(document).ready(function() {
 
@@ -45,7 +72,6 @@ $(document).ready(function() {
 
   // Make any hashtag link scroll with animation to element with matching ID
   // Example: <a href="#features"> will scroll to element with ID #features
-  // Commonly found in the #hero of each page
   $('a[href*="#"]:not([href="#"])').click(function() {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
       var target = $(this.hash);
@@ -59,22 +85,21 @@ $(document).ready(function() {
     }
   });
 
-  // $('#mailchimp button').on('click', function() {
-  //
-  //   var $btn = $(this);
-  //   $btn.html('Subcribing...').prop('disabled', true);
-  //
-  //   var dataMailChimp = {
-  //     'EMAIL': $('#mailchimp [name="email"]').val()
-  //   };
-  //
-  //   console.log('Submitting subscription to Mailchimp ...', dataMailChimp);
-  //
-  //   $.when(mailChimp(dataMailChimp)).then(function() {
-  //     $btn.html('Done! Check email');
-  //   }, function() {
-  //     $btn.html('Whoops');
-  //   });
-  // });
+  // Submit contact form details to FormSpree
+  $('#contact #form button').on('click', function() {
+    submitContactForm();
+  });
+
+  // Observe all inputs and textareas for user interactions, store data as users type
+  $(document).on('keyup blur change', 'input, textarea', function() {
+    const key = $(this).attr('name');
+    const value = $(this).val();
+    if (key && value) {
+      store(key, value);
+      $(this).addClass('has-value');
+    } else {
+      $(this).removeClass('has-value');
+    }
+  });
 
 });
