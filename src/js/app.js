@@ -1,6 +1,9 @@
 const isProduction = location.host === 'www.petasitcheff.com' ? true : false;
 const environment = isProduction ? 'production' : 'staging';
 
+// Peta's email
+const email = 'peta@petasitcheff.com';
+
 // Where we store contact form details
 let userData = {};
 
@@ -17,7 +20,7 @@ if (ga) {
 function formSpree(data) {
   var deferred = $.Deferred();
   $.ajax({
-    url: 'https://formspree.io/jw@nabu.io',
+    url: `https://formspree.io/${email}`,
     method: 'POST',
     data: data,
     dataType: 'json'
@@ -32,8 +35,8 @@ function formSpree(data) {
 }
 
 function submitContactForm() {
-  const label = !isProduction ? '[TEST] ' : '';
-  const extra = !isProduction ? 'Given that this is test data, it\'s very likely Jan or Hannah working on your website :)' : '';
+  const label = isProduction ? '' : '[TEST] ';
+  const extra = isProduction ? '' : 'This is test data though. It\'s very likely Jan or Hannah working on your website this very moment :)';
   let data = {
     message: `${label} Someone just completed the contact form on ${location.href}. ${extra}`,
     _subject: `${label} Someone is contacting you`,
