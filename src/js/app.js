@@ -1,7 +1,7 @@
 const isProduction = location.host === 'www.petasitcheff.com' ? true : false;
 const environment = isProduction ? 'production' : 'staging';
 
-// Peta's email
+// Email we send Formspree data to
 const email = 'peta@petasitcheff.com';
 
 // Where we store contact form details
@@ -36,12 +36,15 @@ function formSpree(data) {
 
 function submitContactForm() {
   const label = isProduction ? '' : '[TEST] ';
-  const extra = isProduction ? '' : 'This is test data though. It\'s very likely Jan or Hannah working on your website this very moment :)';
+  const extra = isProduction ? '' : 'This is test data. It\'s very likely Jan or Hannah working on your website this very moment :)';
   let data = {
-    message: `${label} Someone just completed the contact form on ${location.href}. ${extra}`,
     _subject: `${label} Someone is contacting you`,
-    _format: 'plain'
+    _format: 'plain',
+    about: `Someone just completed the contact form on ${location.href}.`,
   };
+  if (!isProduction) {
+    data.about = 'This is test data. Most likely Jan or Hannah is now working on your website :)';
+  }
   const keys = ['name', 'email', 'phone', 'location', 'company', 'industry', 'message'];
   $.each(keys, function(i, key) {
     data[key] = userData[key] || '-';
