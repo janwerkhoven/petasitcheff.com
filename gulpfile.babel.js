@@ -77,7 +77,8 @@ function compileHtml() {
       data: {
         project: project,
         app_name: 'Peta Sitcheff',
-        app_url: 'http://www.petasitcheff.com/'
+        app_url: 'http://www.petasitcheff.com/',
+        linkedin: 'https://www.linkedin.com/in/peta-sitcheff-20b8b483/'
       }
     }))
     .pipe(prettify({ config: './jsbeautifyrc.json' }))

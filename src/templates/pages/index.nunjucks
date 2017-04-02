@@ -48,39 +48,41 @@
     </div>
   </section>
 
-  <section id="my-story">
+  <section id="story">
     <div>
       <div id="short">
         <div>
           <h2>My Story</h2>
           <hr>
           <p>Let me introduce myself, I'm Peta Sitcheff and I unashamedly love to sell. In fact, I love it to the point where most of the time, I don't even realise I'm doing it.</p>
-          <button>
+          <button class="arrow right">
             <span>Read More</span>
             {% include "partials/svg/arrow-right.html" %}
           </button>
         </div>
       </div>
       <div id="long">
-        <h2>My Story</h2>
-        <hr>
         <div>
-          <div class="left">
-            <p>Selling is a passion of mine that has afforded me an extraordinary career spanning over 17 years. I've worked for market leading organisations in a range of industries. Each organisation possessed a strong culture that I could thrive in. Success was recognised, challenges overcome and achievements rewarded, but most importantly for me, those I respected took the time to recognise a job well done.</p>
-            <p>My career was ticking along beautifully. Then one day that changed. I was so determined to succeed that I failed to recognise I no longer had professional boundaries. Work was 24/7. I was operating robotically, I was exhausted and I was on the edge of a burn out. I pretended everything was OK when in reality it was far from it.</p>
-            <p>Fundamentally I still loved what I did, I just didn't love the impact it was having on me anymore. It was completely unsustainable. This moment made me question things. How do I prevent this from happening again to myself or to any high performing salesperson? I knew there must be a better way.</p>
+          <h2>My Story</h2>
+          <hr>
+          <div>
+            <div class="left">
+              <p>Selling is a passion of mine that has afforded me an extraordinary career spanning over 17 years. I've worked for market leading organisations in a range of industries. Each organisation possessed a strong culture that I could thrive in. Success was recognised, challenges overcome and achievements rewarded, but most importantly for me, those I respected took the time to recognise a job well done.</p>
+              <p>My career was ticking along beautifully. Then one day that changed. I was so determined to succeed that I failed to recognise I no longer had professional boundaries. Work was 24/7. I was operating robotically, I was exhausted and I was on the edge of a burn out. I pretended everything was OK when in reality it was far from it.</p>
+              <p>Fundamentally I still loved what I did, I just didn't love the impact it was having on me anymore. It was completely unsustainable. This moment made me question things. How do I prevent this from happening again to myself or to any high performing salesperson? I knew there must be a better way.</p>
+            </div>
+            <div class="right">
+              <p>By drawing on my personal experiences, the triumphs and let's face it, a few failures along the way, I've devised a sales coaching practice which acknowledges that every salesperson has a unique operating style. This, along with loyal customer connections and a value based sales strategy, provides the foundation for your selling success.</p>
+              <p>I believe that practicing sales can and should be deeply rewarding for both you and the business you operate within. And most importantly it must be sustainable.</p>
+              <a href="{{ project.linkedin }}" target="_blank" class="button">LinkedIn</a>
+              <a href="#contact" class="button">Contact Peta</a>
+            </div>
           </div>
-          <div class="right">
-            <p>By drawing on my personal experiences, the triumphs and let's face it, a few failures along the way, I've devised a sales coaching practice which acknowledges that every salesperson has a unique operating style. This, along with loyal customer connections and a value based sales strategy, provides the foundation for your selling success.</p>
-            <p>I believe that practicing sales can and should be deeply rewarding for both you and the business you operate within. And most importantly it must be sustainable.</p>
-            <a href="#" class="button">LinkedIn</a>
-            <a href="#" class="button">Contact Peta</a>
-          </div>
+          <button class="arrow left">
+            {% include "partials/svg/arrow-left.html" %}
+            <span>Read Less</span>
+          </button>
         </div>
-        <button>
-          {% include "partials/svg/arrow-left.html" %}
-          <span>Read Less</span>
-        </button>
       </div>
     </div>
   </section>
@@ -365,7 +367,7 @@
           </a>
         </li>
         <li>
-          <a href="https://www.linkedin.com/in/peta-sitcheff-20b8b483/" target="_blank" title="Connect with Peta Sitcheff on Linkedin">
+          <a href="{{ project.linkedin }}" target="_blank" title="Connect with Peta Sitcheff on Linkedin">
             <img src="/assets/images/linkedin.svg" alt="Linkdein icon" width="40px" height="40px">
           </a>
         </li>

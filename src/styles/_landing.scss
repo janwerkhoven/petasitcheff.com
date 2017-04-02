@@ -1,4 +1,4 @@
-body#landing {
+#landing {
   #hero {
     position: relative;
     background: #0B0B0B url('/assets/images/hero-2000px.jpg') no-repeat 50% 50% / auto 100%;
@@ -190,7 +190,7 @@ body#landing {
     }
   }
 
-  #my-story {
+  #story {
     width: 100vw;
     height: 74vw;
     overflow: hidden;
@@ -216,30 +216,44 @@ body#landing {
       display: inline-block;
     }
     button {
-      display: flex;
-      flex-flow: row nowrap;
-      color: $peta-yellow;
-      justify-content: flex-end;
-      align-items: center;
-      background: none;
-      font-size: 2.4vw;
-      width: 100%;
-      margin-top: 2vw;
-      transition: transform 250ms ease-out;
-      transform: translateX(0vw);
-      &:hover {
-        transform: translateX(1vw);
-        svg {
-          transform: translateX(1vw);
-        }
-      }
-      svg {
-        width: 20px;
+      &.arrow {
+        display: flex;
+        flex-flow: row nowrap;
+        color: $peta-yellow;
+        align-items: center;
+        background: none;
+        font-size: 2.4vw;
+        width: 100%;
+        margin-top: 2vw;
         transition: transform 250ms ease-out;
         transform: translateX(0vw);
-      }
-      span {
-        margin: 0 1vw;
+        padding: 0;
+        &.right {
+          justify-content: flex-end;
+          &:hover {
+            transform: translateX(1vw);
+            svg {
+              transform: translateX(1vw);
+            }
+          }
+        }
+        &.left {
+          justify-content: flex-start;
+          &:hover {
+            transform: translateX(-1vw);
+            svg {
+              transform: translateX(-1vw);
+            }
+          }
+        }
+        svg {
+          width: 20px;
+          transition: transform 250ms ease-out;
+          transform: translateX(0vw);
+        }
+        span {
+          margin: 0 1vw;
+        }
       }
     }
     #short {
@@ -255,7 +269,21 @@ body#landing {
         margin: 0;
       }
     }
-    #long {}
+    #long {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      > div {
+        max-width: 78vw;
+        > div {
+          display: flex;
+          justify-content: space-between;
+          > div {
+            width: 44%;
+          }
+        }
+      }
+    }
   }
 
   #services-nav {

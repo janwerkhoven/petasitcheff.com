@@ -91,6 +91,34 @@ $(document).ready(function() {
     }
   });
 
+  // Animation logic for the "My story" section which can expands
+  let showing = 'short';
+  const $story = $('#story');
+  const $slide = $('#story>div');
+  // const $long = $('#story #hort');
+  // const $short = $('#story #long');
+  const config = {
+    duration: 1000,
+    easing: 'easeOutExpo'
+  };
+  $story.find('button').on('click', function() {
+    if (showing === 'short') {
+      // const longStoryHeight = $long.height();
+      // console.log(longStoryHeight);
+      // $story.velocity({ height: longStoryHeight }, config);
+      $story.velocity({ height: '92vw' }, config);
+      $slide.velocity({ translateX: '-100vw' }, config);
+      showing = 'long'
+    } else {
+      // const shortStoryHeight = $short.height();
+      // console.log(shortStoryHeight);
+      // $story.velocity({ height: shortStoryHeight }, config);
+      $story.velocity({ height: '74vw' }, config);
+      $slide.velocity({ translateX: '0vw' }, config);
+      showing = 'short';
+    }
+  });
+
   // Submit contact form details to FormSpree
   $('#contact #form button').on('click', function() {
     submitContactForm();
