@@ -110,9 +110,6 @@ $(document).ready(function() {
       $slide.velocity({ translateX: '-100vw' }, config);
       showing = 'long'
     } else {
-      // const shortStoryHeight = $short.height();
-      // console.log(shortStoryHeight);
-      // $story.velocity({ height: shortStoryHeight }, config);
       $story.velocity({ height: '74vw' }, config);
       $slide.velocity({ translateX: '0vw' }, config);
       showing = 'short';

@@ -28,7 +28,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const babel = require('gulp-babel');
 const concat = require('gulp-concat');
 const connect = require('gulp-connect');
-// const data = require('gulp-data');
+const data = require('gulp-data');
 const del = require('del');
 const eslint = require('gulp-eslint');
 const gulp = require('gulp');
@@ -42,34 +42,31 @@ const sitemap = require('gulp-sitemap');
 const size = require('gulp-size');
 const uglify = require('gulp-uglify');
 
-// Config for gulp-size
-const s = size();
-
 // Delete the dist folder
-function deleteDist() {
+gulp.task('deleteDist', function() {
   return del(['dist']);
-}
+});
 
 // Delete the temp folder
-function deleteTemp() {
+gulp.task('deleteTemp', function() {
   return del(['temp']);
-}
+});
 
-// Copy over the files in the public folder "as they are" to the dist folder
-function copyPublic() {
+// Copy over all files from public folder "as they are" to the dist folder
+gulp.task('copyPublic', function() {
   return gulp.src('src/public/**/*')
     .pipe(gulp.dest('dist/'))
     .pipe(connect.reload());
-}
+});
 
 // Copy the outdatedbrowser script
-function copyOutdatedBrowser() {
+gulp.task('copyOutdatedBrowser', function() {
   return gulp.src('bower_components/outdated-browser/outdatedbrowser/outdatedbrowser.min.js')
     .pipe(gulp.dest('dist/assets/js/'))
-}
+});
 
 // Compile all HTML
-function compileHtml() {
+gulp.task('compileHtml', function() {
   return gulp.src('src/templates/pages/**/*.+(html|nunjucks)')
     // .pipe(data(function() { return require('./src/templates/data/people.json') }))
     .pipe(nunjucksRender({
@@ -90,10 +87,10 @@ function compileHtml() {
     }))
     .pipe(gulp.dest('dist'))
     .pipe(connect.reload());
-}
+});
 
 // Compile all CSS
-function compileCss() {
+gulp.task('compileCss', function() {
   return gulp.src('src/styles/app.scss')
     .pipe(sass({
       outputStyle: 'expanded',
@@ -109,19 +106,21 @@ function compileCss() {
       keepSpecialComments: 'none'
     }))
     .pipe(rename('styles.min.css'))
-    .pipe(size({ showFiles: true }))
     .pipe(gulp.dest('dist/assets/css'))
     .pipe(connect.reload());
-}
+});
 
-function lintJs() {
+// Lint app JS, warn about bad JS, break on errors
+gulp.task('lintJs', function() {
   return gulp.src(['src/js/app.js'])
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError())
-}
+});
 
-function transformAndMinifyJs() {
+// Create temp/scripts.js
+// Transform app JS with Babel ES6 + minify
+gulp.task('transformAndMinifyJs', function() {
   return gulp.src(['src/js/app.js'])
     .pipe(babel({ presets: ['es2015'] }))
     .pipe(rename('scripts.js'))
@@ -129,10 +128,11 @@ function transformAndMinifyJs() {
     .pipe(uglify({ preserveComments: 'license' }))
     .pipe(rename('scripts.min.js'))
     .pipe(gulp.dest('temp'));
-}
+});
 
-// Merge the vendor JS and project JS (unminified)
-function concatJs() {
+// Create scripts.js
+// Merge the vendor JS and app JS (unminified)
+gulp.task('concatJs', function() {
   return gulp.src([
       'bower_components/jquery/dist/jquery.min.js',
       'bower_components/velocity/velocity.min.js',
@@ -140,73 +140,119 @@ function concatJs() {
       'temp/scripts.js'
     ])
     .pipe(concat('scripts.js'), { newLine: '\n\n' })
-    .pipe(size({ showFiles: true }))
     .pipe(gulp.dest('dist/assets/js'))
     .pipe(connect.reload());
-}
 
-// Merge the vendor JS and minified project JS
-function concatJsMin() {
+});
+
+// Create scripts.min.js
+// Merge the vendor JS and minified app JS
+gulp.task('concatJsMin', function() {
   return gulp.src([
       'bower_components/jquery/dist/jquery.min.js',
       'bower_components/velocity/velocity.min.js',
       'src/js/vendor/google-analytics.js',
       'temp/scripts.min.js'
     ])
-    .pipe(size({ showFiles: true, showTotal: false }))
     .pipe(concat('scripts.min.js'), { newLine: '\n\n\n\n' })
     .pipe(replace(/^\s*\r?\n/gm, ''))
-    .pipe(size({ showFiles: true }))
     .pipe(gulp.dest('dist/assets/js'))
     .pipe(connect.reload());
-}
+});
 
-// Rerun the task when a file changes
-function watch() {
-  gulp.watch(['src/public/**/*'], copyPublic);
-  gulp.watch(['src/templates/**/*.+(html|nunjucks|json)'], compileHtml);
-  gulp.watch(['src/styles/**/*.scss'], compileCss);
-  // gulp.watch(['src/js/**/*.js'], compileJs); // TODO
-  // gulp.watch(['gulpfile.js', 'package.json', 'bower.json'], build); // TODO
-}
+// Compile all JS
+gulp.task('compileJs',
+  gulp.series(
+    gulp.series(
+      'lintJs',
+      'transformAndMinifyJs'
+    ),
+    gulp.parallel(
+      'concatJs',
+      'concatJsMin',
+      'copyOutdatedBrowser'
+    )
+  )
+);
+
+// Watch all files and run tasks when files change
+gulp.task('watch', function() {
+  gulp.watch(['src/public/**/*'], gulp.parallel('copyPublic'));
+  gulp.watch(['src/templates/**/*.+(html|nunjucks|json)'], gulp.parallel('compileHtml'));
+  gulp.watch(['src/styles/**/*.scss'], gulp.parallel('compileCss'));
+  gulp.watch(['src/js/**/*.js', '.babelrc', '.eslintrc'], gulp.parallel('compileJs'));
+  gulp.watch(['gulpfile.babel.js', 'package.json', 'bower.json'], gulp.parallel('build'));
+});
 
 // Run a local server on http://localhost:9000
-function serve() {
+gulp.task('serve', function() {
+  connect.server({
+    root: 'dist',
+    livereload: true,
+    port: 9000
+  });
+});
+
+// Build the entire dist folder
+gulp.task('build',
+  gulp.series(
+    'deleteDist',
+    gulp.parallel(
+      'copyPublic',
+      'compileHtml',
+      'compileCss',
+      'compileJs'
+    ),
+    'deleteTemp'
+  )
+);
+
+// Default gulp command
+gulp.task('default',
+  gulp.series(
+    'build',
+    gulp.parallel(
+      'watch',
+      'serve'
+    )
+  )
+);
+
+// Serve the dist files on http://localhost:9000/
+gulp.task('serve', function() {
   connect.server({
     root: 'dist',
     livereload: true,
     port: 9000,
   });
-}
+});
 
-// Create Gulp commands
-gulp.task(watch);
-gulp.task(serve);
-gulp.task('compileJs',
+gulp.task('report', function() {
+  return gulp.src(['dist/**/*'])
+    .pipe(size({
+      showFiles: true,
+      showTotal: false
+    }))
+})
+
+// Build the entire dist folder
+gulp.task('build',
   gulp.series(
-    gulp.series(
-      lintJs,
-      transformAndMinifyJs
+    'deleteDist',
+    gulp.parallel(
+      'copyPublic',
+      'compileHtml',
+      'compileCss',
+      'compileJs'
     ),
     gulp.parallel(
-      concatJs,
-      concatJsMin,
-      copyOutdatedBrowser
+      'deleteTemp',
+      'report'
     )
   )
 );
-gulp.task('build',
-  gulp.series(
-    deleteDist,
-    gulp.parallel(
-      copyPublic,
-      compileHtml,
-      compileCss,
-      'compileJs'
-    ),
-    deleteTemp
-  )
-);
+
+// Default gulp command
 gulp.task('default',
   gulp.series(
     'build',
