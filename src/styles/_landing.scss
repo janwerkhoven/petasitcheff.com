@@ -29,9 +29,9 @@
         background-image: url('/assets/images/hero-1200px.jpg');
         height: 400px;
       }
-      @media (max-width: 400px) {
+      @media (max-width: 450px) {
         height: 178vw;
-        background-size: 185vw;
+        background-size: 172vw;
         background-position-y: -10vw;
         background-position-x: -30vw;
         max-height: none;
@@ -50,7 +50,7 @@
       position: absolute;
       left: 3vw;
       top: 3vw;
-      @media (max-width: 400px) {
+      @media (max-width: 600px) {
         left: 5vw;
         top: 5vw;
       }
@@ -72,7 +72,7 @@
       display: flex;
       flex-flow: column nowrap;
       align-items: flex-end;
-      @media (max-width: 400px) {
+      @media (max-width: 600px) {
         bottom: 0;
         right: 5vw;
       }
