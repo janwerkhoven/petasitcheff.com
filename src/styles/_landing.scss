@@ -393,15 +393,15 @@
       font-family: $neuzeit-heavy;
       font-size: 4.2vw;
       line-height: 130%;
-      &:after {
-        content: ' ';
-        background: $peta-yellow;
-        height: 2px;
-        bottom: 0;
-        width: 30px;
-        position: absolute;
-        left: 0;
-      }
+      // &:after {
+      //   content: ' ';
+      //   background: $peta-yellow;
+      //   height: 2px;
+      //   bottom: 0;
+      //   width: 30px;
+      //   position: absolute;
+      //   left: 0;
+      // }
     }
     p {
       color: white;
