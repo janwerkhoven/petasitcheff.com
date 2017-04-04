@@ -584,12 +584,21 @@
   section.split {
     display: flex;
     flex-flow: row nowrap;
+    @media (max-width: 640px) {
+      flex-direction: column;
+    }
     > div {
       width: 50%;
       padding: 0;
       max-width: none;
       &.text {
         padding: 8vw;
+      }
+      @media (max-width: 640px) {
+        order: 1;
+        &.text {
+          order: 2;
+        }
       }
       .includes {
         border: 0.2vw solid white;
