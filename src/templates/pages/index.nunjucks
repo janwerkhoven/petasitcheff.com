@@ -8,7 +8,7 @@
       <img src="/assets/images/peta-sitcheff-logo.svg" alt="Peta Sitcheff logo" width="233" height="480"> {% include "partials/svg/hamburger.html" %}
     </div>
     <div class="right">
-      <h1>Sales <br>Coaching <br>&amp;&nbsp;Strategy</h1>
+      <h1>Sales<br/> Coaching<br/> &amp; Strategy </h1>
       <h2>Authentic, intentional, sustainable</h2>
       <a href="#welcome">
           {% include "partials/svg/arrow-down.html" %}
@@ -155,7 +155,8 @@
           <h3>You</h3>
           <hr>
           <p>Together we'll identify your inner traits and explore ways to turn them into valuable sales tools. You'll discover the role authenticity plays in your selling practice and develop a framework that sets the foundations for your personal selling
-            style.</p>
+            style.
+          </p>
           <a href="#enquire">Enquire</a>
         </div>
         <div class="right">
