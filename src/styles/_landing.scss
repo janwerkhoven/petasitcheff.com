@@ -174,6 +174,19 @@
       line-height: 170%;
       margin: 8vw;
       width: 42vw;
+      @media (max-width: 700px) {
+        font-size: 3.2vw;
+      }
+      @media (max-width: 600px) {
+        font-size: 4.2vw;
+      }
+      @media (max-width: 450px) {
+        font-size: 6vw;
+        min-width: 280px;
+        width: 84vw;
+        margin-top: 25vw;
+        margin-bottom: 40vw;
+      }
       u {
         position: relative;
         text-decoration: none;
