@@ -347,10 +347,6 @@
     hr {
       background: white;
       margin: 0 0 3.6vw;
-      @media (max-width: 600px) {
-        min-width: 6vw;
-        min-height: 0.6vw;
-      }
     }
     ul {
       display: flex;
@@ -420,8 +416,7 @@
     }
     @include retina {
        @media (max-width: 600px){
-        background-image: url('/assets/images/1on1-1200px.jpg');
-        background: #0b0b0c url('/assets/images/1on1-2000px.jpg') no-repeat 140% -10%/auto 60%;
+        background: #0b0b0c url('/assets/images/1on1-1200px.jpg') no-repeat -80vw -4vw/auto 110vw;
       }
     }
     > div {
@@ -453,6 +448,10 @@
     }
     p {
       color: white;
+      @media (max-width: 600px) {
+        font-size: 4vw;
+        margin-top: 6vw;
+      }
     }
     hr {
       margin: 1vw 0 3.6vw;
@@ -467,6 +466,14 @@
       padding: 1.4vw 5vw 1.1vw;
       margin-top: 2vw;
       background: rgba($peta-yellow, 0);
+      @media (max-width: 600px) {
+        font-size: 4vw;
+        padding: 2.4vw 8vw 2.1vw;
+      }
+      @media (max-width: 450px) {
+        font-size: 6vw;
+        padding: 3.4vw 12vw 3.1vw;
+      }
       &:hover {
         background: rgba($peta-yellow, 0.3);
       }
