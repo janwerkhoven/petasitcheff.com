@@ -330,30 +330,43 @@
     background: $peta-yellow-bg;
     background: #f5e401;
     > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       max-width: none;
       padding: 8vw 5vw;
-      > div {
-        margin-left: 36vw;
-      }
     }
     h2 {
       color: white;
       font-family: $neuzeit-heavy;
       font-size: 5vw;
+      @media (max-width: 600px) {
+        font-size: 10vw;
+      }
     }
     hr {
       background: white;
       margin: 0 0 3.6vw;
+      @media (max-width: 600px) {
+        min-width: 6vw;
+        min-height: 0.6vw;
+      }
     }
     ul {
       display: flex;
       flex-flow: row nowrap;
+      @media (max-width: 600px) {
+        flex-wrap: wrap;
+      }
       li {
         width: 25%;
         &:nth-child(even) {
           a {
             padding-top: 6vw;
           }
+        }
+        @media (max-width: 600px) {
+          width: 50%;
         }
         a {
           display: block;
@@ -369,6 +382,11 @@
           box-sizing: border-box;
           transition: all 300ms ease-out;
           transition-property: background, transform;
+          @media (max-width: 600px) {
+            font-size: 6vw;
+            height: 54vw;
+            padding-left: 4vw 4.8vw 0;
+          }
           &:hover {
             transform: translateY(1vw);
             svg {
@@ -382,6 +400,9 @@
             height: auto;
             display: block;
             margin-top: 1vw;
+            @media (max-width: 600px) {
+              width: 10vw;
+            }
             path {
               fill: white;
             }
