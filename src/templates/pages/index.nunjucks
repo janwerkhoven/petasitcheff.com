@@ -39,8 +39,7 @@
 <section id="guidance-quote">
   <div>
     <div class="background"></div>
-    <blockquote cite="{{ project.url }}">&ldquo;I wholeheartedly believe that with the right
-      <u>guidance</u>, we each have the ability to engineer our exceptional selling selves.&rdquo;
+    <blockquote cite="{{ project.url }}">&ldquo;I wholeheartedly believe that with the right g<u>uidance</u>, we each have the ability to engineer our exceptional selling selves.&rdquo;
     </blockquote>
   </div>
 </section>

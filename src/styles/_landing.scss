@@ -192,12 +192,12 @@
         text-decoration: none;
         &:after {
           content: ' ';
-          background: $peta-yellow;
+          background: #f5e401;
           height: 2px;
           bottom: 0;
-          width: 84%;
+          width: 97%;
           position: absolute;
-          right: 0;
+          right: 2px;
         }
       }
     }
