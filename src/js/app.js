@@ -99,7 +99,7 @@ $(document).ready(function() {
     duration: 1000,
     easing: 'easeOut'
   };
-  $('#menu-burger,.close-menu').on('click', function() {
+  $('#menu-burger,.close-menu,#navigation-links>li>a').on('click', function() {
     if (showingMenu) {
       $menu.removeClass('active');
       $main.removeClass('menu-active');

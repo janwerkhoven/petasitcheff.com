@@ -63,9 +63,11 @@
     #social-media-links {
       display: flex;
       margin: 2vw 0;
-
       li {
         margin-right: 1vw;
+        @media (max-width: 500px) {
+          margin-left: 2vw;
+        }
         a {
           img {
             width: 40px;
