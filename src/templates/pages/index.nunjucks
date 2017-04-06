@@ -365,22 +365,22 @@
     <ul class="social">
       <li>
         <a href="https://www.facebook.com/peta.sitcheff" target="_blank" title="Make friends with Peta on Facebook">
-          <img src="/assets/images/facebook.svg" alt="Facebook icon" width="40px" height="40px">
+          <img src="/assets/images/social/facebook.svg" alt="Facebook icon" width="40px" height="40px">
         </a>
       </li>
       <li>
         <a href="https://twitter.com/PetaSitcheff" target="_blank" title="Follow Peta Sitcheff on Twitter">
-          <img src="/assets/images/twitter.svg" alt="Twitter icon" width="40px" height="40px">
+          <img src="/assets/images/social/twitter.svg" alt="Twitter icon" width="40px" height="40px">
         </a>
       </li>
       <li>
         <a href="{{ project.linkedin }}" target="_blank" title="Connect with Peta Sitcheff on Linkedin">
-          <img src="/assets/images/linkedin.svg" alt="Linkdein icon" width="40px" height="40px">
+          <img src="/assets/images/social/linkedin.svg" alt="Linkdein icon" width="40px" height="40px">
         </a>
       </li>
       <li>
         <a href="https://www.instagram.com/petasitcheff/" target="_blank" title="See pictures of Peta on Instagram">
-          <img src="/assets/images/instagram.svg" alt="Instagram icon" width="40px" height="40px">
+          <img src="/assets/images/social/instagram.svg" alt="Instagram icon" width="40px" height="40px">
         </a>
       </li>
     </ul>

@@ -91,6 +91,33 @@ $(document).ready(function() {
     }
   });
 
+  //Add toggle effect for sliding #menu
+  let showingMenu = false;
+  const $menu = $('#menu');
+  const $main = $('main');
+  $('#Layer_1,.close-menu').on('click', function() {
+    if (showingMenu) {
+      $menu.velocity('stop').velocity({
+        translateX: '-100%'
+      }, config);
+      $main.velocity('stop').velocity({
+        translateX: '0vw'
+      }, config);
+      showingMenu = false;
+      event.preventDefault();
+    } else {
+      $menu.velocity('stop').velocity({
+        translateX: '0%'
+      }, config);
+      $main.velocity('stop').velocity({
+        translateX: '25vw'
+      }, config);
+      showingMenu = true;
+      event.preventDefault();
+    }
+    return showingMenu;
+  });
+
   // Animation logic for the "My story" section which can expands
   let showing = 'short';
   const $story = $('#story');
@@ -106,12 +133,20 @@ $(document).ready(function() {
       // const longStoryHeight = $long.height();
       // console.log(longStoryHeight);
       // $story.velocity({ height: longStoryHeight }, config);
-      $story.velocity({ height: '92vw' }, config);
-      $slide.velocity({ translateX: '-100vw' }, config);
+      $story.velocity({
+        height: '92vw'
+      }, config);
+      $slide.velocity({
+        translateX: '-100vw'
+      }, config);
       showing = 'long'
     } else {
-      $story.velocity({ height: '74vw' }, config);
-      $slide.velocity({ translateX: '0vw' }, config);
+      $story.velocity({
+        height: '74vw'
+      }, config);
+      $slide.velocity({
+        translateX: '0vw'
+      }, config);
       showing = 'short';
     }
   });
