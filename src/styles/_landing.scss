@@ -519,22 +519,42 @@
       padding: 10vw 5vw 8vw;
       display: flex;
       @media (max-width: 600px) {
-        padding: 10vw 5vw 8vw;
+        padding: 10vw 8vw 8vw;
         flex-direction: column-reverse;
       }
       h2 {
         margin-top: 1vw;
+        color: white;
+        font-family: $neuzeit-heavy;
+        font-size: 4.2vw;
+        line-height: 130%;
+        @media (max-width: 600px) {
+          font-size: 10vw;
+        }
+      }
+      p {
+        color: white;
+        margin: 0 0 1vw;
+        @media (max-width: 600px) {
+          font-size: 3.6vw;
+        }
       }
       > .callout {
         flex-shrink: 0;
         width: 39vw;
         padding: 3.2vw 3.6vw;
         @media (max-width: 600px) {
+          width: auto;
           margin-left: 0;
+          padding: 8vw;
         }
         blockquote {
           font-size: 2.4vw;
           line-height: 150%;
+          @media (max-width: 600px) {
+            font-size: 5vw;
+            line-height: 160%;
+          }
         }
       }
     }
@@ -564,6 +584,9 @@
             color: $peta-yellow;
             font-size: 4.9vw;
             line-height: 120%;
+            @media (max-width: 600px) {
+              font-size: 5vw;
+            }
           }
           hr {
             margin: 1vw 0 3vw;
@@ -583,6 +606,9 @@
           .left {
             width: 100%;
             padding-right: 4vw;
+            @media (max-width: 600px) {
+              margin-top: 15vw;
+            }
           }
           .right {
             width: 33%;
@@ -643,6 +669,9 @@
               p {
                 color: white;
                 margin: 0 0 1vw;
+                @media (max-width: 600px) {
+                  font-size: 3.6vw;
+                }
               }
               a {
                 font-size: 1.25vw;
@@ -689,6 +718,9 @@
           line-height: 100%;
           font-family: $neuzeit-book;
           margin-bottom: 1vw;
+          @media (max-width: 600px) {
+            font-size: 6vw;
+          }
         }
         ul {
           li {
@@ -714,9 +746,12 @@
     }
     h2 {
       color: #fff;
-      font-size: 5vw;
       line-height: 120%;
-      color: white;
+      font-size: 3.8vw;
+      margin: 0;
+      @media (max-width: 600px) {
+        font-size: 10vw;
+      }
     }
     hr {
       margin: 0.4vw 0.4vw 3.4vw;
@@ -724,6 +759,10 @@
     p {
       color: $peta-brown;
       margin: 0;
+      @media (max-width: 600px) {
+        font-size: 4vw;
+        margin-top: 6vw;
+      }
       &+p {
         margin: 1.6vw 0 0;
       }
@@ -766,12 +805,19 @@
       color: $peta-yellow;
       font-size: 3.8vw;
       margin: 0;
+      line-height: 120%;
+      @media (max-width: 600px) {
+        font-size: 10vw;
+      }
     }
     h3 {
       color: $peta-yellow;
       font-size: 2vw;
       font-family: $neuzeit-book;
       margin-bottom: 0.9vw;
+      @media (max-width: 700px) {
+        font-size: 5vw;
+      }
     }
     .button {
       background: rgba($peta-yellow, 0);
