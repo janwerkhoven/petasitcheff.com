@@ -91,6 +91,49 @@ $(document).ready(function() {
     }
   });
 
+  //Add toggle effect for sliding #menu
+  let showingMenu = false;
+  const $menu = $('#menu');
+  const $main = $('main');
+  const config2 = {
+    duration: 1000,
+    easing: 'easeOut'
+  };
+  $('#menu-burger,.close-menu,#navigation-links>li>a').on('click', function() {
+    if (showingMenu) {
+      $menu.removeClass('active');
+      $main.removeClass('menu-active');
+      showingMenu = false;
+      event.preventDefault();
+    } else {
+      $menu.addClass('active');
+      $main.addClass('menu-active');
+      showingMenu = true;
+      event.preventDefault();
+    }
+    return showingMenu;
+  });
+
+  const burgerPos_y = $('#menu-burger').offset().top;
+  $(document).on('scroll', function() {
+    let scrollPos_y = $(window).scrollTop();
+    if (scrollPos_y + $(window).width() / 33 > burgerPos_y) {
+      // $('#menu-burger').css('transform', 'translateY(' + (scrollPos_y + ($(window).width() / 33.33) - burgerPos_y) + 'px)');
+      $('#menu-burger').css({
+        'position': 'fixed',
+        'top': '3vw',
+        'left': '3vw',
+        'margin': 0
+      });
+    } else {
+      // $('#menu-burger').css('transform', 'translateY(0)');
+      $('#menu-burger').css({
+        'position': 'static',
+        'margin-top': '3vw'
+      });
+    }
+  });
+
   // Animation logic for the "My story" section which can expands
   let showing = 'short';
   const $story = $('#story');
@@ -106,12 +149,20 @@ $(document).ready(function() {
       // const longStoryHeight = $long.height();
       // console.log(longStoryHeight);
       // $story.velocity({ height: longStoryHeight }, config);
-      $story.velocity({ height: '92vw' }, config);
-      $slide.velocity({ translateX: '-100vw' }, config);
+      $story.velocity({
+        height: '92vw'
+      }, config);
+      $slide.velocity({
+        translateX: '-100vw'
+      }, config);
       showing = 'long'
     } else {
-      $story.velocity({ height: '74vw' }, config);
-      $slide.velocity({ translateX: '0vw' }, config);
+      $story.velocity({
+        height: '74vw'
+      }, config);
+      $slide.velocity({
+        translateX: '0vw'
+      }, config);
       showing = 'short';
     }
   });

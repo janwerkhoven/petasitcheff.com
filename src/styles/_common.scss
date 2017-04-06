@@ -71,6 +71,10 @@ hr {
   height: 0.3vw;
   background: $peta-yellow;
   border: 0;
+  @media (max-width: 600px) {
+    min-width: 6vw;
+    min-height: 0.6vw;
+  }
 }
 
 h2 {
