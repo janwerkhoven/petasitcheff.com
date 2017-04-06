@@ -1,9 +1,16 @@
 #landing {
   position: relative;
-  main {
-    transition: transform ease-out 400ms;
-    &.menu-active {
-      transform: translateX(25vw);
+  @media (min-width: 599px) {
+    main {
+      transition: transform ease-out 400ms;
+      &.menu-active {
+        transform: translateX(25vw);
+        #hero {
+          .right {
+            opacity: 0;
+          }
+        }
+      }
     }
   }
   #hero {
@@ -87,6 +94,7 @@
       display: flex;
       flex-flow: column nowrap;
       align-items: flex-end;
+      transition: opacity 400ms ease-out;
       @media (max-width: 600px) {
         bottom: 0;
         right: 5vw;
