@@ -95,27 +95,43 @@ $(document).ready(function() {
   let showingMenu = false;
   const $menu = $('#menu');
   const $main = $('main');
-  $('#Layer_1,.close-menu').on('click', function() {
+  const config2 = {
+    duration: 1000,
+    easing: 'easeOut'
+  };
+  $('#menu-burger,.close-menu').on('click', function() {
     if (showingMenu) {
-      $menu.velocity('stop').velocity({
-        translateX: '-100%'
-      }, config);
-      $main.velocity('stop').velocity({
-        translateX: '0vw'
-      }, config);
+      $menu.removeClass('active');
+      $main.removeClass('menu-active');
       showingMenu = false;
       event.preventDefault();
     } else {
-      $menu.velocity('stop').velocity({
-        translateX: '0%'
-      }, config);
-      $main.velocity('stop').velocity({
-        translateX: '25vw'
-      }, config);
+      $menu.addClass('active');
+      $main.addClass('menu-active');
       showingMenu = true;
       event.preventDefault();
     }
     return showingMenu;
+  });
+
+  const burgerPos_y = $('#menu-burger').offset().top;
+  $(document).on('scroll', function() {
+    let scrollPos_y = $(window).scrollTop();
+    if (scrollPos_y + $(window).width() / 33 > burgerPos_y) {
+      // $('#menu-burger').css('transform', 'translateY(' + (scrollPos_y + ($(window).width() / 33.33) - burgerPos_y) + 'px)');
+      $('#menu-burger').css({
+        'position': 'fixed',
+        'top': '3vw',
+        'left': '3vw',
+        'margin': 0
+      });
+    } else {
+      // $('#menu-burger').css('transform', 'translateY(0)');
+      $('#menu-burger').css({
+        'position': 'static',
+        'margin-top': '3vw'
+      });
+    }
   });
 
   // Animation logic for the "My story" section which can expands

@@ -1,4 +1,11 @@
 #landing {
+  position: relative;
+  main {
+    transition: transform ease-out 400ms;
+    &.menu-active {
+      transform: translateX(25vw);
+    }
+  }
   #hero {
     position: relative;
     background: #0B0B0B url('/assets/images/hero-2000px.jpg') no-repeat 50% 50% / auto 100%;
@@ -65,9 +72,12 @@
         width: 50px;
         margin-top: 2vw;
         cursor: pointer;
+        transition: transform ease-out 90ms;
+        z-index: 2;
         @media (max-width: 450px) {
           display: block;
         }
+
       }
     }
     .right {
