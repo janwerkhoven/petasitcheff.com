@@ -61,9 +61,10 @@
         min-width: 60px;
       }
       svg {
-        display: none;
+        // display: none;
         width: 50px;
         margin-top: 2vw;
+        cursor: pointer;
         @media (max-width: 450px) {
           display: block;
         }
@@ -416,7 +417,7 @@
     }
     @include retina {
        @media (max-width: 600px){
-        background: #0b0b0c url('/assets/images/1on1-1200px.jpg') no-repeat -80vw -4vw/auto 110vw;
+        background: #0b0b0c url('/assets/images/1on1-1200px.jpg') no-repeat -80vw -4vw / auto 110vw;
       }
     }
     > div {
@@ -499,13 +500,20 @@
     > div {
       padding: 10vw 5vw 8vw;
       display: flex;
+      @media (max-width: 600px) {
+        padding: 10vw 5vw 8vw;
+        flex-direction: column-reverse;
+      }
       h2 {
         margin-top: 1vw;
       }
-      .callout {
+      > .callout {
         flex-shrink: 0;
         width: 39vw;
         padding: 3.2vw 3.6vw;
+        @media (max-width: 600px) {
+          margin-left: 0;
+        }
         blockquote {
           font-size: 2.4vw;
           line-height: 150%;
