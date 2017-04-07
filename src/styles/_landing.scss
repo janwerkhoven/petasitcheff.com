@@ -521,6 +521,9 @@
       @media (max-width: 600px) {
         padding: 10vw 8vw 8vw;
         flex-direction: column-reverse;
+        > .left {
+          margin-top: 8vw;
+        }
       }
       h2 {
         margin-top: 1vw;
@@ -539,6 +542,7 @@
           font-size: 3.6vw;
         }
       }
+
       > .callout {
         flex-shrink: 0;
         width: 39vw;
@@ -563,7 +567,14 @@
   #packages-list {
     > div {
       padding: 0 5vw 11vw;
+      overflow: visible;
+      @media (max-width: 600px) {
+        padding: 0 8vw 11vw;
+      }
       > ul {
+        @media (max-width: 600px) {
+          padding-top: 10vw;
+        }
         > li {
           position: relative;
           display: flex;
@@ -571,6 +582,11 @@
           padding: 4vw 3vw 4vw 8vw;
           background: white;
           margin-bottom: 3vw;
+          @media (max-width: 600px) {
+            flex-direction: column;
+            padding: 10vw 6vw 6vw;
+            margin-bottom: 10vw;
+          }
           img {
             position: absolute;
             left: 0;
@@ -578,6 +594,13 @@
             width: 9vw;
             height: 9vw;
             transform: translate(-4.5vw, -4.5vw);
+            @media (max-width: 600px) {
+              left: 50%;
+              top: 0;
+              width: 12vw;
+              height: 12vw;
+              transform: translate(-6vw, -6vw);
+            }
           }
           h3 {
             position: relative;
@@ -585,7 +608,7 @@
             font-size: 4.9vw;
             line-height: 120%;
             @media (max-width: 600px) {
-              font-size: 5vw;
+              font-size: 9vw;
             }
           }
           hr {
@@ -596,28 +619,40 @@
             font-family: $neuzeit-heavy;
             color: $peta-yellow;
             text-decoration: underline;
+            @media (max-width: 600px) {
+              font-size: 4.25vw;
+            }
             &:hover {
               text-decoration: none;
             }
           }
           p {
             color: $paragraph-grey;
+            margin: 0 0 1vw;
+            @media (max-width: 600px) {
+              font-size: 3.6vw;
+            }
           }
           .left {
             width: 100%;
             padding-right: 4vw;
-            @media (max-width: 600px) {
-              margin-top: 15vw;
-            }
           }
           .right {
             width: 33%;
             flex-shrink: 0;
+            @media (max-width: 600px) {
+              width: auto;
+            }
             h4 {
               font-family: $neuzeit-book;
               font-size: 2.7vw;
               margin-top: 1.58vw;
               margin-bottom: 1vw;
+              @media (max-width: 600px) {
+                display: block;
+                font-size: 5.7vw;
+                margin: 5vw 0 2vw;
+              }
             }
             ul {
               li {
@@ -632,6 +667,13 @@
                   height: 0.5vw;
                   background: $peta-yellow;
                   border-radius: 50%;
+                  @media (max-width: 600px) {
+                    left: -1vw;
+                    top: 2.25vw;
+                    width: 1vw;
+                    height: 1vw;
+                    border-radius: 100%;
+                  }
                 }
                 p {
                   margin: 0;
