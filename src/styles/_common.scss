@@ -152,6 +152,9 @@ input {
       display: inline-block;
       position: relative;
       text-decoration: none;
+      @media (max-width: 600px) {
+        display: inline-block;
+      }
       &:after {
         content: ' ';
         background: white;

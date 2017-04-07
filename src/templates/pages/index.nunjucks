@@ -264,7 +264,7 @@
   <div>
     <div class="background"></div>
     <blockquote cite="{{ project.url }}">&ldquo;Don't underestimate the power of your
-      <u>authentic awareness</u> and the value that brings to your customers.&rdquo;
+      <u>authentic&nbsp;awareness</u> and the value that brings to your customers.&rdquo;
     </blockquote>
   </div>
 </section>

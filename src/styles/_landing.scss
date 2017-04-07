@@ -240,9 +240,17 @@
     }
     blockquote {
       text-align: right;
+      @media (max-width: 700px) {
+        width: 60vw;
+      }
+      @media (max-width: 600px) {
+        width: 70vw;
+      }
       u {
         &:after {
           width: 100%;
+          right: 0;
+          bottom: 0;
         }
       }
     }
@@ -757,6 +765,9 @@
       width: 50%;
       padding: 0;
       max-width: none;
+      @media (max-width: 600px) {
+        width: auto;
+      }
       &.text {
         padding: 8vw;
       }
@@ -767,15 +778,33 @@
         }
       }
       &.image {
-        @media (max-width: 600px) {
+        position: relative;
+        img {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          width: 55vw;
+          height: auto;
+          min-height: 100%;
+        }
+        @media (max-width: 700px) {
+          img {
+
+            height: 102%;
+            width: auto;
+          }
+        }
+        @media (max-width: 640px) {
           width: 102vw;
           height: 102vw;
-          position: relative;
           img {
-            position: absolute;
             left: 50vw;
             top: 50vw;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, -33%);
+            width: 100vw;
+            min-width: 100%;
+            height: auto;
           }
         }
       }
@@ -893,6 +922,9 @@
       font-family: $neuzeit-book;
       margin-bottom: 0.9vw;
       @media (max-width: 700px) {
+        font-size: 3vw;
+      }
+      @media (max-width: 500px) {
         font-size: 5vw;
       }
     }
