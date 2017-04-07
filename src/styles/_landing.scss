@@ -142,11 +142,19 @@
     }
     h2 {
       color: $peta-yellow;
+      font-size: 5vw;
+      @media (max-width: 600px) {
+        font-size: 10vw;
+      }
     }
     h3 {
-      font-size: 2.2vw;
       font-family: $neuzeit-book;
       line-height: 100%;
+      font-size: 2.2vw;
+      margin-bottom: 0.9vw;
+      @media (max-width: 600px) {
+        font-size: 5vw;
+      }
     }
     hr {
       margin: 2vw 0 1.6vw;
@@ -155,9 +163,26 @@
       line-height: 170%;
       margin: 0 0 1.6vw;
       font-size: 1.25vw;
+      @media (max-width: 800px) {
+        font-size: 2vw;
+      }
+      @media (max-width: 600px) {
+        font-size: 3.6vw;
+        &:nth-last-child(1) {
+          display: none;
+        }
+      }
     }
     .left {
       width: 40vw;
+      @media (max-width: 800px) {
+        width: 68vw;
+      }
+    }
+    @media (max-width: 800px) {
+      .callout {
+        display: none;
+      }
     }
   }
 
@@ -195,6 +220,7 @@
       width: 42vw;
       @media (max-width: 700px) {
         font-size: 3.2vw;
+        width: 70vw;
       }
       @media (max-width: 600px) {
         font-size: 4.2vw;
