@@ -770,6 +770,24 @@
       }
       &.text {
         padding: 8vw;
+        a {
+          @media (max-width: 600px) {
+            display: inline-flex;
+            margin-top: 3vw;
+            width: auto;
+            font-size: 4vw;
+            padding: 2.4vw 8vw 2.1vw;
+          }
+          @media (max-width: 450px) {
+            font-size: 6vw;
+            padding: 3.4vw 12vw 3.1vw;
+          }
+          @media (max-width: 400px) {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+          }
+        }
       }
       @media (max-width: 640px) {
         order: 1;
