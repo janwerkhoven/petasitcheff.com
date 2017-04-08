@@ -150,7 +150,7 @@
     h3 {
       font-family: $neuzeit-book;
       line-height: 100%;
-      font-size: 2.2vw;
+      font-size: 2.5vw;
       margin-bottom: 0.9vw;
       @media (max-width: 600px) {
         font-size: 5vw;
@@ -538,7 +538,7 @@
     background: #0b0b0c;
     > div {
       max-width: none;
-      width: 82vw;
+      width: 80vw;
     }
     h2 {
       color: white;
@@ -550,7 +550,7 @@
 
   #packages-intro {
     > div {
-      padding: 10vw 5vw 8vw;
+      padding: 10vw 0 8vw;
       display: flex;
       @media (max-width: 600px) {
         padding: 10vw 8vw 8vw;
@@ -600,7 +600,7 @@
 
   #packages-list {
     > div {
-      padding: 0 5vw 11vw;
+      padding: 0 0 11vw;
       overflow: visible;
       @media (max-width: 600px) {
         padding: 0 8vw 11vw;
@@ -962,7 +962,7 @@
     }
     h3 {
       color: $peta-yellow;
-      font-size: 2vw;
+      font-size: 2.5vw;
       font-family: $neuzeit-book;
       margin-bottom: 0.9vw;
       @media (max-width: 700px) {
@@ -1002,26 +1002,29 @@
       font-size: 2.5vw;
       color: $peta-brown-text;
       line-height: 130%;
-
+      @media (max-width: 600px) {
+        font-size: 5vw;
+      }
     }
     h4 {
       line-height: 200%;
       font-size: 1.8vw;
       font-family: $neuzeit-heavy;
       color: $peta-brown-text;
+      @media (max-width: 600px) {
+        font-size: 3.5vw;
+      }
     }
 
     #details {
       max-width: 37vw;
       padding-top: 10vw;
       @media (max-width: 600px) {
-        padding: 16vw 8vw;
+        padding: 16vw 8vw 8vw;
         max-width: none;
         span {
           display: none;
         }
-        h3,
-        h4,
         p {
           font-size: 4vw;
         }
@@ -1099,11 +1102,12 @@
             img {
               width: 5vw;
               height: 5vw;
-              min-width: 15vw;
-              min-height: 15vw;
               transform: scaleX(1) scaleY(1);
               transition: transform 400ms ease-out;
-
+              @media (max-width: 600px) {
+                width: 15vw;
+                height: 15vw;
+              }
             }
           }
         }
@@ -1137,20 +1141,36 @@
       max-width: 80vw;
       padding-top: 6vw;
       padding-bottom: 17vw;
+      @media (max-width: 600px) {
+        max-width: 100vw;
+        padding: 0 8vw 8vw;
+      }
       h4 {
         margin-bottom: 1vw;
       }
       form {
         display: flex;
+        @media (max-width: 600px) {
+          flex-direction: column;
+        }
         > div {
           width: 50%;
           display: flex;
           flex-flow: column nowrap;
+          @media (max-width: 600px) {
+            width: 100%;
+          }
           &.left {
             padding-right: 2vw;
+            @media (max-width: 600px) {
+              padding-right: 0;
+            }
           }
           &.right {
             padding-left: 2vw;
+            @media (max-width: 600px) {
+              padding-left: 0;
+            }
           }
         }
       }
@@ -1163,6 +1183,9 @@
           font-size: 2vw;
           line-height: 150%;
           padding: 1.8vw 1.9vw 1.4vw;
+          @media (max-width: 600px) {
+            font-size: 4vw;
+          }
         }
         label {
           position: absolute;
@@ -1235,8 +1258,25 @@
         line-height: 150%;
         padding: 1.8vw 1.9vw 1.4vw;
         transition: opacity 200ms ease-out;
-        &:hover {
-          opacity: 0.8;
+        @media (max-width: 600px) {
+          display: inline-flex;
+          margin-top: 3vw;
+          width: auto;
+          font-size: 4vw;
+          padding: 2.4vw 8vw 2.1vw;
+        }
+        @media (max-width: 450px) {
+          font-size: 6vw;
+          padding: 3.4vw 12vw 3.1vw;
+        }
+        @media (max-width: 400px) {
+          display: flex;
+          justify-content: center;
+        }
+        @media (min-width: 600px) {
+          &:hover {
+            opacity: 0.8;
+          }
         }
       }
     }
