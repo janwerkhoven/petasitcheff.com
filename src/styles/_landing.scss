@@ -137,16 +137,24 @@
       display: flex;
       flex-flow: row nowrap;
       justify-content: center;
-      padding: 12vw 30px;
+      padding: 12vw 8vw;
       max-width: none;
     }
     h2 {
       color: $peta-yellow;
+      font-size: 5vw;
+      @media (max-width: 600px) {
+        font-size: 10vw;
+      }
     }
     h3 {
-      font-size: 2.2vw;
       font-family: $neuzeit-book;
       line-height: 100%;
+      font-size: 2.5vw;
+      margin-bottom: 0.9vw;
+      @media (max-width: 600px) {
+        font-size: 5vw;
+      }
     }
     hr {
       margin: 2vw 0 1.6vw;
@@ -155,9 +163,26 @@
       line-height: 170%;
       margin: 0 0 1.6vw;
       font-size: 1.25vw;
+      @media (max-width: 800px) {
+        font-size: 2vw;
+      }
+      @media (max-width: 600px) {
+        font-size: 3.6vw;
+        &:nth-last-child(1) {
+          display: none;
+        }
+      }
     }
     .left {
       width: 40vw;
+      @media (max-width: 800px) {
+        width: 100%;
+      }
+    }
+    @media (max-width: 800px) {
+      .callout {
+        display: none;
+      }
     }
   }
 
@@ -195,6 +220,7 @@
       width: 42vw;
       @media (max-width: 700px) {
         font-size: 3.2vw;
+        width: 70vw;
       }
       @media (max-width: 600px) {
         font-size: 4.2vw;
@@ -240,9 +266,17 @@
     }
     blockquote {
       text-align: right;
+      @media (max-width: 700px) {
+        width: 60vw;
+      }
+      @media (max-width: 600px) {
+        width: 70vw;
+      }
       u {
         &:after {
           width: 100%;
+          right: 0;
+          bottom: 0;
         }
       }
     }
@@ -250,24 +284,29 @@
 
   #story {
     width: 100vw;
-    height: 74vw;
+    // height: 74vw;
     overflow: hidden;
     > div {
       width: 200vw;
-      height: 100%;
       display: flex;
+      align-items: flex-start;
       flex-flow: row nowrap;
       max-width: none;
       padding: 0;
+
       > div {
-        width: 100vw;
+        padding: 8vw;
+        width: 84vw;
       }
     }
     h2 {
       color: $peta-yellow;
       font-family: $neuzeit-heavy;
-      font-size: 5.2vw;
       line-height: 100%;
+      font-size: 5vw;
+      @media (max-width: 600px) {
+        font-size: 10vw;
+      }
     }
     hr {
       margin: 1.2vw 0 2.9vw 0.2vw;
@@ -286,6 +325,9 @@
         transition: transform 250ms ease-out;
         transform: translateX(0vw);
         padding: 0;
+        @media (max-width: 600px) {
+          font-size: 3.6vw;
+        }
         &.right {
           justify-content: flex-end;
           &:hover {
@@ -308,6 +350,9 @@
           width: 20px;
           transition: transform 250ms ease-out;
           transform: translateX(0vw);
+          @media (max-width: 600px) {
+            width: 10px;
+          }
         }
         span {
           margin: 0 1vw;
@@ -318,26 +363,78 @@
       display: flex;
       justify-content: center;
       align-items: center;
+
       > div {
         max-width: 30vw;
+        @media (max-width: 600px) {
+          max-width: 84vw;
+        }
       }
       p {
-        font-size: 2.4vw;
-        line-height: 140%;
-        margin: 0;
+        @media (max-width: 600px) {
+          font-size: 3.6vw;
+        }
       }
     }
     #long {
       display: flex;
       justify-content: center;
       align-items: center;
+      p {
+        @media (max-width: 600px) {
+          font-size: 3.6vw;
+        }
+      }
+      a.button {
+        width: 100%;
+        border: 0.2vw solid $peta-yellow;
+        color: $peta-brown;
+        background: rgba($peta-yellow, 0);
+        display: block;
+        box-sizing: border-box;
+        text-align: center;
+        font-size: 2.4vw;
+        line-height: 100%;
+        padding: 2vw 0 1.6vw;
+        margin: 3vw auto;
+        &:hover {
+          background: rgba($peta-yellow, 1);
+        }
+        @media (max-width: 700px) {
+          width: 40vw;
+        }
+        @media (max-width: 600px) {
+          display: flex;
+          margin-top: 3vw;
+          width: auto;
+          font-size: 4vw;
+          padding: 2.4vw 8vw 2.1vw;
+          justify-content: center;
+        }
+        @media (max-width: 450px) {
+          font-size: 6vw;
+          padding: 3.4vw 12vw 3.1vw;
+        }
+        @media (max-width: 400px) {
+          display: flex;
+          justify-content: center;
+          width: 100%;
+        }
+      }
       > div {
         max-width: 78vw;
+
         > div {
           display: flex;
           justify-content: space-between;
+          @media (max-width: 700px) {
+            flex-direction: column;
+          }
           > div {
             width: 44%;
+            @media (max-width: 700px) {
+              width: 100%;
+            }
           }
         }
       }
@@ -504,7 +601,7 @@
     background: #0b0b0c;
     > div {
       max-width: none;
-      width: 82vw;
+      width: 80vw;
     }
     h2 {
       color: white;
@@ -516,25 +613,49 @@
 
   #packages-intro {
     > div {
-      padding: 10vw 5vw 8vw;
+      padding: 10vw 0 8vw;
       display: flex;
       @media (max-width: 600px) {
-        padding: 10vw 5vw 8vw;
+        padding: 10vw 8vw 8vw;
         flex-direction: column-reverse;
+        > .left {
+          margin-top: 8vw;
+        }
       }
       h2 {
         margin-top: 1vw;
+        color: white;
+        font-family: $neuzeit-heavy;
+        font-size: 4.2vw;
+        line-height: 130%;
+        @media (max-width: 600px) {
+          font-size: 10vw;
+        }
       }
+      p {
+        color: white;
+        margin: 0 0 1vw;
+        @media (max-width: 600px) {
+          font-size: 3.6vw;
+        }
+      }
+
       > .callout {
         flex-shrink: 0;
         width: 39vw;
         padding: 3.2vw 3.6vw;
         @media (max-width: 600px) {
+          width: auto;
           margin-left: 0;
+          padding: 8vw;
         }
         blockquote {
           font-size: 2.4vw;
           line-height: 150%;
+          @media (max-width: 600px) {
+            font-size: 5vw;
+            line-height: 160%;
+          }
         }
       }
     }
@@ -542,8 +663,15 @@
 
   #packages-list {
     > div {
-      padding: 0 5vw 11vw;
+      padding: 0 0 11vw;
+      overflow: visible;
+      @media (max-width: 600px) {
+        padding: 0 8vw 11vw;
+      }
       > ul {
+        @media (max-width: 600px) {
+          padding-top: 10vw;
+        }
         > li {
           position: relative;
           display: flex;
@@ -551,6 +679,11 @@
           padding: 4vw 3vw 4vw 8vw;
           background: white;
           margin-bottom: 3vw;
+          @media (max-width: 600px) {
+            flex-direction: column;
+            padding: 10vw 6vw 6vw;
+            margin-bottom: 10vw;
+          }
           img {
             position: absolute;
             left: 0;
@@ -558,12 +691,26 @@
             width: 9vw;
             height: 9vw;
             transform: translate(-4.5vw, -4.5vw);
+            @media (max-width: 600px) {
+              left: 50%;
+              top: 0;
+              width: 12vw;
+              height: 12vw;
+              transform: translate(-6vw, -6vw);
+            }
           }
           h3 {
             position: relative;
             color: $peta-yellow;
-            font-size: 4.9vw;
             line-height: 120%;
+            font-size: 3vw;
+            @media (max-width: 800px) {
+              font-size: 4.9vw;
+
+            }
+            @media (max-width: 600px) {
+              font-size: 9vw;
+            }
           }
           hr {
             margin: 1vw 0 3vw;
@@ -573,12 +720,20 @@
             font-family: $neuzeit-heavy;
             color: $peta-yellow;
             text-decoration: underline;
+            @media (max-width: 600px) {
+              font-size: 4.25vw;
+            }
             &:hover {
               text-decoration: none;
             }
           }
           p {
             color: $paragraph-grey;
+            margin: 0 0 1vw;
+            @media (max-width: 600px) {
+              font-size: 3.6vw;
+              margin-bottom: 3vw;
+            }
           }
           .left {
             width: 100%;
@@ -587,11 +742,22 @@
           .right {
             width: 33%;
             flex-shrink: 0;
+            @media (max-width: 600px) {
+              width: auto;
+            }
             h4 {
               font-family: $neuzeit-book;
-              font-size: 2.7vw;
+              font-size: 2vw;
               margin-top: 1.58vw;
               margin-bottom: 1vw;
+              @media (max-width: 800px) {
+                font-size: 2.7vw;
+              }
+              @media (max-width: 600px) {
+                display: block;
+                font-size: 5.7vw;
+                margin: 5vw 0 2vw;
+              }
             }
             ul {
               li {
@@ -606,6 +772,13 @@
                   height: 0.5vw;
                   background: $peta-yellow;
                   border-radius: 50%;
+                  @media (max-width: 600px) {
+                    left: -1vw;
+                    top: 2.25vw;
+                    width: 1vw;
+                    height: 1vw;
+                    border-radius: 100%;
+                  }
                 }
                 p {
                   margin: 0;
@@ -618,37 +791,48 @@
             border: 0.2vw solid white;
             display: flex;
             flex-flow: row wrap;
+            @media (max-width: 600px) {
+              flex-flow: column nowrap;
+              padding: 10vw 10vw 6vw;
+            }
             h5 {
               position: relative;
               width: 100%;
               color: white;
               font-size: 2vw;
-              margin-bottom: 1.8vw;
-              font-size: 2vw;
-              margin-bottom: 3.6vw;
               line-height: 120%;
-              &:after {
-                content: ' ';
-                background: $peta-yellow;
-                height: 0.14vw;
-                bottom: -1vw;
-                width: 2.8vw;
-                position: absolute;
-                left: 0;
-                min-height: 1px;
+              @media (max-width: 600px) {
+                margin-bottom: 2.6vw;
+                font-size: 6vw;
               }
+            }
+            hr {
+              display: block;
+              margin-right: 40vw;
             }
             > div {
               width: 50%;
+              @media (max-width: 600px) {
+                width: auto;
+                margin-bottom: 6vw;
+
+              }
               p {
                 color: white;
-                margin: 0 0 1vw;
+                margin: 0;
+                @media (max-width: 600px) {
+                  font-size: 4.6vw;
+                  margin: 0 0 2vw;
+                }
               }
               a {
                 font-size: 1.25vw;
                 font-family: $neuzeit-heavy;
                 color: $peta-yellow;
                 text-decoration: underline;
+                @media (max-width: 600px) {
+                  font-size: 5vw;
+                }
                 &:hover {
                   text-decoration: none;
                 }
@@ -670,13 +854,65 @@
       width: 50%;
       padding: 0;
       max-width: none;
+      @media (max-width: 600px) {
+        width: auto;
+      }
       &.text {
         padding: 8vw;
+        a {
+          @media (max-width: 600px) {
+            display: inline-flex;
+            margin-top: 3vw;
+            width: auto;
+            font-size: 4vw;
+            padding: 2.4vw 8vw 2.1vw;
+          }
+          @media (max-width: 450px) {
+            font-size: 6vw;
+            padding: 3.4vw 12vw 3.1vw;
+          }
+          @media (max-width: 400px) {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+          }
+        }
       }
       @media (max-width: 640px) {
         order: 1;
         &.text {
           order: 2;
+        }
+      }
+      &.image {
+        position: relative;
+        img {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          width: 55vw;
+          height: auto;
+          min-height: 100%;
+        }
+        @media (max-width: 700px) {
+          img {
+
+            height: 102%;
+            width: auto;
+          }
+        }
+        @media (max-width: 640px) {
+          width: 102vw;
+          height: 102vw;
+          img {
+            left: 50vw;
+            top: 50vw;
+            transform: translate(-50%, -33%);
+            width: 100vw;
+            min-width: 100%;
+            height: auto;
+          }
         }
       }
       .includes {
@@ -689,6 +925,9 @@
           line-height: 100%;
           font-family: $neuzeit-book;
           margin-bottom: 1vw;
+          @media (max-width: 600px) {
+            font-size: 6vw;
+          }
         }
         ul {
           li {
@@ -703,6 +942,12 @@
               height: 0.5vw;
               background: $peta-brown;
               border-radius: 50%;
+              @media (max-width: 600px) {
+                left: -0.8vw;
+                top: 2.68vw;
+                width: 0.8vw;
+                height: 0.8vw;
+              }
             }
           }
         }
@@ -714,9 +959,12 @@
     }
     h2 {
       color: #fff;
-      font-size: 5vw;
       line-height: 120%;
-      color: white;
+      font-size: 3.8vw;
+      margin: 0;
+      @media (max-width: 600px) {
+        font-size: 10vw;
+      }
     }
     hr {
       margin: 0.4vw 0.4vw 3.4vw;
@@ -724,6 +972,10 @@
     p {
       color: $peta-brown;
       margin: 0;
+      @media (max-width: 600px) {
+        font-size: 4vw;
+        margin-top: 6vw;
+      }
       &+p {
         margin: 1.6vw 0 0;
       }
@@ -766,12 +1018,22 @@
       color: $peta-yellow;
       font-size: 3.8vw;
       margin: 0;
+      line-height: 120%;
+      @media (max-width: 600px) {
+        font-size: 10vw;
+      }
     }
     h3 {
       color: $peta-yellow;
-      font-size: 2vw;
+      font-size: 2.5vw;
       font-family: $neuzeit-book;
       margin-bottom: 0.9vw;
+      @media (max-width: 700px) {
+        font-size: 3vw;
+      }
+      @media (max-width: 500px) {
+        font-size: 5vw;
+      }
     }
     .button {
       background: rgba($peta-yellow, 0);
@@ -793,27 +1055,50 @@
 
   #contact {
     background: $peta-yellow-bg;
+    h2 {
+      @media (max-width: 600px) {
+        font-size: 10vw;
+      }
+    }
     h3 {
       font-family: $neuzeit-book;
       font-size: 2.5vw;
       color: $peta-brown-text;
       line-height: 130%;
+      @media (max-width: 600px) {
+        font-size: 5vw;
+      }
     }
     h4 {
       line-height: 200%;
       font-size: 1.8vw;
       font-family: $neuzeit-heavy;
       color: $peta-brown-text;
+      @media (max-width: 600px) {
+        font-size: 3.5vw;
+      }
     }
+
     #details {
       max-width: 37vw;
       padding-top: 10vw;
+      @media (max-width: 600px) {
+        padding: 16vw 8vw 8vw;
+        max-width: none;
+        span {
+          display: none;
+        }
+        p {
+          font-size: 4vw;
+        }
+      }
       hr {
         background: white;
       }
       p {
         margin-top: 2vw;
         color: $peta-brown-text;
+
       }
       dl {
         display: flex;
@@ -823,6 +1108,9 @@
         dt {
           line-height: 200%;
           font-size: 2vw;
+          @media (max-width: 600px) {
+            font-size: 4vw;
+          }
         }
         dt {
           width: 8%;
@@ -838,7 +1126,7 @@
             &:after {
               content: ' ';
               position: absolute;
-              bottom: 13px;
+              bottom: 1vw;
               left: 0;
               width: 100%;
               height: 1px;
@@ -846,9 +1134,11 @@
               opacity: 0.5;
               transition: bottom 300ms ease-out;
             }
-            &:hover {
-              &:after {
-                bottom: 5px;
+            @media (min-width: 800px) {
+              &:hover {
+                &:after {
+                  bottom: 0.7vw;
+                }
               }
             }
           }
@@ -859,12 +1149,17 @@
         margin: 3vw 0 5vw;
         li {
           margin-right: 1.6vw;
+          @media (max-width: 600px) {
+            margin-right: 3vw;
+          }
           a {
             display: block;
             border-radius: 50%;
-            &:hover {
-              img {
-                transform: scaleX(-1.24) scaleY(1.24);
+            @media (max-width: 600px) {
+              &:hover {
+                img {
+                  transform: scaleX(1.1) scaleY(1.1);
+                }
               }
             }
             img {
@@ -872,6 +1167,10 @@
               height: 5vw;
               transform: scaleX(1) scaleY(1);
               transition: transform 400ms ease-out;
+              @media (max-width: 600px) {
+                width: 15vw;
+                height: 15vw;
+              }
             }
           }
         }
@@ -881,29 +1180,60 @@
         line-height: 100%;
         font-size: 2.4vw;
         text-align: center;
-        width: 28vw;
+        width: 100%;
         padding: 1.7vw 0 1.4vw;
         margin: 1.1vw 0;
+        @media (max-width: 600px) {
+          display: inline-flex;
+          margin-top: 3vw;
+          width: auto;
+          font-size: 4vw;
+          padding: 2.4vw 8vw 2.1vw;
+        }
+        @media (max-width: 450px) {
+          font-size: 6vw;
+          padding: 3.4vw 12vw 3.1vw;
+        }
+        @media (max-width: 400px) {
+          display: flex;
+          justify-content: center;
+        }
       }
     }
     #form {
       max-width: 80vw;
       padding-top: 6vw;
       padding-bottom: 17vw;
+      @media (max-width: 600px) {
+        max-width: 100vw;
+        padding: 0 8vw 8vw;
+      }
       h4 {
         margin-bottom: 1vw;
       }
       form {
         display: flex;
+        @media (max-width: 600px) {
+          flex-direction: column;
+        }
         > div {
           width: 50%;
           display: flex;
           flex-flow: column nowrap;
+          @media (max-width: 600px) {
+            width: 100%;
+          }
           &.left {
             padding-right: 2vw;
+            @media (max-width: 600px) {
+              padding-right: 0;
+            }
           }
           &.right {
             padding-left: 2vw;
+            @media (max-width: 600px) {
+              padding-left: 0;
+            }
           }
         }
       }
@@ -916,6 +1246,9 @@
           font-size: 2vw;
           line-height: 150%;
           padding: 1.8vw 1.9vw 1.4vw;
+          @media (max-width: 600px) {
+            font-size: 4vw;
+          }
         }
         label {
           position: absolute;
@@ -988,8 +1321,26 @@
         line-height: 150%;
         padding: 1.8vw 1.9vw 1.4vw;
         transition: opacity 200ms ease-out;
-        &:hover {
-          opacity: 0.8;
+        justify-content: center;
+        @media (max-width: 600px) {
+          display: flex;
+          margin-top: 3vw;
+          width: auto;
+          font-size: 4vw;
+          padding: 2.4vw 8vw 2.1vw;
+        }
+        @media (max-width: 450px) {
+          font-size: 6vw;
+          padding: 3.4vw 12vw 3.1vw;
+        }
+        @media (max-width: 400px) {
+          display: flex;
+          justify-content: center;
+        }
+        @media (min-width: 600px) {
+          &:hover {
+            opacity: 0.8;
+          }
         }
       }
     }

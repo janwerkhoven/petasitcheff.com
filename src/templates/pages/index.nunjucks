@@ -5,7 +5,7 @@
 <section id="hero">
   <div>
     <div class="left">
-      <img src="/assets/images/peta-sitcheff-logo.svg" alt="Peta Sitcheff logo" width="233" height="480"> {% include "partials/svg/hamburger.html" %}
+      <img src="/assets/images/peta-sitcheff-logo2.svg" alt="Peta Sitcheff logo" width="233" height="480"> {% include "partials/svg/hamburger.html" %}
     </div>
     <div class="right">
       <h1>Sales<br/> Coaching<br/> &amp; Strategy </h1>
@@ -66,7 +66,7 @@
             <p>Selling is a passion of mine that has afforded me an extraordinary career spanning over 17 years. I've worked for market leading organisations in a range of industries. Each organisation possessed a strong culture that I could thrive in. Success
               was recognised, challenges overcome and achievements rewarded, but most importantly for me, those I respected took the time to recognise a job well done.</p>
             <p>My career was ticking along beautifully. Then one day that changed. I was so determined to succeed that I failed to recognise I no longer had professional boundaries. Work was 24/7. I was operating robotically, I was exhausted and I was on
-              the edge of a burn out. I pretended everything was OK when in reality it was far from it.</p>
+              the edge of a burn out. I pretended everything was OK when in reality, it was far from it.</p>
             <p>Fundamentally I still loved what I did, I just didn't love the impact it was having on me anymore. It was completely unsustainable. This moment made me question things. How do I prevent this from happening again to myself or to any high performing
               salesperson? I knew there must be a better way.</p>
           </div>
@@ -74,14 +74,16 @@
             <p>By drawing on my personal experiences, the triumphs and let's face it, a few failures along the way, I've devised a sales coaching practice which acknowledges that every salesperson has a unique operating style. This, along with loyal customer
               connections and a value based sales strategy, provides the foundation for your selling success.</p>
             <p>I believe that practicing sales can and should be deeply rewarding for both you and the business you operate within. And most importantly it must be sustainable.</p>
-            <a href="{{ project.linkedin }}" target="_blank" class="button">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/peta-sitcheff-20b8b483/" target="_blank" class="button">LinkedIn</a>
             <a href="#contact" class="button">Contact Peta</a>
           </div>
         </div>
-        <button class="arrow left">
+        <a href="#story">
+          <button class="arrow left">
             {% include "partials/svg/arrow-left.html" %}
             <span>Read Less</span>
           </button>
+        </a>
       </div>
     </div>
   </div>
@@ -126,7 +128,7 @@
     <hr>
     <p>Coaching is a recognised tool that helps your sales talent maximise their potential and drive results. My coaching sessions are designed to engage, inspire and empower salespeople with the tools required to achieve sustainable selling success.</p>
     <p>By enhancing your authentic awareness, I encourage you to appreciate your natural talent as we transform your personal traits into practical selling tools. This will help you navigate your sales career with confidence, integrity &amp; authenticity.</p>
-    <a href="#" class="button">Enquire</a>
+    <a href="#contact" class="button">Enquire</a>
   </div>
 </section>
 
@@ -156,7 +158,7 @@
           <p>Together we'll identify your inner traits and explore ways to turn them into valuable sales tools. You'll discover the role authenticity plays in your selling practice and develop a framework that sets the foundations for your personal selling
             style.
           </p>
-          <a href="#enquire">Enquire</a>
+          <a href="#contact">Enquire</a>
         </div>
         <div class="right">
           <h4>Includes:</h4>
@@ -180,7 +182,7 @@
           <hr>
           <p>Successful salespeople have one thing in common, the ability to build an emotional connection with their customers quickly. We'll dissect your customer's journey, refine communication skills and devise strategies that will enhance your relationship
             and drive sales.</p>
-          <a href="#enquire">Enquire</a>
+          <a href="#contact">Enquire</a>
         </div>
         <div class="right">
           <h4>Includes:</h4>
@@ -197,14 +199,14 @@
           </ul>
         </div>
       </li>
-      <li>
+      <!-- <li>
         <img src="/assets/images/icon-strategy.svg" alt="icon of strategy network" width="80" height="80">
         <div class="left">
           <h3>Your Sales Strategy</h3>
           <hr>
           <p>Strategise by design not by default. We'll review your existing plans and identify opportunities before creating and crash testing an intentional and targeted sales strategy. Your transformative sales plan will empower you to navigate sales
             challenges with ease and maximise your business potential.</p>
-          <a href="#enquire">Enquire</a>
+          <a href="#contact">Enquire</a>
         </div>
         <div class="right">
           <h4>Includes:</h4>
@@ -220,14 +222,14 @@
             </li>
           </ul>
         </div>
-      </li>
+      </li> -->
       <li>
         <img src="/assets/images/icon-custom.svg" alt="icon of pen writing custom package" width="80" height="80">
         <div class="left">
           <h3>Custom</h3>
           <hr>
           <p>No set framework, this package is based on individual needs. It is ideal for sales people who have a specific problem to solve or who feel like they are at a crossroads in their career and need clarity on the journey forward.</p>
-          <a href="#enquire">Enquire</a>
+          <a href="#contact">Enquire</a>
         </div>
         <div class="right">
           <h4>Includes:</h4>
@@ -246,6 +248,7 @@
       </li>
       <li class="last">
         <h5>Read more about the benefits of sales coaching</h5>
+        <hr>
         <div>
           <p>Sales Teams Need More Coaching</p>
           <a href="https://hbr.org/2015/05/a-high-percentage-move-to-increase-revenue" target="_blank" title="Sales Teams Need More Coaching">Read</a>
@@ -263,7 +266,7 @@
   <div>
     <div class="background"></div>
     <blockquote cite="{{ project.url }}">&ldquo;Don't underestimate the power of your
-      <u>authentic awareness</u> and the value that brings to your customers.&rdquo;
+      <u>authentic&nbsp;awareness</u> and the value that brings to your customers.&rdquo;
     </blockquote>
   </div>
 </section>
@@ -272,7 +275,7 @@
   <div class="left text">
     <h2>Coaching Women</h2>
     <hr>
-    <p>Having worked in male dominated industries myself, I'm particularly passionate about supporting women sales experts to succeed. These sessions are designed to engage, empower and provide a confidential environment where scenarios can be discussed
+    <p>Having worked in male dominated industries myself, I'm particularly passionate about supporting women to succeed in their sales careers. These sessions are designed to engage, empower and provide a confidential environment where scenarios can be discussed
       and workshopped. Through the use of powerful mindset techniques alongside tested sales strategies we build confidence and tenacity to improve performance for female salespeople.</p>
     <div class="includes">
       <h4>Includes:</h4>
@@ -290,15 +293,15 @@
         </li>
       </ul>
     </div>
-    <a href="#enquire" class="button">Enquire</a>
+    <a href="#contact" class="button">Enquire</a>
   </div>
-  <div class="right">
+  <div class="right image">
     <img src="/assets/images/coaching-women.jpg" alt="portrait photo of Peta Sitcheff for coaching women by Prue Aja" width="660" height="1110">
   </div>
 </section>
 
 <section id="sales-preparation" class="split">
-  <div class="left">
+  <div class="left image">
     <img src="/assets/images/sales-preparation.jpg" alt="sky view from city map Peta Sitcheff's sales preparation" width="660" height="1110">
   </div>
   <div class="right text">
@@ -308,9 +311,7 @@
       <hr>
     </div>
     <p>The medical device industry is driven by continuous innovation and new technologies. If you're looking to carve out a rewarding and lucrative sales career in this dynamic industry, we will arm you with industry insights, ensure you are interview ready
-      and provide recruitment&nbsp;
-      <nobr>support along the way.</nobr>
-    </p>
+      and provide support throughout your recruitment journey.</p>
     <div class="includes">
       <h4>Includes:</h4>
       <ul>
@@ -327,7 +328,7 @@
         </li>
       </ul>
     </div>
-    <a href="#enquire" class="button">Enquire</a>
+    <a href="#contact" class="button">Enquire</a>
   </div>
 </section>
 
@@ -338,9 +339,9 @@
     <p>Your teams coaching journey will reveal unique methods of selling for each person while keeping the company vision and desired team culture top of mind. Your team will not only transform their personal selling power, but also gain an understanding
       of each other's unique talents to enhance team performance.</p>
     <p>These workshops are customised to suit your organisations needs or can be based on the 1:1 sales coaching framework; you, your customer, your business strategy.</p>
-    <a href="#enquire" class="button">Enquire</a>
+    <a href="#contact" class="button">Enquire</a>
   </div>
-  <div class="right">
+  <div class="right image">
     <img src="/assets/images/group-workshops.jpg" alt="photo of Peta Sitcheff for group workshop by Prue Aja" width="660" height="1110">
   </div>
 </section>
@@ -350,17 +351,17 @@
     <h2>Contact</h2>
     <hr>
     <h3>Are you ready to discover how a confident and authentic sales strategy can transform how you sell?</h3>
-    <p>I'd love to hear from you. Send me your career questions, comments and coaching enquiries. I personally answer every email that comes in. Alternatively, book a free 15-minute call with me to talk about how your career is going and how I might be able
-      to help you.</p>
+    <p>I'd love to hear from you. <span>Send me your career questions, comments and coaching enquiries. I personally answer every email that comes in. Alternatively, book a free 15-minute call with me to talk about how your career is going and how I might be able
+      to help you.</span></p>
     <dl>
       <dt>E</dt>
       <dd>
         <a href="mailto:peta@petasitcheff.com" target="_blank">peta@petasitcheff.com</a>
       </dd>
-      <dt>T</dt>
-      <dd>
-        <a href="tel:+61488025991" target="_blank">0488 025 991</a>
-      </dd>
+      <!-- <dt>T</dt> -->
+      <!-- <dd>
+        <a href="tel:" target="_blank"></a>
+      </dd> -->
     </dl>
     <ul class="social">
       <li>
@@ -374,7 +375,7 @@
         </a>
       </li>
       <li>
-        <a href="{{ project.linkedin }}" target="_blank" title="Connect with Peta Sitcheff on Linkedin">
+        <a href="https://www.linkedin.com/in/peta-sitcheff-20b8b483/" target="_blank" title="Connect with Peta Sitcheff on Linkedin">
           <img src="/assets/images/social/linkedin.svg" alt="Linkdein icon" width="40px" height="40px">
         </a>
       </li>
@@ -385,7 +386,7 @@
       </li>
     </ul>
     <h4>Book your free 15-minute call</h4>
-    <a href="#enquire" class="button">Book</a>
+    <a href="#contact" class="button">Book</a>
   </div>
   <div id="form">
     <h4>Or contact Peta via email</h4>
@@ -416,11 +417,11 @@
           <input type="text" name="company">
           <div class="bg"></div>
         </div>
-        <div class="field">
+        <!-- <div class="field">
           <label>Industry</label>
           <input type="text" name="industry">
           <div class="bg"></div>
-        </div>
+        </div> -->
       </div>
       <div class="right">
         <div class="field">

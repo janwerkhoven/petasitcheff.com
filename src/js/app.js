@@ -138,31 +138,46 @@ $(document).ready(function() {
   let showing = 'short';
   const $story = $('#story');
   const $slide = $('#story>div');
-  // const $long = $('#story #hort');
-  // const $short = $('#story #long');
   const config = {
     duration: 1000,
     easing: 'easeOutExpo'
   };
-  $story.find('button').on('click', function() {
+
+  //Temporary variables so that users can rotate and resize the
+  let padding8vw = ($(document).width()) * 8 / 100;
+  let shortStoryHeight = $('#story #short>div').height() + (padding8vw * 2);
+  let longStoryHeight = $('#story #long>div').height() + (padding8vw * 2);
+  $slide.css('height', shortStoryHeight);
+
+  $(window).resize(function() {
+    let padding8vw = ($(document).width()) * 8 / 100;
+    let longStoryHeight = $('#story #long>div').height() + (padding8vw * 2);
+    let shortStoryHeight = $('#story #short>div').height() + (padding8vw * 2);
     if (showing === 'short') {
-      // const longStoryHeight = $long.height();
-      // console.log(longStoryHeight);
-      // $story.velocity({ height: longStoryHeight }, config);
-      $story.velocity({
-        height: '92vw'
-      }, config);
+      $slide.css('height', shortStoryHeight);
+    } else {
+      $slide.css('height', longStoryHeight);
+    }
+  });
+
+  $story.find('button').on('click', function() {
+    let padding8vw = ($(document).width()) * 8 / 100;
+    let longStoryHeight = $('#story #long>div').height() + (padding8vw * 2);
+    let shortStoryHeight = $('#story #short>div').height() + (padding8vw * 2);
+    if (showing === 'short') {
       $slide.velocity({
+        height: longStoryHeight,
         translateX: '-100vw'
       }, config);
       showing = 'long'
     } else {
-      $story.velocity({
-        height: '74vw'
-      }, config);
       $slide.velocity({
         translateX: '0vw'
       }, config);
+      $slide.velocity({
+        height: shortStoryHeight
+      }, config);
+
       showing = 'short';
     }
   });
