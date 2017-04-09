@@ -51,11 +51,10 @@
         <h2>My Story</h2>
         <hr>
         <p>Let me introduce myself, I'm Peta Sitcheff and I unashamedly love to sell. In fact, I love it to the point where most of the time, I don't even realise I'm doing it.</p>
-        <a href="#story">
-          <button class="arrow right">
+        <button class="arrow right">
             <span>Read More</span>
             {% include "partials/svg/arrow-right.html" %}
-          </button></a>
+          </button>
       </div>
     </div>
     <div id="long">
@@ -83,7 +82,8 @@
           <button class="arrow left">
             {% include "partials/svg/arrow-left.html" %}
             <span>Read Less</span>
-          </button></a>
+          </button>
+        </a>
       </div>
     </div>
   </div>

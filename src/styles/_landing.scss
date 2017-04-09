@@ -288,15 +288,15 @@
     overflow: hidden;
     > div {
       width: 200vw;
-      height: 100%;
       display: flex;
+      align-items: center;
       flex-flow: row nowrap;
       max-width: none;
       padding: 0;
 
       > div {
-        margin: 8vw;
-        width: 100vw;
+        padding: 8vw;
+        width: 84vw;
       }
     }
     h2 {
@@ -391,8 +391,14 @@
         > div {
           display: flex;
           justify-content: space-between;
+          @media (max-width: 700px) {
+            flex-direction: column;
+          }
           > div {
             width: 44%;
+            @media (max-width: 700px) {
+              width: 100%;
+            }
           }
         }
       }

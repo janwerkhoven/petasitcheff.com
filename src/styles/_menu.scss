@@ -63,6 +63,9 @@
     #social-media-links {
       display: flex;
       margin: 2vw 0;
+      @media (max-width: 500px) {
+        margin-bottom: 15vw; // for iOS browsers which cut off part of the screen size
+      }
       li {
         margin-right: 1vw;
         @media (max-width: 500px) {

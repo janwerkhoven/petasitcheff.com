@@ -138,12 +138,14 @@ $(document).ready(function() {
   let showing = 'short';
   const $story = $('#story');
   const $slide = $('#story>div');
-  const longStoryHeight = $('#story #long>div').height();
-  const shortStoryHeight = $('#story #short>div').height();
+  const padding8vw = ($(document).width()) * 8 / 100;
+  const longStoryHeight = $('#story #long>div').height() + (padding8vw * 2);
+  const shortStoryHeight = $('#story #short>div').height() + (padding8vw * 2);
   const config = {
     duration: 1000,
     easing: 'easeOutExpo'
   };
+  $('#story>div').css('height', shortStoryHeight);
   $story.find('button').on('click', function() {
     if (showing === 'short') {
       // const longStoryHeight = $long.height();
