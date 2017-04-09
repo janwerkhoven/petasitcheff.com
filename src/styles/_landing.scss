@@ -137,7 +137,7 @@
       display: flex;
       flex-flow: row nowrap;
       justify-content: center;
-      padding: 12vw 30px;
+      padding: 12vw 8vw;
       max-width: none;
     }
     h2 {
@@ -176,7 +176,7 @@
     .left {
       width: 40vw;
       @media (max-width: 800px) {
-        width: 68vw;
+        width: 100%;
       }
     }
     @media (max-width: 800px) {
@@ -383,6 +383,42 @@
       p {
         @media (max-width: 600px) {
           font-size: 3.6vw;
+        }
+      }
+      a.button {
+        width: 100%;
+        border: 0.2vw solid $peta-yellow;
+        color: $peta-brown;
+        background: rgba($peta-yellow, 0);
+        display: block;
+        box-sizing: border-box;
+        text-align: center;
+        font-size: 2.4vw;
+        line-height: 100%;
+        padding: 2vw 0 1.6vw;
+        margin: 3vw auto;
+        &:hover {
+          background: rgba($peta-yellow, 1);
+        }
+        @media (max-width: 700px) {
+          width: 40vw;
+        }
+        @media (max-width: 600px) {
+          display: flex;
+          margin-top: 3vw;
+          width: auto;
+          font-size: 4vw;
+          padding: 2.4vw 8vw 2.1vw;
+          justify-content: center;
+        }
+        @media (max-width: 450px) {
+          font-size: 6vw;
+          padding: 3.4vw 12vw 3.1vw;
+        }
+        @media (max-width: 400px) {
+          display: flex;
+          justify-content: center;
+          width: 100%;
         }
       }
       > div {
@@ -1285,8 +1321,9 @@
         line-height: 150%;
         padding: 1.8vw 1.9vw 1.4vw;
         transition: opacity 200ms ease-out;
+        justify-content: center;
         @media (max-width: 600px) {
-          display: inline-flex;
+          display: flex;
           margin-top: 3vw;
           width: auto;
           font-size: 4vw;
