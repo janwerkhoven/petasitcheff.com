@@ -35,6 +35,8 @@
     "gulp-uglify": "^2.0.1",
     "node-normalize-scss": "^1.4.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "gulp-notify": "^3.0.0"
+  },
   "optionalDependencies": {}
 }
