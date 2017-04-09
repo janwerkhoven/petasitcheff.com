@@ -5,7 +5,7 @@
 <section id="hero">
   <div>
     <div class="left">
-      <img src="/assets/images/peta-sitcheff-logo.svg" alt="Peta Sitcheff logo" width="233" height="480"> {% include "partials/svg/hamburger.html" %}
+      <img src="/assets/images/peta-sitcheff-logo2.svg" alt="Peta Sitcheff logo" width="233" height="480"> {% include "partials/svg/hamburger.html" %}
     </div>
     <div class="right">
       <h1>Sales<br/> Coaching<br/> &amp; Strategy </h1>
@@ -66,7 +66,7 @@
             <p>Selling is a passion of mine that has afforded me an extraordinary career spanning over 17 years. I've worked for market leading organisations in a range of industries. Each organisation possessed a strong culture that I could thrive in. Success
               was recognised, challenges overcome and achievements rewarded, but most importantly for me, those I respected took the time to recognise a job well done.</p>
             <p>My career was ticking along beautifully. Then one day that changed. I was so determined to succeed that I failed to recognise I no longer had professional boundaries. Work was 24/7. I was operating robotically, I was exhausted and I was on
-              the edge of a burn out. I pretended everything was OK when in reality it was far from it.</p>
+              the edge of a burn out. I pretended everything was OK when in reality, it was far from it.</p>
             <p>Fundamentally I still loved what I did, I just didn't love the impact it was having on me anymore. It was completely unsustainable. This moment made me question things. How do I prevent this from happening again to myself or to any high performing
               salesperson? I knew there must be a better way.</p>
           </div>
@@ -199,7 +199,7 @@
           </ul>
         </div>
       </li>
-      <li>
+      <!-- <li>
         <img src="/assets/images/icon-strategy.svg" alt="icon of strategy network" width="80" height="80">
         <div class="left">
           <h3>Your Sales Strategy</h3>
@@ -222,7 +222,7 @@
             </li>
           </ul>
         </div>
-      </li>
+      </li> -->
       <li>
         <img src="/assets/images/icon-custom.svg" alt="icon of pen writing custom package" width="80" height="80">
         <div class="left">
@@ -275,7 +275,7 @@
   <div class="left text">
     <h2>Coaching Women</h2>
     <hr>
-    <p>Having worked in male dominated industries myself, I'm particularly passionate about supporting women sales experts to succeed. These sessions are designed to engage, empower and provide a confidential environment where scenarios can be discussed
+    <p>Having worked in male dominated industries myself, I'm particularly passionate about supporting women to succeed in their sales careers. These sessions are designed to engage, empower and provide a confidential environment where scenarios can be discussed
       and workshopped. Through the use of powerful mindset techniques alongside tested sales strategies we build confidence and tenacity to improve performance for female salespeople.</p>
     <div class="includes">
       <h4>Includes:</h4>
@@ -311,7 +311,7 @@
       <hr>
     </div>
     <p>The medical device industry is driven by continuous innovation and new technologies. If you're looking to carve out a rewarding and lucrative sales career in this dynamic industry, we will arm you with industry insights, ensure you are interview ready
-      and provide recruitment support along the way.</p>
+      and provide support throughout your recruitment journey.</p>
     <div class="includes">
       <h4>Includes:</h4>
       <ul>
@@ -358,10 +358,10 @@
       <dd>
         <a href="mailto:peta@petasitcheff.com" target="_blank">peta@petasitcheff.com</a>
       </dd>
-      <dt>T</dt>
-      <dd>
-        <a href="tel:+61488025991" target="_blank">0488 025 991</a>
-      </dd>
+      <!-- <dt>T</dt> -->
+      <!-- <dd>
+        <a href="tel:" target="_blank"></a>
+      </dd> -->
     </dl>
     <ul class="social">
       <li>
@@ -417,11 +417,11 @@
           <input type="text" name="company">
           <div class="bg"></div>
         </div>
-        <div class="field">
+        <!-- <div class="field">
           <label>Industry</label>
           <input type="text" name="industry">
           <div class="bg"></div>
-        </div>
+        </div> -->
       </div>
       <div class="right">
         <div class="field">
