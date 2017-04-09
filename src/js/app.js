@@ -138,8 +138,8 @@ $(document).ready(function() {
   let showing = 'short';
   const $story = $('#story');
   const $slide = $('#story>div');
-  // const $long = $('#story #hort');
-  // const $short = $('#story #long');
+  const longStoryHeight = $('#story #long>div').height();
+  const shortStoryHeight = $('#story #short>div').height();
   const config = {
     duration: 1000,
     easing: 'easeOutExpo'
@@ -149,16 +149,16 @@ $(document).ready(function() {
       // const longStoryHeight = $long.height();
       // console.log(longStoryHeight);
       // $story.velocity({ height: longStoryHeight }, config);
-      $story.velocity({
-        height: '92vw'
+      $slide.velocity({
+        height: longStoryHeight
       }, config);
       $slide.velocity({
         translateX: '-100vw'
       }, config);
       showing = 'long'
     } else {
-      $story.velocity({
-        height: '74vw'
+      $slide.velocity({
+        height: shortStoryHeight
       }, config);
       $slide.velocity({
         translateX: '0vw'
