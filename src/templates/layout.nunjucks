@@ -16,11 +16,13 @@
   </head>
 
   <body id="{% block id %}{% endblock %}">
-    {% include "partials/header.html" %} {% include "partials/menu.html" %}
+    {% include "partials/header.html" %}
+    {% include "partials/menu.html" %}
     <main>
       {% block main %}{% endblock %}
     </main>
-    {% include "partials/footer.html" %} {% include "partials/outdated-browsers.html" %}
+    {% include "partials/footer.html" %}
+    {% include "partials/outdated-browsers.html" %}
   </body>
 
 </html>
