@@ -95,10 +95,6 @@ $(document).ready(function() {
   let showingMenu = false;
   const $menu = $('#menu');
   const $main = $('main');
-  const config2 = {
-    duration: 1000,
-    easing: 'easeOut'
-  };
   $('#menu-burger,.close-menu,#navigation-links>li>a').on('click', function() {
     if (showingMenu) {
       $menu.removeClass('active');
