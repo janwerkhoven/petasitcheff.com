@@ -75,7 +75,6 @@
         min-width: 60px;
       }
       svg {
-        // display: none;
         width: 50px;
         margin-top: 2vw;
         cursor: pointer;
@@ -101,7 +100,6 @@
       }
       h1 {
         font-size: 5.6vh;
-        // max-width: 30vw;
         text-align: right;
         line-height: 120%;
         color: white;
@@ -284,7 +282,6 @@
 
   #story {
     width: 100vw;
-    // height: 74vw;
     overflow: hidden;
     > div {
       width: 200vw;
@@ -552,15 +549,6 @@
       @media (max-width: 600px) {
         font-size: 10vw;
       }
-      // &:after {
-      //   content: ' ';
-      //   background: $peta-yellow;
-      //   height: 2px;
-      //   bottom: 0;
-      //   width: 30px;
-      //   position: absolute;
-      //   left: 0;
-      // }
     }
     p {
       color: white;
