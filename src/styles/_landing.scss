@@ -237,7 +237,7 @@
         text-decoration: none;
         &:after {
           content: ' ';
-          background: #f5e401;
+          background: $peta-yellow;
           height: 2px;
           bottom: 0;
           width: 97%;
@@ -444,7 +444,7 @@
   #services-nav {
     background: $peta-yellow;
     background: $peta-yellow-bg;
-    background: #f5e401;
+    background: $peta-yellow;
     > div {
       display: flex;
       flex-direction: column;

@@ -107,7 +107,7 @@ $(document).ready(function() {
       showingMenu = true;
       event.preventDefault();
     }
-    return showingMenu;
+    // return showingMenu;
   });
 
   const burgerPos_y = $('#menu-burger').offset().top;
