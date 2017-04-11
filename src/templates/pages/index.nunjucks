@@ -25,8 +25,8 @@
       <hr>
       <p>Your sales force is the lifeblood of your organisation. Their performance is critical to your overall business success. But how often do you stop to ask, are we doing enough to support our salespeople and make them exceptional? When your salespeople
         thrive, so does your bottom line.</p>
-      <p>Whether you're a fresh starter, a seasoned performer or simply seeking some professional direction, my coaching vision is to help salespeople of all levels thrive through the development of a personal selling plan that is intentional, authentic
-        and above all, sustainable.</p>
+      <p>Whether you are an individual salesperson seeking to enhance your selling skills or a corporation wanting to improve the effectiveness of your sales team, my coaching vision is to help salespeople of all levels thrive through the development of
+        a personal selling plan that is intentional, authentic and above all, sustainable.</p>
     </div>
     <div class="callout">
       <blockquote cite="{{ project.url }}">&ldquo;My holistic coaching approach focuses on you, the individual seller first. Together we will explore and enhance your
@@ -386,7 +386,7 @@
       </li>
     </ul>
     <h4>Book your free 15-minute call</h4>
-    <a href="#contact" class="button">Book</a>
+    <a href="https://app.acuityscheduling.com/schedule.php?owner=13280671" class="button">Book</a>
   </div>
   <div id="form">
     <h4>Or contact Peta via email</h4>
