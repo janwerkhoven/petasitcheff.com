@@ -364,11 +364,11 @@
       </dd> -->
     </dl>
     <ul class="social">
-      <li>
+      <!-- <li>
         <a href="https://www.facebook.com/peta.sitcheff" target="_blank" title="Make friends with Peta on Facebook">
           <img src="/assets/images/social/facebook.svg" alt="Facebook icon" width="40px" height="40px">
         </a>
-      </li>
+      </li> -->
       <li>
         <a href="https://twitter.com/PetaSitcheff" target="_blank" title="Follow Peta Sitcheff on Twitter">
           <img src="/assets/images/social/twitter.svg" alt="Twitter icon" width="40px" height="40px">
