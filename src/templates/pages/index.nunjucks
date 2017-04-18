@@ -199,7 +199,7 @@
           </ul>
         </div>
       </li>
-      <!-- <li>
+      <li>
         <img src="/assets/images/icon-strategy.svg" alt="icon of strategy network" width="80" height="80">
         <div class="left">
           <h3>Your Sales Strategy</h3>
@@ -222,7 +222,7 @@
             </li>
           </ul>
         </div>
-      </li> -->
+      </li>
       <li>
         <img src="/assets/images/icon-custom.svg" alt="icon of pen writing custom package" width="80" height="80">
         <div class="left">
@@ -338,8 +338,8 @@
     <hr>
     <p>Your teams coaching journey will reveal unique methods of selling for each person while keeping the company vision and desired team culture top of mind. Your team will not only transform their personal selling power, but also gain an understanding
       of each other's unique talents to enhance team performance.</p>
-    <p>These workshops are customised to suit your organisations needs or can be based on the 1:1 sales coaching framework; you, your customer, your business strategy.</p>
-    <a href="#contact" class="button">Enquire</a>
+    <p>These workshops are customised to suit your organisations needs or can be based on the 1:1 sales coaching framework; you and your customer.</p>
+    <a href="#contact" class="button">Corporate Enquiry</a>
   </div>
   <div class="right image">
     <img src="/assets/images/group-workshops.jpg" alt="photo of Peta Sitcheff for group workshop by Prue Aja" width="660" height="1110">
@@ -417,11 +417,6 @@
           <input type="text" name="company">
           <div class="bg"></div>
         </div>
-        <!-- <div class="field">
-          <label>Industry</label>
-          <input type="text" name="industry">
-          <div class="bg"></div>
-        </div> -->
       </div>
       <div class="right">
         <div class="field">
