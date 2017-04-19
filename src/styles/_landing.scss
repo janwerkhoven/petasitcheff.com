@@ -1348,9 +1348,9 @@
           transition: transform 200ms ease-out;
         }
         &.message {
-          // @media (min-width: 601px) { //radio button margin
-          //   margin-top: 8vw;
-          // }
+          @media (min-width: 601px) {
+            margin-top: 8vw;
+          }
           textarea {
             display: block;
             max-width: 100%;
