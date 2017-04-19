@@ -387,13 +387,12 @@
     <h4>Or contact Peta via email</h4>
     <form>
       <div class="left">
-        <!-- Removed at client request for further styling -->
-        <!-- <div class="field">
+        <div class="field">
           <button class="toggle" name="brochure">
               <span class="check"></span>
               <span>Request Corporate Brochure</span>
             </button>
-        </div> -->
+        </div>
         <div class="field">
           <label>Name</label>
           <input type="text" name="name">
