@@ -45,12 +45,12 @@ function submitContactForm() {
   if (!isProduction) {
     data.about = 'This is test data. Most likely Jan or Hannah is now working on your website :)';
   }
-  const keys = ['name', 'email', 'phone', 'location', 'company', 'industry', 'message'];
+  const keys = ['name', 'email', 'phone', 'location', 'company', 'industry', 'message', 'brochure'];
   $.each(keys, function(i, key) {
     data[key] = userData[key] || '-';
   });
   console.log('Submitting contact form to FormSpree ...', data);
-  const $btn = $('#contact #form button');
+  const $btn = $('#contact #form button.submit');
   $btn.html('Sending...').prop('disabled', true);
   $.when(formSpree(data)).then(function() {
     console.log('success');
@@ -179,8 +179,18 @@ $(document).ready(function() {
   });
 
   // Submit contact form details to FormSpree
-  $('#contact #form button').on('click', function() {
+  $('#contact #form button.submit').on('click', function(e) {
+    e.preventDefault();
     submitContactForm();
+  });
+
+  // Observe toggle buttons, on click invert their value
+  $('button.toggle').on('click', function(e) {
+    e.preventDefault();
+    const key = $(this).attr('name');
+    const currentValue = userData[key] || false;
+    store(key, !currentValue);
+    $(this).toggleClass('checked', !currentValue);
   });
 
   // Observe all inputs and textareas for user interactions, store data as users type

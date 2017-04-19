@@ -15,32 +15,32 @@
   }
   #hero {
     position: relative;
-    background: #0B0B0B url('/assets/images/hero-2000px.jpg') no-repeat 50% 50% / auto 100%;
+    background: #000000 url('/assets/images/hero2-2000px.jpg') no-repeat 50% 50% / auto 100%;
     height: 1333px;
     max-height: 100vh;
     @media (max-width: 1800px) {
-      background-image: url('/assets/images/hero-1800px.jpg');
+      background-image: url('/assets/images/hero2-1800px.jpg');
       height: 1333px;
     }
     @media (max-width: 1600px) {
-      background-image: url('/assets/images/hero-1600px.jpg');
+      background-image: url('/assets/images/hero2-1600px.jpg');
       height: 1200px;
     }
     @media (max-width: 1200px) {
-      background-image: url('/assets/images/hero-1200px.jpg');
+      background-image: url('/assets/images/hero2-1200px.jpg');
       height: 800px;
     }
     @include retina {
        @media (max-width: 900px){
-        background-image: url('/assets/images/hero-1800px.jpg');
+        background-image: url('/assets/images/hero2-1800px.jpg');
         height: 666px;
       }
       @media (max-width: 800px) {
-        background-image: url('/assets/images/hero-1600px.jpg');
+        background-image: url('/assets/images/hero2-1600px.jpg');
         height: 600px;
       }
       @media (max-width: 600px) {
-        background-image: url('/assets/images/hero-1200px.jpg');
+        background-image: url('/assets/images/hero2-1200px.jpg');
         height: 400px;
       }
       @media (max-width: 450px) {
@@ -885,7 +885,6 @@
         }
         @media (max-width: 700px) {
           img {
-
             height: 102%;
             width: auto;
           }
@@ -898,7 +897,6 @@
             top: 50vw;
             transform: translate(-50%, -33%);
             width: 100vw;
-            min-width: 100%;
             height: auto;
           }
         }
@@ -1038,6 +1036,34 @@
     }
     .button {
       color: $peta-yellow;
+    }
+    > .image {
+      position: relative;
+      img {
+        width: auto;
+        height: 100%;
+        min-width: none;
+      }
+      @media (max-width: 700px) {
+        img {
+          height: 100%;
+          width: auto;
+          min-width: none;
+        }
+      }
+      @media (max-width: 640px) {
+        width: 102vw;
+        height: 102vw;
+        min-width: none;
+
+        img {
+          left: 50vw;
+          top: 50vw;
+          transform: translate(-50%, -50%);
+          height: 100%;
+          min-width: none;
+        }
+      }
     }
   }
 
@@ -1295,6 +1321,7 @@
             padding-left: 10vw;
             @media (max-width: 600px) {
               padding-left: 20vw;
+<<<<<<< HEAD
             }
           }
         }
@@ -1308,9 +1335,12 @@
           &:focus {
             &+label {
               display: none;
+=======
+>>>>>>> 595cd2990755f125b0cbc26bb4c598d19829f45a
             }
           }
         }
+
         .bg {
           background: white;
           position: absolute;
@@ -1319,6 +1349,25 @@
           left: 0;
           bottom: 0;
           transition: transform 200ms ease-out;
+        }
+        &.message {
+          // @media (min-width: 601px) { //radio button margin
+          //   margin-top: 8vw;
+          // }
+          textarea {
+            display: block;
+            max-width: 100%;
+            min-width: 100%;
+            // min-height: 36.6vw;
+            min-height: 29vw;
+            padding-bottom: 1.8vw;
+            &.has-value,
+            &:focus {
+              &+label {
+                display: none;
+              }
+            }
+          }
         }
       }
       button {
@@ -1346,6 +1395,44 @@
         @media (min-width: 600px) {
           &:hover {
             opacity: 0.8;
+          }
+        }
+        &.toggle {
+          background: none;
+          color: $peta-brown-text;
+          padding: 1.8vw 0;
+          width: 100%;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          opacity: 1 !important;
+          span.check {
+            width: 3vw;
+            height: 3vw;
+            background: white;
+            border-radius: 50%;
+            position: relative;
+            margin-right: 1.5vw;
+            margin-top: -0.4vw;
+            &:after {
+              content: ' ';
+              position: absolute;
+              border-radius: 50%;
+              left: 20%;
+              top: 20%;
+              width: 60%;
+              height: 60%;
+              background: $peta-brown;
+              transform: scale(0);
+              transition: transform 300ms ease;
+            }
+          }
+          &.checked {
+            span.check {
+              &:after {
+                transform: scale(1);
+              }
+            }
           }
         }
       }
