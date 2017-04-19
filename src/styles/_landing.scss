@@ -1263,21 +1263,39 @@
           }
           &[name="name"] {
             padding-left: 8.2vw;
+            @media (max-width: 600px) {
+              padding-left: 16.4vw;
+            }
           }
           &[name="email"] {
             padding-left: 7.7vw;
+            @media (max-width: 600px) {
+              padding-left: 14.4vw;
+            }
           }
           &[name="phone"] {
             padding-left: 8.5vw;
+            @media (max-width: 600px) {
+              padding-left: 17vw;
+            }
           }
           &[name="location"] {
             padding-left: 10.8vw;
+            @media (max-width: 600px) {
+              padding-left: 21.6vw;
+            }
           }
           &[name="company"] {
             padding-left: 11.8vw;
+            @media (max-width: 600px) {
+              padding-left: 23.6vw;
+            }
           }
           &[name="industry"] {
             padding-left: 10vw;
+            @media (max-width: 600px) {
+              padding-left: 20vw;
+            }
           }
         }
         textarea {
