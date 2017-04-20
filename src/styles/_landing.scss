@@ -1378,17 +1378,12 @@
         }
       }
       button {
-        display: flex;
         background: $background-brown;
         font-size: 2vw;
         line-height: 150%;
         padding: 1.8vw 1.9vw 1.4vw;
         transition: opacity 200ms ease-out;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
         @media (max-width: 600px) {
-          display: flex;
           margin-top: 3vw;
           width: 100%;
           font-size: 4vw;
@@ -1398,11 +1393,6 @@
         @media (max-width: 450px) {
           font-size: 6vw;
           padding: 3.4vw 12vw 3.1vw;
-        }
-        @media (max-width: 400px) {
-          display: flex;
-          justify-content: center;
-          align-items: center;
         }
         @media (min-width: 600px) {
           &:hover {
