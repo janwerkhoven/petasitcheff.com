@@ -1283,6 +1283,9 @@
           outline: 0;
           background: white;
         }
+        input:-webkit-autofill {
+          -webkit-box-shadow: 0 0 0 1000px white inset !important;
+        }
         input {
           &:focus+.bg {
             transform: scaleX(1.02) scaleY(1.06);
@@ -1362,6 +1365,7 @@
         padding: 1.8vw 1.9vw 1.4vw;
         transition: opacity 200ms ease-out;
         justify-content: center;
+        text-align: center;
         @media (max-width: 600px) {
           display: flex;
           margin-top: 3vw;
@@ -1382,6 +1386,11 @@
             opacity: 0.8;
           }
         }
+        span {
+          @media (max-width: 450px) {
+            font-size: 4vw;
+          }
+        }
         &.toggle {
           background: none;
           color: $peta-brown-text;
@@ -1394,6 +1403,8 @@
           span.check {
             width: 3vw;
             height: 3vw;
+            min-width: 15px;
+            min-height: 15px;
             background: white;
             border-radius: 50%;
             position: relative;
