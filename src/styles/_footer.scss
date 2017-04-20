@@ -6,6 +6,12 @@ footer {
     text-align: center;
     font-size: 1.4vw;
     margin: 0;
+    @media (max-width: 600px) {
+      font-size: 1.8vw;
+    }
+    @media (max-width: 450px) {
+      font-size: 3.4vw;
+    }
     a {
       color: #939393;
       &:hover {

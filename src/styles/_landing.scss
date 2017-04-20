@@ -853,6 +853,7 @@
   section.split {
     display: flex;
     flex-flow: row nowrap;
+    overflow: hidden;
     @media (max-width: 640px) {
       flex-direction: column;
     }
