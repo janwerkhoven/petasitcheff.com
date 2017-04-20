@@ -99,18 +99,36 @@
         right: 5vw;
       }
       h1 {
-        font-size: 5.6vh;
+        font-size: 4vw;
         text-align: right;
         line-height: 120%;
         color: white;
+        @media (max-width: 800px) {
+          font-size: 5vw;
+        }
+        @media (max-width: 600px) {
+          font-size: 6vw;
+        }
+        @media (max-width: 450px) {
+          font-size: 11vw;
+        }
       }
       h2 {
         font-family: $neuzeit-book;
-        font-size: 2.4vh;
         color: $peta-yellow;
         text-align: right;
         line-height: 150%;
         margin-top: 0.8vw;
+        font-size: 1.5vw;
+        @media (max-width: 800px) {
+          font-size: 2vw;
+        }
+        @media (max-width: 600px) {
+          font-size: 3vw;
+        }
+        @media (max-width: 450px) {
+          font-size: 5vw;
+        }
       }
       a {
         display: block;
@@ -835,6 +853,7 @@
   section.split {
     display: flex;
     flex-flow: row nowrap;
+    overflow: hidden;
     @media (max-width: 640px) {
       flex-direction: column;
     }
@@ -896,7 +915,7 @@
             left: 50vw;
             top: 50vw;
             transform: translate(-50%, -33%);
-            width: 100vw;
+            width: 100%;
             height: auto;
           }
         }
@@ -1247,6 +1266,7 @@
             padding-left: 2vw;
             @media (max-width: 600px) {
               padding-left: 0;
+              justify-content: center;
             }
           }
         }
@@ -1282,6 +1302,9 @@
           border: 0;
           outline: 0;
           background: white;
+        }
+        input:-webkit-autofill {
+          -webkit-box-shadow: 0 0 0 1000px white inset !important;
         }
         input {
           &:focus+.bg {
@@ -1373,25 +1396,25 @@
         line-height: 150%;
         padding: 1.8vw 1.9vw 1.4vw;
         transition: opacity 200ms ease-out;
-        justify-content: center;
         @media (max-width: 600px) {
-          display: flex;
           margin-top: 3vw;
-          width: auto;
+          width: 100%;
           font-size: 4vw;
           padding: 2.4vw 8vw 2.1vw;
+          max-width: none;
         }
         @media (max-width: 450px) {
           font-size: 6vw;
           padding: 3.4vw 12vw 3.1vw;
         }
-        @media (max-width: 400px) {
-          display: flex;
-          justify-content: center;
-        }
         @media (min-width: 600px) {
           &:hover {
             opacity: 0.8;
+          }
+        }
+        span {
+          @media (max-width: 450px) {
+            font-size: 4vw;
           }
         }
         &.toggle {
@@ -1406,11 +1429,12 @@
           span.check {
             width: 3vw;
             height: 3vw;
+            min-width: 15px;
+            min-height: 15px;
             background: white;
             border-radius: 50%;
             position: relative;
-            margin-right: 1.5vw;
-            margin-top: -0.4vw;
+            margin: auto 1.5vw;
             &:after {
               content: ' ';
               position: absolute;
