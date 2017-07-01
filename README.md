@@ -1,12 +1,12 @@
-# Sitcheff
+# Peta Sitcheff
 
 #### What
-The [website](http://www.sitcheff.com.au/) of ...
+The [website](http://www.sitcheff.com.au/) of a sales coaching consultant in Australia.
 
 #### Highlights
 * Built with Gulp, Nunchucks (HTML), SASS (CSS), jQuery (JS), Atom & Git
 * Mobile responsive & retina-ready
-* Served on SSD Ubuntu Nginx servers
+* Served on SSD Ubuntu Nginx servers with HTTP2 and HTTPS
 * Design by [Hannah Sutton](http://hannahsuttondesign.com/)
 * Code by [Jan Werkhoven](https://github.com/janwerkhoven) and [Richard Verheyen](https://github.com/richardverheyen)
 
