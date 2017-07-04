@@ -21,7 +21,7 @@
 
 const project = {
   name: 'Peta Sitcheff',
-  url: 'http://www.petasitcheff.com/'
+  url: 'https://www.petasitcheff.com/'
 };
 
 const autoprefixer = require('gulp-autoprefixer');
@@ -81,7 +81,7 @@ gulp.task('compileHtml', function() {
     .pipe(prettify({ config: './jsbeautifyrc.json' }))
     .pipe(gulp.dest('dist'))
     .pipe(sitemap({
-      siteUrl: 'http://www.petasitcheff.com/',
+      siteUrl: project.url,
       changefreq: 'monthly',
       priority: 0.5
     }))
