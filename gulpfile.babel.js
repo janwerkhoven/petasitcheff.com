@@ -81,7 +81,7 @@ function css() {
     .pipe(dest("dist/assets/css"));
 }
 
-// Compiles all the JS
+// Check your JS syntax against ES Lint
 function lintJs() {
   return src("src/js/app.js")
     .pipe(eslint())
@@ -89,7 +89,7 @@ function lintJs() {
     .pipe(eslint.failAfterError());
 }
 
-// Compiles all the JS
+// Convert your JS with Babel and minify it
 function buildJs() {
   return src("src/js/app.js")
     .pipe(
@@ -102,7 +102,7 @@ function buildJs() {
     .pipe(dest("dist/assets/js"));
 }
 
-// Compiles all the JS
+// Concatenate all vendor JS
 function concatVendorJs() {
   return src([
     "bower_components/jquery/dist/jquery.min.js",
