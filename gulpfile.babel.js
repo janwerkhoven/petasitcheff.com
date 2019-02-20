@@ -6,8 +6,10 @@ const { src, dest, series, parallel, watch } = require("gulp");
 // https://gulpjs.com/docs/en/getting-started/using-plugins
 const autoprefixer = require("gulp-autoprefixer");
 const babel = require("gulp-babel");
+const concat = require("gulp-concat");
 const connect = require("gulp-connect");
 const del = require("del");
+const eslint = require("gulp-eslint");
 const normalize = require("node-normalize-scss");
 const nunjucksRender = require("gulp-nunjucks-render");
 const prettify = require("gulp-jsbeautifier");
@@ -80,7 +82,15 @@ function css() {
 }
 
 // Compiles all the JS
-function js() {
+function lintJs() {
+  return src("src/js/main.js")
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(eslint.failAfterError());
+}
+
+// Compiles all the JS
+function buildJs() {
   return src("src/js/main.js")
     .pipe(
       babel({
@@ -89,6 +99,13 @@ function js() {
     )
     .pipe(uglify())
     .pipe(rename("main.min.js"))
+    .pipe(dest("dist/assets/js"));
+}
+
+// Compiles all the JS
+function concatVendorJs() {
+  return src(["bower_components/jquery/jquery.min.js", "src/js/vendor/*.js"])
+    .pipe(concat("vendor.min.js"))
     .pipe(dest("dist/assets/js"));
 }
 
@@ -112,14 +129,19 @@ function localhost() {
 
 // Watches the `src/` folder for file changes and fires tasks accordingly
 // https://gulpjs.com/docs/en/getting-started/watching-files
-function watchDist() {
+function watchers() {
   watch("src/public/**/*", assets);
   watch("src/html/**/*.njk", html);
   watch("src/css/**/*.scss", css);
   watch("src/js/**/*.js", js);
 }
 
-// Finally, create Gulp commands
+// Create Gulp commands
 // https://gulpjs.com/docs/en/getting-started/creating-tasks
-exports.build = series(clean, parallel(assets, html, css, js), report);
-exports.serve = parallel(localhost, watchDist);
+const js = parallel(concatVendorJs, series(lintJs, buildJs));
+const build = series(clean, parallel(assets, html, css, js), report);
+const serve = series(build, parallel(localhost, watchers));
+
+// Finally make those tasks available in Gulp CLI
+exports.build = build;
+exports.serve = serve;
