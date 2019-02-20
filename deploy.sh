@@ -11,8 +11,8 @@ echo "Deploying:"
 echo $branch
 echo $revision
 echo "----------"
-echo "scp install.sh deploy@server-frankfurt.nabu.io:/var/www/praktijkcentrumlochristi.be"
-scp install.sh deploy@server-frankfurt.nabu.io:/var/www/praktijkcentrumlochristi.be
+echo "scp install.sh deploy@server-singapore.nabu.io:/var/www/petasitcheff.com"
+scp install.sh deploy@server-singapore.nabu.io:/var/www/petasitcheff.com
 echo "----------"
-echo 'ssh deploy@server-frankfurt.nabu.io "/var/www/praktijkcentrumlochristi.be/install.sh $branch $revision"'
-ssh deploy@server-frankfurt.nabu.io "/var/www/praktijkcentrumlochristi.be/install.sh $branch $revision"
+echo 'ssh deploy@server-singapore.nabu.io "/var/www/petasitcheff.com/install.sh $branch $revision"'
+ssh deploy@server-singapore.nabu.io "/var/www/petasitcheff.com/install.sh $branch $revision"

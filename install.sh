@@ -18,8 +18,8 @@ echo "Path: $PWD"
 echo "Branch: $BRANCH"
 echo "Revision: $REVISION"
 echo "----------"
-echo "cd /var/www/praktijkcentrumlochristi.be"
-cd /var/www/praktijkcentrumlochristi.be
+echo "cd /var/www/petasitcheff.com"
+cd /var/www/petasitcheff.com
 echo "----------"
 echo "git checkout $BRANCH -f"
 git checkout $BRANCH -f
