@@ -57,7 +57,7 @@ function html() {
 
 // Compiles all the CSS
 function css() {
-  return src("src/css/main.scss")
+  return src("src/css/app.scss")
     .pipe(
       sass({
         outputStyle: "compressed",
@@ -77,13 +77,13 @@ function css() {
         ]
       })
     )
-    .pipe(rename("main.min.css"))
+    .pipe(rename("app.min.css"))
     .pipe(dest("dist/assets/css"));
 }
 
 // Compiles all the JS
 function lintJs() {
-  return src("src/js/main.js")
+  return src("src/js/app.js")
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
@@ -91,20 +91,24 @@ function lintJs() {
 
 // Compiles all the JS
 function buildJs() {
-  return src("src/js/main.js")
+  return src("src/js/app.js")
     .pipe(
       babel({
         presets: ["@babel/env"]
       })
     )
     .pipe(uglify())
-    .pipe(rename("main.min.js"))
+    .pipe(rename("app.min.js"))
     .pipe(dest("dist/assets/js"));
 }
 
 // Compiles all the JS
 function concatVendorJs() {
-  return src(["bower_components/jquery/jquery.min.js", "src/js/vendor/*.js"])
+  return src([
+    "bower_components/jquery/dist/jquery.min.js",
+    "bower_components/velocity/velocity.min.js",
+    "src/js/vendor/google-analytics.js"
+  ])
     .pipe(concat("vendor.min.js"))
     .pipe(dest("dist/assets/js"));
 }
