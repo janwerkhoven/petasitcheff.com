@@ -88,7 +88,7 @@ h2 {
   font-size: 5vw;
   line-height: 120%;
   color: white;
-  &+hr {
+  & + hr {
     margin: 1vw 0 3vw;
   }
 }
@@ -131,7 +131,7 @@ input {
   box-sizing: border-box;
   margin-left: 5vw;
   &:after {
-    content: ' ';
+    content: " ";
     position: absolute;
     bottom: -40px;
     bottom: -4.3vw;
@@ -140,7 +140,6 @@ input {
     border-left: 6.2vw solid rgba(0, 0, 0, 0);
     border-top: 4.4vw solid $peta-yellow;
     right: 4.3vw;
-
   }
   blockquote {
     font-family: $neuzeit-heavy;
@@ -156,7 +155,7 @@ input {
         display: inline-block;
       }
       &:after {
-        content: ' ';
+        content: " ";
         background: white;
         height: 0.2vw;
         bottom: 0.4vw;

@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html lang="{{language}}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="copyright" content="Copyright 2011 all rights reserved by Jan Werkhoven"/>
+    <meta name="developer" content="Jan Werkhoven jan@nabu.io www.nabu.io"/>
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="{{themeColour}}">
+    <meta name="google-site-verification" content="{{googleSiteVerification}}"/>
+    {% block meta %}{% endblock %}
+    <link href="/assets/css/main.min.css" rel="stylesheet" type="text/css">
+    <script src="/assets/js/main.min.js"></script>
+    {% include "partials/favicons.njk" %}
+  </head>
+
+  <body id="{% block id %}{% endblock %}">
+    {% include "partials/menu.njk" %}
+    <main>
+      {% block main %}{% endblock %}
+    </main>
+    {% include "partials/footer.njk" %}
+    {% include "partials/outdated-browsers.njk" %}
+  </body>
+</html>
