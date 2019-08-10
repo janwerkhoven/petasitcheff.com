@@ -17,11 +17,7 @@
   </head>
 
   <body id="{% block id %}{% endblock %}">
-    {% include "partials/menu.njk" %}
-    <main>
-      {% block main %}{% endblock %}
-    </main>
-    {% include "partials/footer.njk" %}
+    {% block content %}{% endblock %}
     {% include "partials/outdated-browsers.njk" %}
   </body>
 </html>

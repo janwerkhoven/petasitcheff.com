@@ -1,0 +1,247 @@
+#brochure {
+  main {
+    #hero {
+      background: black;
+      position: relative;
+      background-color: black;
+      background-image: url("/assets/images/hero2-2000px.jpg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: 50% 50%;
+      background-position: 15vw 50%;
+      @include on-mobile {
+        background-size: cover;
+        background-position: -15vw 50%;
+      }
+      > div {
+        padding: 7.5vw 6vw;
+        max-width: none;
+        @include on-mobile {
+          padding: 10vw 6vw 14vw;
+        }
+      }
+      img {
+        width: 9vw;
+        height: auto;
+        @include on-mobile {
+          width: 20vw;
+        }
+      }
+      h1 {
+        margin-top: 2.4vw;
+        font-family: $neuzeit-heavy;
+        font-size: 3.4vw;
+        color: white;
+        max-width: 21vw;
+        line-height: 140%;
+        @include on-mobile {
+          margin-top: 8vw;
+          flex-direction: column;
+          font-size: 8vw;
+          max-width: 60vw;
+        }
+      }
+      h3 {
+        margin-top: 1vw;
+        font-family: $neuzeit-book;
+        font-size: 1.3vw;
+        color: white;
+        @include on-mobile {
+          margin-top: 2vw;
+          font-size: 5vw;
+        }
+      }
+      a.button {
+        margin-top: 2.4vw;
+        border: 0.2vw solid $peta-yellow;
+        color: $peta-yellow;
+        font-size: 1.8vw;
+        padding: 1.3vw 4.5vw 1vw;
+        background: rgba($peta-yellow, 0);
+        transition: all 180ms ease-out;
+        transition-property: background-color, padding;
+        @include on-mobile {
+          margin-top: 8vw;
+          font-size: 5vw;
+          padding: 2.6vw 9vw 2vw;
+        }
+        &:hover {
+          background-color: rgba($peta-yellow, 0.3);
+          padding: 1.3vw 5vw 1vw;
+          @include on-mobile {
+            padding: 2.6vw 11vw 2vw;
+          }
+        }
+      }
+    }
+    #cta {
+      background: $peta-yellow-bg;
+      background: #f4e200;
+      color: white;
+      > div {
+        display: flex;
+        max-width: none;
+        padding: 9vw;
+        justify-content: space-between;
+        @include on-mobile {
+          flex-direction: column;
+        }
+      }
+      #left {
+        width: 35vw;
+        padding-top: 2vw;
+        @include on-mobile {
+          width: 100%;
+          padding: 14vw 0;
+        }
+        h2 {
+          color: #4c4348;
+          font-size: 2.2vw;
+          line-height: 150%;
+          font-family: $neuzeit-book;
+          @include on-mobile {
+            font-size: 6vw;
+          }
+        }
+        hr {
+          height: 0.15vw;
+          width: 2.4vw;
+          background: white;
+          margin: 2vw 0 3vw;
+          @include on-mobile {
+            height: 0.4vw;
+            width: 6vw;
+            margin: 6vw 0 14vw;
+          }
+        }
+        h3 {
+          font-size: 3vw;
+          margin-bottom: 3vw;
+          @include on-mobile {
+            font-size: 8vw;
+            margin: 5vw 0;
+          }
+        }
+        dl {
+          display: flex;
+          margin: 0 0 1.5vw;
+          @include on-mobile {
+            margin: 0 0 4vw;
+          }
+          dt,
+          dd {
+            color: #4c4348;
+            font-family: $neuzeit-heavy;
+            font-size: 1.8vw;
+            line-height: 100%;
+            @include on-mobile {
+              font-size: 5vw;
+            }
+          }
+          dd {
+            margin-left: 1vw;
+            @include on-mobile {
+              margin-left: 3vw;
+            }
+            a {
+              color: #4c4348;
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+        ul#social {
+          display: flex;
+          li {
+            background: #f4e200;
+            &:hover {
+              a {
+                transform: rotateY(180deg);
+              }
+            }
+            a {
+              display: block;
+              padding: 1.4vw;
+              transform: rotateY(0deg);
+              transition: all 240ms ease-out;
+              transition-property: transform;
+              @include on-mobile {
+                padding: 3vw;
+              }
+              img {
+                width: 4vw;
+                height: auto;
+                @include on-mobile {
+                  width: 12vw;
+                }
+              }
+            }
+          }
+        }
+      }
+      #right {
+        @include on-mobile {
+          padding-bottom: 14vw;
+        }
+        img {
+          width: 28vw;
+          height: auto;
+          @include on-mobile {
+            width: 80vw;
+          }
+        }
+        h3 {
+          margin-top: 2vw;
+          font-size: 3vw;
+          @include on-mobile {
+            margin: 5vw 0;
+            font-size: 8vw;
+          }
+        }
+        a.button {
+          background: white;
+          color: #4c4348;
+          font-size: 1.7vw;
+          padding: 1.4vw 2.3vw 1vw;
+          margin-top: 1.4vw;
+          transition: all 140ms ease-out;
+          transition-property: background-color, padding, transform;
+          @include on-mobile {
+            font-size: 3.8vw;
+            padding: 3.2vw 4vw 2.4vw;
+            margin-top: 0;
+          }
+          &:hover {
+            background: rgba(white, 0.8);
+            padding: 1.4vw 3vw 1vw;
+            @include on-mobile {
+              padding: 3.2vw 8vw 2.4vw;
+            }
+          }
+        }
+      }
+    }
+  }
+  footer {
+    background: #3d3334;
+    padding: 3vw 2vw;
+    @include on-mobile {
+      padding: 4vw 1vw;
+    }
+    p {
+      color: #8b827b;
+      font-size: 1.15vw;
+      line-height: 200%;
+      @include on-mobile {
+        font-size: 4vw;
+      }
+    }
+    a {
+      color: #8b827b;
+      &:hover {
+        color: $peta-yellow;
+      }
+    }
+  }
+}
