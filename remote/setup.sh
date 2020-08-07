@@ -18,5 +18,5 @@ echo "----------"
 (
   set -x
   scp remote/setup-remote.sh $user@$host:~/
-  ssh -t $user@$host "~/setup-remote.sh $domain $repo"
+  ssh -t $user@$host "~/setup-remote.sh $domain $repo; rm -f ~/setup-remote.sh"
 )

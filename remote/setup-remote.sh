@@ -131,6 +131,5 @@ echo "Restarting Nginx... (again)"
 ( set -x; sudo systemctl restart nginx )
 
 echo "----------"
-echo "Done!"
-echo "Open $host in your browser :)"
+echo "Done! Open $host in your browser :)"
 echo "----------"
