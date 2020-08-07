@@ -40,8 +40,9 @@
     "yarn": ">= 1.0.0"
   },
   "scripts": {
-    "start": "gulp serve",
+    "serve": "gulp serve",
     "build": "gulp build",
+    "setup": "remote/setup.sh",
     "postinstall": "node -e \"try { require('fs').symlinkSync(require('path').resolve('node_modules/@bower_components'), 'bower_components', 'junction') } catch (e) { }\""
   }
 }
