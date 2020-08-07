@@ -10,8 +10,7 @@ repo=git@github.com:janwerkhoven/petasitcheff.com.git
 
 echo "----------"
 echo "Setting up remote server for:"
-echo $user
-echo $host
+echo $user@$host
 echo $domain
 echo $repo
 echo "----------"
